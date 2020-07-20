@@ -14,7 +14,7 @@
     apollo: {
       allContacts: gql`{
         allContacts {
-          paragraphe
+          paragraphe  
         }
       }`
     }
