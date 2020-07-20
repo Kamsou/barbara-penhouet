@@ -69,5 +69,11 @@ export default {
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
+  },
+
+  publicRuntimeConfig: {},
+  privateRuntimeConfig: {
+    httpEndpoint: process.env.HTTP_ENDPOINT,
+    getAuth: process.env.TOKEN_AUTH_DATO
   }
 }
