@@ -8,15 +8,14 @@
 
 <script>
 
-  import gql from 'graphql-tag'
+  import allContacts from '~/queries/getContact.gql';
 
   export default {
     apollo: {
-      allContacts: gql`{
-        allContacts {
-          paragraphe  
-        }
-      }`
+      allContacts: {
+        prefetch: true,
+        query: allContacts
+      },
     }
   }
 </script>
