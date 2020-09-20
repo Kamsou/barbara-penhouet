@@ -1,13 +1,31 @@
 <template>
-  <div>
-    <h1>Contact</h1>
+  <div class="page_index">
+    <div class="index_bloc">
+      <div class="index_lign_flex">
+        <span>BARBARA</span>
+        <span>P</span>
+        <span>.</span>
+      </div>
+      <div class="index_lign_flex">
+        <span>CREATIVE</span>
+        <span>STUDIO</span>
+      </div>
+      <div class="index_lign_flex">
+        <span>BASED</span>
+        <span>IN</span>
+        <span>PARIS</span>
+      </div>
+    </div>
+    <!-- <h1>Contact</h1>
     <h2 v-for="(contact, index) in allContacts" :key="index">
       {{contact.paragraphe}}
-    </h2>
+    </h2> -->
 
     <div style="margin-top: 150px; text-align: center">
       <p>Produit 1</p>
-      <nuxt-link :to="`/teeshirt/produit1`" style="border: 1px solid #000; width: 20%; margin: 0 auto">acheter</nuxt-link>
+      <nuxt-link :to="`/teeshirt/produit1`" style="border: 1px solid #000; width: 20%; margin: 0 auto">
+        Acheter
+      </nuxt-link>
     </div>
   </div>
 </template>
@@ -27,5 +45,16 @@
 </script>
 
 <style lang="scss" scoped>
-
+.page_index {
+  .index_bloc {
+    width: 30vw;
+    font-size: 2.714vw;
+    font-weight: bold;
+    margin: 100px auto;
+    .index_lign_flex {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
 </style>
