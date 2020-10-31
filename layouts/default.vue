@@ -26,7 +26,7 @@ html {
     Arial,
     sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;

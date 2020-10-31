@@ -7,22 +7,17 @@
     />
     <div class="navbar_menu">
       <div>
-        <span data-text="Painter">Painter</span>
+        <span data-text="Art">Art</span>
       </div>
       <div>
         <span data-text="Illustrations">Illustrations</span>
       </div>
       <div>
-        <span data-text="Interior">Interior</span>
+        <span data-text="Intérieur">Intérieur</span>
       </div>
       <div>
         <span data-text="Shop">Shop</span>
       </div>
-      <img
-        class="navbar_mail"
-        src="/images/mail.svg"
-        alt="Mail"
-      />
         <img
         class="navbar_instagram"
         src="/images/instagram.svg"
@@ -42,13 +37,15 @@
 .page_navbar {
   display: flex;
   align-items: center;
-  padding: 50px 162px 0 90px;
+  justify-content: space-between;
+  padding: 50px 188px 0 86px;
+  height: 15vh;
   .navbar_menu {
-    width: 100%;
+    width: 70%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    padding-left: 50px;
+    justify-content: space-between;
+    padding-left: 180px;
     div {
       overflow: hidden;
       &:hover span {

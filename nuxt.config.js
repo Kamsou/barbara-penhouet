@@ -24,10 +24,7 @@ export default {
       { rel:"stylesheet", href:"https://cdn.snipcart.com/themes/v3.0.19/default/snipcart.css" },
     ]
   },
-  /*
-  ** Customize the progress-bar color
-  */
-  loading: '@/components/Preloader.vue',
+
   /*
   ** Global CSS
   */
