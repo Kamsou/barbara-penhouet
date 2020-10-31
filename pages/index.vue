@@ -35,6 +35,7 @@
   import allContacts from '~/queries/getContact.gql';
 
   export default {
+    layout: 'home',
     apollo: {
       allContacts: {
         prefetch: true,
