@@ -1,5 +1,14 @@
 <template>
   <div class="page_index">
+    <!-- PRELOADER -->
+    <!-- <div class="b_preloader">
+      <video playsinline autoplay loop muted>
+        <source v-if="this.$mq === 'sm'" src="~/assets/final_mobile.mp4" type="video/mp4">
+        <source v-else-if="this.$mq === 'lg'" src="~/assets/final_desktop.mp4" type="video/mp4">
+      </video>
+    </div> -->
+    <div class="loading-page"></div>
+    <!-- -->
     <div class="index_bloc">
       <div class="index_lign_flex">
         <span>BARBARA</span>
@@ -35,7 +44,6 @@
   import allContacts from '~/queries/getContact.gql';
 
   export default {
-    layout: 'home',
     apollo: {
       allContacts: {
         prefetch: true,
@@ -47,6 +55,30 @@
 
 <style lang="scss" scoped>
 .page_index {
+  .loading-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: url("/images/preloader.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    transition: all 2s;
+    background-color: #fff;
+    animation: revealUpGrey 2s cubic-bezier(0.895,0.03,0.685,0.22) 1.5s forwards;
+  }
+  @keyframes revealUpGrey{
+    0%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 0;
+    }
+  }
   .index_bloc {
     width: 30vw;
     font-size: 2.714vw;
