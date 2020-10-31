@@ -2,7 +2,7 @@
   <div class="page_navbar">
     <img
       class="navbar_logo"
-      src="/images/logo.svg"
+      src="/images/logo.png"
       alt="Barbara Penhouet"
     />
     <div class="navbar_menu">
@@ -34,18 +34,33 @@
 </script>
 
 <style lang="scss" scoped>
+$breakpoint-tablet: 1025px;
 .page_navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 50px 188px 0 86px;
   height: 15vh;
+  @media (max-width: $breakpoint-tablet) {
+    padding: 9px 34px 0 23px;
+    height: 100%;
+  }
+  .navbar_logo {
+    width: 16.181vw;
+    @media (max-width: $breakpoint-tablet) {
+      padding: 0;
+      width: 35.733vw;
+    }
+  }
   .navbar_menu {
     width: 70%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-left: 180px;
+    @media (max-width: $breakpoint-tablet) {
+      display: none;
+    }
     div {
       overflow: hidden;
       &:hover span {
