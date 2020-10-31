@@ -12,7 +12,9 @@
     },
     methods: {
       start() {
-        this.loading = true
+        setTimeout(() => {
+          this.loading = true
+        }, 500);
       },
       finish() {
         this.loading = false
