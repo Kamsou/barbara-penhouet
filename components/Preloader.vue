@@ -35,5 +35,6 @@
   background-attachment: fixed;
   background-size: cover;
   transition: all 2s;
+  background-color: #fff;
 }
 </style>
