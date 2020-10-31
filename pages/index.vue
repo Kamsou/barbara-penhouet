@@ -1,12 +1,6 @@
 <template>
   <div class="page_index">
     <!-- PRELOADER -->
-    <!-- <div class="b_preloader">
-      <video playsinline autoplay loop muted>
-        <source v-if="this.$mq === 'sm'" src="~/assets/final_mobile.mp4" type="video/mp4">
-        <source v-else-if="this.$mq === 'lg'" src="~/assets/final_desktop.mp4" type="video/mp4">
-      </video>
-    </div> -->
     <div class="loading-page"></div>
     <!-- -->
     <div class="index_bloc">
@@ -69,9 +63,9 @@
     background-size: cover;
     transition: all 2s;
     background-color: #fff;
-    animation: revealUpGrey 2s cubic-bezier(0.895,0.03,0.685,0.22) 1.5s forwards;
+    animation: disappear 2s cubic-bezier(0.895,0.03,0.685,0.22) 1.5s forwards;
   }
-  @keyframes revealUpGrey{
+  @keyframes disappear{
     0%{
       opacity: 1;
     }
