@@ -4,6 +4,9 @@
     <!-- <div class="loading-page"></div> -->
     <!-- -->
     <section class="first-bloc-index">
+      <div class="arrow-up-mobile">
+        <img src="/images/index/arrow.svg" alt="">
+      </div>
       <div class="title-first-bloc-mobile">
         <div class="title-placement">
           <div class="index-lign-flex">
@@ -169,6 +172,21 @@ $breakpoint-tablet: 1025px;
     padding: 0 17vw 0 2.5vw;
     @media (max-width: $breakpoint-tablet) {
       padding: 0;
+    }
+    .arrow-up-mobile {
+      display: none;
+      @media (max-width: $breakpoint-tablet) {
+        display: block;
+        position: fixed;
+        bottom: 9.600vw;
+        right: 6.933vw;
+        z-index: 5;
+      }
+      img {
+        @media (max-width: $breakpoint-tablet) {
+          width: 7.200vw;
+        }
+      }
     }
     .image-first-bloc {
       width: 30vw;

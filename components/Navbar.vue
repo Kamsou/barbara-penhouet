@@ -5,6 +5,7 @@
       src="/images/logo.png"
       alt="Barbara Penhouet"
     />
+    <Burger class="menu-mobile"/>
     <div class="navbar_menu">
       <div>
         <span data-text="Art">Art</span>
@@ -28,8 +29,11 @@
 </template>
 
 <script>
+import Burger from '@/components/Burger.vue';
   export default {
-    
+    components: {
+      Burger,
+    }
   }
 </script>
 
@@ -44,6 +48,12 @@ $breakpoint-tablet: 1025px;
   @media (max-width: $breakpoint-tablet) {
     padding: 9px 34px 0 23px;
     height: 100%;
+  }
+  .menu-mobile {
+    display: none;
+    @media (max-width: $breakpoint-tablet) {
+      display: block;
+    }
   }
   .navbar_logo {
     width: 16.181vw;
