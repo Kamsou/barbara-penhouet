@@ -50,32 +50,32 @@
       </div>
       <div class="titles-three-bloc">
         <div class="titles-placement">
-          <div class="index-lign-flex">
-            <span>
+          <div class="index-lign-flex case-01">
+            <span class="couple-numbers">
               <span>2</span>
               <span>0</span>
               <span>1</span>
               <span>8</span>
             </span>
-            <span>PEINTURES</span>
+            <span class="title">PEINTURES</span>
           </div>
-          <div class="index-lign-flex">
-            <span>
+          <div class="index-lign-flex case-02">
+            <span class="couple-numbers">
               <span>2</span>
               <span>0</span>
               <span>2</span>
               <span>0</span>
             </span>
-            <span>PEINTURES</span>
+            <span class="title">PEINTURES</span>
           </div>
-          <div class="index-lign-flex">
-            <span>
+          <div class="index-lign-flex case-03">
+            <span class="couple-numbers">
               <span>2</span>
               <span>0</span>
               <span>1</span>
               <span>8</span>
             </span>
-            <span>FUSAINS</span>
+            <span class="title">FUSAINS</span>
           </div>
         </div>
       </div>
@@ -239,6 +239,7 @@ $breakpoint-tablet: 1025px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     padding: 10vw 5vw 0 42vw;
+    height: 32.429vw;
     @media (max-width: $breakpoint-tablet) {
       grid-template-areas:
       'img'
@@ -246,7 +247,7 @@ $breakpoint-tablet: 1025px;
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 1fr;
       padding: 0 74px 0 53px;
-      height: 100%;
+      height: 167.200vw;
     }
     .text {
       grid-area: text;
@@ -256,11 +257,14 @@ $breakpoint-tablet: 1025px;
       text-align: justify;
       @media (max-width: $breakpoint-tablet) {
         font-size: 2.667vw;
-        width: 100%;
+        width: 68.267vw;
       }
     }
     .img {
       grid-area: img;
+      @media (max-width: $breakpoint-tablet) {
+        margin: 0 auto;
+      }
       img {
         width: 22vw;
         @media (max-width: $breakpoint-tablet) {
@@ -276,8 +280,8 @@ $breakpoint-tablet: 1025px;
     height: 44.653vw;
     @media (max-width: $breakpoint-tablet) {
       display: block;
-      height: 100%;
-      padding: 36px 49px 51px 24px;
+      height: 143.467vw;
+      padding: 9.600vw 13.067vw 13.600vw 6.400vw;
     }
     .images {
       width: 50%;
@@ -317,17 +321,59 @@ $breakpoint-tablet: 1025px;
       @media (max-width: $breakpoint-tablet) {
         width: 100%;
         top: 0;
-        padding: 0 20px 0 42px;
+        padding: 6.400vw 5.333vw 0 11.200vw;
       }
       .titles-placement {
         width: 28.056vw;
         margin: 0 0 0 auto;
         @media (max-width: $breakpoint-tablet) {
           margin: 0;
+          width: 100%;
+          gap: 2.133vw 5.067vw;
+          display: grid;
+          grid-template-areas:
+            'case1 case2'
+            'case3 .';
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
         }
         .index-lign-flex {
           display: flex;
           justify-content: space-between;
+          @media (max-width: $breakpoint-tablet) {
+            font-size: 4.800vw;
+          }
+          .couple-numbers {
+            @media (max-width: $breakpoint-tablet) {
+              display: flex;
+              justify-content: space-between;
+            }
+          }
+        }
+        .case-01,
+        .case-02,
+        .case-03 {
+          @media (max-width: $breakpoint-tablet) {
+            display: block;
+            .title {
+              display: block;
+            }
+          }
+        }
+        .case-01 {
+          @media (max-width: $breakpoint-tablet) {
+            grid-area: case1;
+          }
+        }
+        .case-02 {
+          @media (max-width: $breakpoint-tablet) {
+            grid-area: case2;
+          }
+        }
+        .case-03 {
+          @media (max-width: $breakpoint-tablet) {
+            grid-area: case3;
+          }
         }
       }
     }
@@ -338,7 +384,7 @@ $breakpoint-tablet: 1025px;
     padding: 0 5.486vw 0 0;
     @media (max-width: $breakpoint-tablet) {
       padding: 0;
-      height: 120vw;
+      height: 183.467vw;
     }
     .superposition {
       position: relative;
@@ -356,7 +402,7 @@ $breakpoint-tablet: 1025px;
         z-index: 1;
         @media (max-width: $breakpoint-tablet) {
           width: 63.467vw;
-          top: 28%;
+          top: 30%;
           right: 20%;
         }
       }
@@ -369,6 +415,7 @@ $breakpoint-tablet: 1025px;
           width: 76.533vw;
           transform: rotate(-13.82deg);
           right: 15px;
+          top: 10%;
         }
       }
     }
@@ -427,15 +474,25 @@ $breakpoint-tablet: 1025px;
     height: 32vw;
     display: block;
     padding: 0 7.778vw 0 0;
+    @media (max-width: $breakpoint-tablet) {
+      height: 85.333vw;
+      padding: 0 15.467vw 0 10.133vw;
+    }
     .superposition {
       position: relative;
       display: flex;
       justify-content: flex-end;
+      @media (max-width: $breakpoint-tablet) {
+        justify-content: center;
+      }
       height: 100%;
       .img-01 {
         position: absolute;
         width: 41.528vw;
         z-index: 1;
+        @media (max-width: $breakpoint-tablet) {
+          width: 64.533vw;
+        }
       }
       .img-02 {
         position: absolute;
@@ -443,6 +500,11 @@ $breakpoint-tablet: 1025px;
         top: 80%;
         right: 16%;
         z-index: 2;
+        @media (max-width: $breakpoint-tablet) {
+          width: 41.600vw;
+          top: -26%;
+          right: -10%;
+        }
       }
     }
   }
@@ -450,6 +512,10 @@ $breakpoint-tablet: 1025px;
     height: 101.389vw;
     display: block;
     padding: 0 0 7.014vw 7.569vw;
+    @media (max-width: $breakpoint-tablet) {
+      height: 121.333vw;
+      padding: 0;
+    }
     .superposition {
       position: relative;
       display: flex;
@@ -459,6 +525,10 @@ $breakpoint-tablet: 1025px;
         position: absolute;
         width: 100vw;
         z-index: 1;
+        @media (max-width: $breakpoint-tablet) {
+          width: 113.733vw;
+          bottom: 0;
+        }
       }
       .footer {
         display: flex;
@@ -469,6 +539,9 @@ $breakpoint-tablet: 1025px;
         bottom: 0;
         left: 0;
         z-index: 2;
+        @media (max-width: $breakpoint-tablet) {
+          padding: 0 0 5.667vw 2.667vw;
+        }
         .links {
           span {
             display: block;
@@ -476,10 +549,17 @@ $breakpoint-tablet: 1025px;
             font-size: 2.639vw;
             font-weight: bold;
             padding-bottom: 15px;
+            @media (max-width: $breakpoint-tablet) {
+              font-size: 4vw;
+              padding-bottom: 5px;
+            }
           }
         }
         .arrow-up {
           margin-right: 10.278vw;
+          @media (max-width: $breakpoint-tablet) {
+            display: none;
+          }
         }
       }
     }
