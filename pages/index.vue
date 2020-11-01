@@ -1,7 +1,7 @@
 <template>
   <div class="page-index">
     <!-- PRELOADER -->
-    <!-- <div class="loading-page"></div> -->
+    <div class="loading-page"></div>
     <!-- -->
     <section class="first-bloc-index">
       <div class="arrow-up-mobile">
