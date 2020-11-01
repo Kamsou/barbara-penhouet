@@ -163,9 +163,11 @@ $breakpoint-tablet: 1025px;
   @keyframes disappear{
     0%{
       opacity: 1;
+      z-index: 1000;
     }
     100%{
       opacity: 0;
+      z-index: -1000
     }
   }
   .first-bloc-index {
