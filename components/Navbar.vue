@@ -57,18 +57,24 @@ $breakpoint-tablet: 1025px;
   }
   .navbar_logo {
     width: 16.181vw;
+    position: fixed;
     @media (max-width: $breakpoint-tablet) {
       padding: 0;
       width: 35.733vw;
+      position: relative;
     }
   }
   .navbar_menu {
+    position: fixed;
+    right: 148px;
     width: 70%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-left: 180px;
+    z-index: 999;
     @media (max-width: $breakpoint-tablet) {
+      position: relative;
       display: none;
     }
     div {

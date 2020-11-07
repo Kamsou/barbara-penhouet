@@ -20,7 +20,19 @@
         </div>
       </div>
       <div class="image-first-bloc">
-        <img src="/images/index/femme-qui-danse.png" alt="femme qui danse"/>
+        <video
+        ref="videoPlayer"
+        muted
+        autoplay
+        loop
+        playsinline
+        preload="auto"
+        rel="preload"
+      >
+        <source
+          :src="videoUrl"
+          type="video/mp4">
+      </video>
       </div>
       <div class="title-first-bloc">
         <div class="title-placement">
@@ -127,6 +139,13 @@
 </template>
 
 <script>
+export default {
+  data() {
+    return {
+      videoUrl: '/images/index/femme-qui-danse.mp4',
+    }
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -197,8 +216,8 @@ $breakpoint-tablet: 1025px;
       width: 30vw;
       position: absolute;
       bottom: 0;
-      img {
-        width: 60vw;
+      video {
+        width: 100%;
         position: relative;
         right: 20%;
         top: 2%;
