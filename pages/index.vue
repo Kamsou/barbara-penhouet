@@ -1,5 +1,5 @@
 <template>
-  <div class="page-index">
+  <div ref="smoothscroll" class="page-index">
     <!-- PRELOADER -->
     <div class="loading-page"></div>
     <!-- -->
@@ -119,11 +119,17 @@
         <img class="img-01" src="/images/index/femme-allongee.png" alt="une femme allongée">
         <div class="footer">
           <div class="links">
-            <span>Contact</span>
-            <span>Facebook</span>
-            <span>Instagram</span>
+            <a href="mailto:barbarapenhouetstudio@gmail.com" target="_blank">
+              <span>Contact</span>
+            </a>
+            <a href="https://www.facebook.com/Barbara-P-354201155083653/" target="_blank">
+              <span>Facebook</span>
+            </a>
+            <a href="https://www.instagram.com/barbarabara_p/" target="_blank">
+              <span>Instagram</span>
+            </a>
           </div>
-          <div class="arrow-up">
+          <div class="arrow-up" @click="up()">
             <img src="/images/index/arrow.svg" alt="">
           </div>
         </div>
@@ -145,6 +151,16 @@ export default {
       videoUrl: '/images/index/femme-qui-danse.mp4',
     }
   },
+  methods: {
+    up() {
+      const myEl = this.$refs.smoothscroll
+      this.$smoothScroll({
+        scrollTo: myEl,
+        duration: 2000,
+        updateHistory: false,
+      })
+    }
+  }
 }
 </script>
 
@@ -382,6 +398,10 @@ $breakpoint-tablet: 1025px;
         .index-lign-flex {
           display: flex;
           justify-content: space-between;
+          &:hover {
+            color: #fff;
+            cursor: pointer;
+          }
           @media (max-width: $breakpoint-tablet) {
             font-size: 4.800vw;
           }
@@ -585,20 +605,28 @@ $breakpoint-tablet: 1025px;
           padding: 0 0 5.667vw 2.667vw;
         }
         .links {
-          span {
-            display: block;
-            width: 34.722vw;
-            font-size: 2.639vw;
-            font-weight: bold;
-            padding-bottom: 15px;
-            @media (max-width: $breakpoint-tablet) {
-              font-size: 4vw;
-              padding-bottom: 5px;
+          a {
+            text-decoration: none;
+            color: #EF0311;
+            &:hover {
+              color: white;
+            }
+            span {
+              display: block;
+              width: 34.722vw;
+              font-size: 2.639vw;
+              font-weight: bold;
+              padding-bottom: 15px;
+              @media (max-width: $breakpoint-tablet) {
+                font-size: 4vw;
+                padding-bottom: 5px;
+              }
             }
           }
         }
         .arrow-up {
           margin-right: 10.278vw;
+          cursor: pointer;
           @media (max-width: $breakpoint-tablet) {
             display: none;
           }

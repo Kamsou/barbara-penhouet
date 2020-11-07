@@ -19,11 +19,13 @@
       <div>
         <span data-text="Shop">Shop</span>
       </div>
+      <a href="https://www.instagram.com/barbarabara_p/" target="_blank">
         <img
         class="navbar_instagram"
         src="/images/instagram.svg"
         alt="Instagram"
-      />
+        />
+      </a>
     </div>
   </div>
 </template>
@@ -87,12 +89,16 @@ $breakpoint-tablet: 1025px;
         display: inline-block;
         transition: 0.5s;
         transform: translateY(0);
+        cursor: pointer;
         &::before {
           content: attr(data-text);
           position: absolute;
           transform: translateY(100%);
         }
       }
+    }
+    img {
+      cursor: pointer;
     }
   }
 }
