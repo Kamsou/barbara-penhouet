@@ -44,7 +44,7 @@ html {
 }
 
 .page {
-  background-color: #FCF3F4;
+  background-color: #ffffff;
   color: #EF0311;
   height: 100%;
 }

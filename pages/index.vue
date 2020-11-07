@@ -1,5 +1,5 @@
-<template>
-  <div ref="smoothscroll" class="page-index">
+<template ref="smoothscroll">
+  <div class="page-index">
     <!-- PRELOADER -->
     <div class="loading-page"></div>
     <!-- -->
@@ -65,15 +65,17 @@
       </div>
       <div class="titles-three-bloc">
         <div class="titles-placement">
-          <div class="index-lign-flex case-01">
-            <span class="couple-numbers">
-              <span>2</span>
-              <span>0</span>
-              <span>1</span>
-              <span>8</span>
-            </span>
-            <span class="title">PEINTURES</span>
-          </div>
+          <nuxt-link to="/painting-2018/">
+            <div class="index-lign-flex case-01">
+              <span class="couple-numbers">
+                <span>2</span>
+                <span>0</span>
+                <span>1</span>
+                <span>8</span>
+              </span>
+              <span class="title">PEINTURES</span>
+            </div>
+          </nuxt-link>
           <div class="index-lign-flex case-02">
             <span class="couple-numbers">
               <span>2</span>
@@ -146,6 +148,7 @@
 
 <script>
 export default {
+  layout: 'default',
   data() {
     return {
       videoUrl: '/images/index/femme-qui-danse.mp4',
@@ -166,8 +169,9 @@ export default {
 
 <style lang="scss" scoped>
 $breakpoint-tablet: 1025px;
+
 .page-index {
-  height: 90vh;
+  height: 100%;
   position: relative;
   @media (max-width: $breakpoint-tablet) {
     width: 100%;
@@ -207,9 +211,10 @@ $breakpoint-tablet: 1025px;
   }
   .first-bloc-index {
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
     display: flex;
     padding: 0 17vw 0 2.5vw;
+    position: relative;
     @media (max-width: $breakpoint-tablet) {
       padding: 0;
     }

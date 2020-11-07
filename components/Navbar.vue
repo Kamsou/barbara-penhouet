@@ -1,10 +1,12 @@
 <template>
   <div class="page_navbar">
-    <img
-      class="navbar_logo"
-      src="/images/logo.png"
-      alt="Barbara Penhouet"
-    />
+    <nuxt-link to="/" class="logo-link">
+      <img
+        class="navbar_logo"
+        src="/images/logo.png"
+        alt="Barbara Penhouet"
+      />
+    </nuxt-link>
     <Burger class="menu-mobile"/>
     <div class="navbar_menu">
       <div>
@@ -57,13 +59,15 @@ $breakpoint-tablet: 1025px;
       display: block;
     }
   }
-  .navbar_logo {
-    width: 16.181vw;
+  .logo-link {
     position: fixed;
-    @media (max-width: $breakpoint-tablet) {
-      padding: 0;
-      width: 35.733vw;
-      position: relative;
+    .navbar_logo {
+      width: 16.181vw;
+      @media (max-width: $breakpoint-tablet) {
+        padding: 0;
+        width: 35.733vw;
+        position: relative;
+      }
     }
   }
   .navbar_menu {
