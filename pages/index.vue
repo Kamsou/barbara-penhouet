@@ -171,8 +171,7 @@ export default {
 $breakpoint-tablet: 1025px;
 
 .page-index {
-  height: 100%;
-  position: relative;
+  width: 100%;
   @media (max-width: $breakpoint-tablet) {
     width: 100%;
     height: 93vh;
@@ -191,7 +190,7 @@ $breakpoint-tablet: 1025px;
     background-size: cover;
     transition: all 2s;
     background-color: #fff;
-    z-index: 1000;
+    z-index: 10000;
     animation: disappear 2s cubic-bezier(0.895,0.03,0.685,0.22) 1.5s forwards;
     @media (max-width: $breakpoint-tablet) {
       background: url("/images/preloader-mobile.png");
@@ -210,10 +209,9 @@ $breakpoint-tablet: 1025px;
     }
   }
   .first-bloc-index {
-    width: 100vw;
-    height: 90vh;
+    width: 100%;
+    height: 105vh;
     display: flex;
-    padding: 0 17vw 0 2.5vw;
     position: relative;
     @media (max-width: $breakpoint-tablet) {
       padding: 0;
@@ -234,7 +232,7 @@ $breakpoint-tablet: 1025px;
       }
     }
     .image-first-bloc {
-      width: 30vw;
+      width: 648px;
       position: absolute;
       bottom: 0;
       video {
@@ -245,6 +243,9 @@ $breakpoint-tablet: 1025px;
         @media (max-width: $breakpoint-tablet) {
           width: 69.867vw;
         }
+      }
+      @media (max-width: $breakpoint-tablet) {
+        width: 100%;
       }
     }
     .title-first-bloc-mobile {
@@ -275,19 +276,16 @@ $breakpoint-tablet: 1025px;
       }
     }
     .title-first-bloc {
-      width: 100%;
-      font-size: 2.714vw;
+      font-size: 38px;
       font-weight: bold;
-      margin: 7vw auto;
-      position: relative;
+      position: absolute;
+      top: 45%;
+      right: 18%;
       @media (max-width: $breakpoint-tablet) {
         display: none;
       }
       .title-placement {
-        width: 30vw;
-        position: absolute;
-        right: 0;
-        top: 20%;
+        width: 404px;
         .index-lign-flex {
           display: flex;
           justify-content: space-between;
@@ -301,8 +299,7 @@ $breakpoint-tablet: 1025px;
       'text img';
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    padding: 10vw 5vw 0 42vw;
-    height: 32.429vw;
+    padding: 147px 72px 39px 30%;
     @media (max-width: $breakpoint-tablet) {
       grid-template-areas:
       'img'
@@ -314,13 +311,14 @@ $breakpoint-tablet: 1025px;
     }
     .text {
       grid-area: text;
-      width: 23vw;
-      margin: 0 auto;
-      font-size: 0.972vw;
+      width: 317px;
+      font-size: 14px;
       text-align: justify;
+      margin-right: 0 39px 0 auto;
       @media (max-width: $breakpoint-tablet) {
         font-size: 2.667vw;
         width: 68.267vw;
+        margin: 0 auto;
       }
     }
     .img {
@@ -329,7 +327,8 @@ $breakpoint-tablet: 1025px;
         margin: 0 auto;
       }
       img {
-        width: 22vw;
+        width: 321px;
+        
         @media (max-width: $breakpoint-tablet) {
           width: 68.267vw;
           margin: 65px 0 16px 0;
@@ -339,8 +338,8 @@ $breakpoint-tablet: 1025px;
   }
   .three-bloc-index {
     display: flex;
-    padding: 0 17vw 0 2.5vw;
-    height: 44.653vw;
+    padding: 39px 0 0;
+    height: 643px;
     @media (max-width: $breakpoint-tablet) {
       display: block;
       height: 143.467vw;
@@ -348,13 +347,14 @@ $breakpoint-tablet: 1025px;
     }
     .images {
       width: 50%;
+      height: 100%;
       position: relative;
       @media (max-width: $breakpoint-tablet) {
         width: 100%;
         height: 107.333vw;
       }
       .img-01 {
-        width: 36.6vw;
+        width: 527px;
         position: absolute;
         top: 0;
         left: 0;
@@ -364,41 +364,46 @@ $breakpoint-tablet: 1025px;
         }
       }
       .img-02 {
-        width: 33.4vw;
+        width: 481px;
         position: absolute;
-        top: 12vw;
-        left: 8vw;
+        top: 177px;
+        left: 113px;
         z-index: 1;
         @media (max-width: $breakpoint-tablet) {
           width: 68.267vw;
-          top: 40vw;
+          top: 38.667vw;
+          left: 7.733vw;
         }
       }
     }
     .titles-three-bloc {
       width: 50%;
-      font-size: 2.639vw;
+      font-size: 38px;
       font-weight: bold;
       position: relative;
-      top: 25vw;
+      top: 100px;
       @media (max-width: $breakpoint-tablet) {
         width: 100%;
         top: 0;
         padding: 6.400vw 5.333vw 0 11.200vw;
       }
       .titles-placement {
-        width: 28.056vw;
-        margin: 0 0 0 auto;
+        width: 404px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         @media (max-width: $breakpoint-tablet) {
           margin: 0;
           width: 100%;
-          gap: 2.133vw 5.067vw;
+          gap: 2.133vw 7.067vw;
           display: grid;
           grid-template-areas:
             'case1 case2'
             'case3 .';
           grid-template-columns: 1fr 1fr;
           grid-template-rows: 1fr 1fr;
+          padding: 34.667vw 5.067vw 0 10.400vw;
         }
         .index-lign-flex {
           display: flex;
@@ -446,9 +451,9 @@ $breakpoint-tablet: 1025px;
     }
   }
   .four-bloc-index {
-    height: 54.583vw;
+    height: 786px;
     display: block;
-    padding: 0 5.486vw 0 0;
+    padding: 0 79px 0 0;
     @media (max-width: $breakpoint-tablet) {
       padding: 0;
       height: 183.467vw;
@@ -465,7 +470,7 @@ $breakpoint-tablet: 1025px;
         position: absolute;
         top: 19%;
         right: 11%;
-        width: 32.361vw;
+        width: 466px;
         z-index: 1;
         @media (max-width: $breakpoint-tablet) {
           width: 63.467vw;
@@ -476,7 +481,7 @@ $breakpoint-tablet: 1025px;
       .img-02 {
         position: absolute;
         top: 0;
-        width: 34.722vw;
+        width: 500px;
         z-index: 2;
         @media (max-width: $breakpoint-tablet) {
           width: 76.533vw;
@@ -488,9 +493,10 @@ $breakpoint-tablet: 1025px;
     }
   }
   .five-bloc-index {
-    height: 54.653vw;
+    height: 994px;
     display: block;
     padding: 5% 0 0 2.361vw;
+    width: 100%;
     @media (max-width: $breakpoint-tablet) {
       height: 146.667vw;
       padding: 0;
@@ -502,7 +508,7 @@ $breakpoint-tablet: 1025px;
       height: 100%;
       .img-01 {
         position: absolute;
-        width: 30.625vw;
+        width: 441px;
         z-index: 2;
         bottom: 70%;
         @media (max-width: $breakpoint-tablet) {
@@ -515,7 +521,7 @@ $breakpoint-tablet: 1025px;
       .img-02 {
         position: absolute;
         left: 11%;
-        width: 28.472vw;
+        width: 410px;
         z-index: 1;
         @media (max-width: $breakpoint-tablet) {
           width: 54.667vw;
@@ -527,7 +533,7 @@ $breakpoint-tablet: 1025px;
         position: absolute;
         top: 33%;
         left: -2%;
-        width: 25.764vw;
+        width: 371px;
         z-index: 3;
         @media (max-width: $breakpoint-tablet) {
           width: 48vw;
@@ -538,9 +544,9 @@ $breakpoint-tablet: 1025px;
     }
   }
   .six-bloc-index {
-    height: 32vw;
+    height: 762px;
     display: block;
-    padding: 0 7.778vw 0 0;
+    padding: 0 122px 0 0;
     @media (max-width: $breakpoint-tablet) {
       height: 85.333vw;
       padding: 0 15.467vw 0 10.133vw;
@@ -555,7 +561,7 @@ $breakpoint-tablet: 1025px;
       height: 100%;
       .img-01 {
         position: absolute;
-        width: 41.528vw;
+        width: 598px;
         z-index: 1;
         @media (max-width: $breakpoint-tablet) {
           width: 64.533vw;
@@ -563,8 +569,8 @@ $breakpoint-tablet: 1025px;
       }
       .img-02 {
         position: absolute;
-        width: 26.736vw;
-        top: 80%;
+        width: 385px;
+        top: 51%;
         right: 16%;
         z-index: 2;
         @media (max-width: $breakpoint-tablet) {
@@ -576,9 +582,9 @@ $breakpoint-tablet: 1025px;
     }
   }
   .seven-bloc-index {
-    height: 101.389vw;
+    height: 1460px;
     display: block;
-    padding: 0 0 7.014vw 7.569vw;
+    padding: 0 0 101px 109px;
     @media (max-width: $breakpoint-tablet) {
       height: 121.333vw;
       padding: 0;
@@ -590,10 +596,9 @@ $breakpoint-tablet: 1025px;
       height: 100%;
       .img-01 {
         position: absolute;
-        width: 100vw;
         z-index: 1;
         @media (max-width: $breakpoint-tablet) {
-          width: 113.733vw;
+          width: 100%;
           bottom: 0;
         }
       }
@@ -618,19 +623,20 @@ $breakpoint-tablet: 1025px;
             }
             span {
               display: block;
-              width: 34.722vw;
-              font-size: 2.639vw;
+              width: 501px;
+              font-size: 38px;
               font-weight: bold;
               padding-bottom: 15px;
               @media (max-width: $breakpoint-tablet) {
                 font-size: 4vw;
                 padding-bottom: 5px;
+                width: 100%;
               }
             }
           }
         }
         .arrow-up {
-          margin-right: 10.278vw;
+          margin-right: 148px;
           cursor: pointer;
           @media (max-width: $breakpoint-tablet) {
             display: none;

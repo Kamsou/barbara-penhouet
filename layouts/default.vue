@@ -14,7 +14,8 @@
     },
   }
 </script>
-<style>
+<style lang="scss">
+$breakpoint-tablet: 1025px;
 html {
   font-family:
     'Rubik',
@@ -34,6 +35,7 @@ html {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
   display: block;
+  background-color: #FCF3F4;
 }
 
 *,
@@ -47,6 +49,11 @@ html {
   background-color: #FCF3F4;
   color: #EF0311;
   height: 100%;
+  width: 100%;
+  @media (min-width: $breakpoint-tablet) {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
 }
 
 a {

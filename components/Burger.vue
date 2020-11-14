@@ -63,14 +63,14 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
+      height: 100vh;
       background-color: #E5E5E5;
       z-index: 100;
       padding: 12vw 22.667vw 20.267vw 16vw;
       transition: all 1s;
       .burger-logo {
-        width: 39.200vw;
-        margin-bottom: 30.400vw;
+        width: 147px;
+        margin-bottom: 115px;
       }
       .burger-instagram {
         width: 7.467vw;
@@ -78,11 +78,11 @@
       .burger-list {
         list-style: none;
         padding: 0;
-        padding-bottom: 25.067vw;
+        padding-bottom: 94px;
         li {
           padding: 5.333vw 0 2.667vw;
           border-bottom: 1px solid #EF0311;
-          font-size: 8vw;
+          font-size: clamp(20px, 8vw, 40px);
           font-weight: bold;
         }
       }
