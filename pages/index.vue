@@ -174,7 +174,7 @@ $breakpoint-tablet: 1025px;
   width: 100%;
   @media (max-width: $breakpoint-tablet) {
     width: 100%;
-    height: 93vh;
+    height: 100%;
   }
   .loading-page {
     position: fixed;
@@ -190,7 +190,7 @@ $breakpoint-tablet: 1025px;
     background-size: cover;
     transition: all 2s;
     background-color: #fff;
-    z-index: 10000;
+    z-index: 100000000;
     animation: disappear 2s cubic-bezier(0.895,0.03,0.685,0.22) 1.5s forwards;
     @media (max-width: $breakpoint-tablet) {
       background: url("/images/preloader-mobile.png");
@@ -215,6 +215,7 @@ $breakpoint-tablet: 1025px;
     position: relative;
     @media (max-width: $breakpoint-tablet) {
       padding: 0;
+      height: 100vh;
     }
     .arrow-up-mobile {
       display: none;
@@ -238,8 +239,6 @@ $breakpoint-tablet: 1025px;
       video {
         width: 100%;
         position: relative;
-        right: 20%;
-        top: 2%;
         @media (max-width: $breakpoint-tablet) {
           width: 69.867vw;
         }
