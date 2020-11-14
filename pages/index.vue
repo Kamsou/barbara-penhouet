@@ -172,6 +172,7 @@ $breakpoint-tablet: 1025px;
 
 .page-index {
   width: 100%;
+  background-color: #FCF3F4;
   @media (max-width: $breakpoint-tablet) {
     width: 100%;
     height: 100%;
