@@ -1,7 +1,7 @@
 <template>
-  <section class="page-painter-2017">
+  <section class="page-painter-2020" ref="smoothscroll">
     <article class="banner">
-      <h2>PEINTURES 2017 - 2018</h2>
+      <h2>PEINTURES 2019 - 2020</h2>
     </article>
     <article class="first-row">
       <div class="column-1">
@@ -14,15 +14,7 @@
           À l’image de la rue symbole de démocratie et de liberté, mes représentations sont une ode au vivre ensemble par le silence de l’interstice, incluant ses amours et désamours.</p>
       </div>
       <div class="column-2">
-        <img src="/images/painter/painter-2.jpg" alt="painter-2" />
-      </div>
-    </article>
-    <article class="second-row">
-      <div class="column-1">
-        <img src="/images/painter/painter-3.jpg" alt="painter-2" />
-      </div>
-      <div class="column-2">
-        <img src="/images/painter/painter-4.jpg" alt="painter-2" />
+        <img src="/images/painter/painter-6.jpg" alt="painter-2" />
       </div>
     </article>
     <Footer :up="up" />
@@ -35,15 +27,25 @@
     layout: 'bg-white',
     components: {
       Footer,
+    },
+    methods: {
+      up() {
+        const myEl = this.$refs.smoothscroll
+        this.$smoothScroll({
+          scrollTo: myEl,
+          duration: 2000,
+          updateHistory: false,
+        })
+      }
     }
   }
 </script>
 
 <style lang="scss" scoped>
-.page-painter-2017 {
+.page-painter-2020 {
   padding-top: 15vh;
   .banner {
-    background: url("/images/painter/painter-1.jpg");
+    background: url("/images/painter/painter-5.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;

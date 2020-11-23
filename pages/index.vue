@@ -1,7 +1,7 @@
-<template ref="smoothscroll">
-  <div class="page-index">
+<template>
+  <div class="page-index" ref="smoothscroll">
     <!-- PRELOADER -->
-    <div class="loading-page"></div>
+    <!-- <div class="loading-page"></div> -->
     <!-- -->
     <section class="first-bloc-index">
       <div class="arrow-up-mobile">
@@ -76,15 +76,17 @@
               <span class="title">PEINTURES</span>
             </div>
           </nuxt-link>
-          <div class="index-lign-flex case-02">
-            <span class="couple-numbers">
-              <span>2</span>
-              <span>0</span>
-              <span>2</span>
-              <span>0</span>
-            </span>
-            <span class="title">PEINTURES</span>
-          </div>
+          <nuxt-link to="/painting-2020/">
+            <div class="index-lign-flex case-02">
+              <span class="couple-numbers">
+                <span>2</span>
+                <span>0</span>
+                <span>2</span>
+                <span>0</span>
+              </span>
+              <span class="title">PEINTURES</span>
+            </div>
+          </nuxt-link>
           <div class="index-lign-flex case-03">
             <span class="couple-numbers">
               <span>2</span>
@@ -131,7 +133,7 @@
               <span>Instagram</span>
             </a>
           </div>
-          <div class="arrow-up" @click="up()">
+          <div class="arrow-up" @click="up">
             <img src="/images/index/arrow.svg" alt="">
           </div>
         </div>

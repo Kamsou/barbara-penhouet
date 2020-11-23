@@ -1,0 +1,69 @@
+<template>
+  <div class="footer">
+    <div class="links">
+      <a href="mailto:barbarapenhouetstudio@gmail.com" target="_blank">
+        <span>Contact</span>
+      </a>
+      <a href="https://www.facebook.com/Barbara-P-354201155083653/" target="_blank">
+        <span>Facebook</span>
+      </a>
+      <a href="https://www.instagram.com/barbarabara_p/" target="_blank">
+        <span>Instagram</span>
+      </a>
+    </div>
+    <div class="arrow-up" @click="up">
+      <img src="/images/index/arrow.svg" alt="">
+    </div>
+  </div>
+</template>
+
+<script>
+  export default {
+    props: {
+      up: { type: Function },
+    },
+  }
+</script>
+
+<style lang="scss" scoped>
+$breakpoint-tablet: 1025px;
+.footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 100%;
+        z-index: 2;
+        padding: 207px 90px 90px;
+        @media (max-width: $breakpoint-tablet) {
+          padding: 0 0 5.667vw 2.667vw;
+        }
+        .links {
+          a {
+            text-decoration: none;
+            color: #EF0311;
+            &:hover {
+              color: white;
+            }
+            span {
+              display: block;
+              width: 501px;
+              font-size: 38px;
+              font-weight: bold;
+              padding-bottom: 15px;
+              @media (max-width: $breakpoint-tablet) {
+                font-size: 4vw;
+                padding-bottom: 5px;
+                width: 100%;
+              }
+            }
+          }
+        }
+        .arrow-up {
+          margin-right: 20px;
+          cursor: pointer;
+          @media (max-width: $breakpoint-tablet) {
+            display: none;
+          }
+        }
+      }
+</style>

@@ -1,7 +1,7 @@
 <template>
   <section class="fixed">
     <div class="page_navbar">
-      <nuxt-link to="/" class="logo-link">
+      <nuxt-link to="" @click.native="test" class="logo-link">
         <img
           class="navbar_logo"
           src="/images/logo.png"
@@ -39,6 +39,11 @@ import Burger from '@/components/Burger.vue';
   export default {
     components: {
       Burger,
+    }, 
+    methods: {
+      test() {
+        this.$router.push({path: '/'})
+      }
     }
   }
 </script>
