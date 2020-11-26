@@ -51,7 +51,7 @@ html {
   height: 100%;
   width: 100%;
   @media (min-width: $breakpoint-tablet) {
-    max-width: 1440px;
+    width: 1440px;
     margin: 0 auto;
   }
 }

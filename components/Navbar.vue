@@ -13,12 +13,16 @@
         <div>
           <span data-text="Art">Art</span>
         </div>
-        <div>
-          <span data-text="Illustrations">Illustrations</span>
-        </div>
-        <div>
-          <span data-text="Intérieur">Intérieur</span>
-        </div>
+        <nuxt-link to="/illustrations-et-animations/">
+          <div>
+            <span data-text="Illustrations">Illustrations</span>
+          </div>
+        </nuxt-link>
+        <nuxt-link to="/interior/">
+          <div>
+            <span data-text="Intérieur">Intérieur</span>
+          </div>
+        </nuxt-link>
         <div>
           <span data-text="Shop">Shop</span>
         </div>
