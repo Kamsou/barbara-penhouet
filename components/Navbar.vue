@@ -1,7 +1,7 @@
 <template>
   <section class="fixed">
     <div class="page_navbar">
-      <nuxt-link to="" @click.native="test" class="logo-link">
+      <nuxt-link to="/" class="logo-link">
         <img
           class="navbar_logo"
           src="/images/logo.png"
@@ -10,9 +10,9 @@
       </nuxt-link>
       <Burger class="menu-mobile"/>
       <div class="navbar_menu">
-        <div>
+        <!-- <div>
           <span data-text="Art">Art</span>
-        </div>
+        </div> -->
         <nuxt-link to="/illustrations-et-animations/">
           <div>
             <span data-text="Illustrations">Illustrations</span>
@@ -46,11 +46,6 @@ import Burger from '@/components/Burger.vue';
     components: {
       Burger,
     }, 
-    methods: {
-      test() {
-        this.$router.push({path: '/'})
-      }
-    }
   }
 </script>
 

@@ -1,7 +1,7 @@
 <template>
   <section class="page-painter-2020" ref="smoothscroll">
     <article class="banner">
-      <h2>PEINTURES 2019 - 2020</h2>
+      <h2>PEINTURES 2019-2020</h2>
     </article>
     <article class="first-row">
       <div class="column-1">
@@ -42,8 +42,9 @@
 </script>
 
 <style lang="scss" scoped>
+$breakpoint-tablet: 1025px;
+
 .page-painter-2020 {
-  padding-top: 15vh;
   .banner {
     background: url("/images/painter/painter-5.jpg");
     background-position: center;
@@ -51,6 +52,13 @@
     background-size: contain;
     height: 554px;
     position: relative;
+    @media (max-width: $breakpoint-tablet) {
+      background: url("/images/painter/painter-5-mobile.jpg");
+      background-position: right;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 80vw;
+    }
     h2 {
       position: absolute;
       top: 50%;
@@ -58,27 +66,52 @@
       transform: translate(-50%, -50%);
       font-size: 110px;
       color: #FFFFFF;
+      @media (max-width: $breakpoint-tablet) {
+        font-size: 12.800vw;
+        color: #EF0311;
+        text-align: center;
+      }
     }
   }
   .first-row {
     display: flex;
     padding: 33px 100px;
     max-width: 100%;
+    @media (max-width: $breakpoint-tablet) {
+      display: block;
+      padding: 8.800vw 8.533vw;
+    }
     .column-1 {
       width: 50%;
       color: #EF0311;
       padding-right: 55px;
+      @media (max-width: $breakpoint-tablet) {
+        width: 100%;
+        padding-right: 0;
+      }
       span {
         font-size: 20px;
         font-weight: bold;
+        @media (max-width: $breakpoint-tablet) {
+          text-align: justify;
+          font-size: 3.733vw;
+        }
       }
       p {
         font-size: 14px;
         padding-top: 25px;
+        @media (max-width: $breakpoint-tablet) {
+          text-align: justify;
+          font-size: 2.667vw;
+        }
       }
     }
     .column-2 {
       width: 50%;
+      @media (max-width: $breakpoint-tablet) {
+        width: 100%;
+        margin-top: 6.667vw;
+      }
       img {
         width: 100%;
       }

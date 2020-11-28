@@ -4,7 +4,7 @@
     <!-- <div class="loading-page"></div> -->
     <!-- -->
     <section class="first-bloc-index">
-      <div class="arrow-up-mobile">
+      <div class="arrow-up-mobile" @click="up">
         <img src="/images/index/arrow.svg" alt="">
       </div>
       <div class="title-first-bloc-mobile">

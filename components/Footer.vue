@@ -14,13 +14,19 @@
     <div class="arrow-up" @click="up">
       <img src="/images/index/arrow.svg" alt="">
     </div>
+    <div class="arrow-up-mobile" @click="up">
+      <img src="/images/index/arrow.svg" alt="">
+    </div>
   </div>
 </template>
 
 <script>
   export default {
     props: {
-      up: { type: Function },
+      up: {
+        type: Function,
+        default: () => {}
+      },
     },
   }
 </script>
@@ -63,6 +69,21 @@ $breakpoint-tablet: 1025px;
           cursor: pointer;
           @media (max-width: $breakpoint-tablet) {
             display: none;
+          }
+        }
+        .arrow-up-mobile {
+          display: none;
+          @media (max-width: $breakpoint-tablet) {
+            display: block;
+            position: fixed;
+            bottom: 9.600vw;
+            right: 6.933vw;
+            z-index: 5;
+          }
+          img {
+            @media (max-width: $breakpoint-tablet) {
+              width: 7.200vw;
+            }
           }
         }
       }

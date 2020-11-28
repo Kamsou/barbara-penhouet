@@ -46,13 +46,16 @@ html {
 
 .content {
   padding-top: 15vh;
+  @media (min-width: $breakpoint-tablet) {
+    padding-top: 14vw
+  }
 }
 
 .page {
   background-color: #ffffff;
   color: #EF0311;
   height: 100%;
-  @media (min-width: $breakpoint-tablet) {
+  @media (max-width: $breakpoint-tablet) {
     width: 100%;
     margin: 0 auto;
   }

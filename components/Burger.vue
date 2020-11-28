@@ -10,16 +10,26 @@
                 <span class="burger-bar burger-bar--3"></span>
             </button>
             <div v-if="isBurgerActive" class="sidebar">
-              <img
-                class="burger-logo"
-                src="/images/logo.png"
-                alt="Barbara Penhouet"
-              />
+              <nuxt-link to="/" class="logo-link">
+                <img
+                  class="burger-logo"
+                  src="/images/logo.png"
+                  alt="Barbara Penhouet"
+                />
+              </nuxt-link>
               <ul class="burger-list">
-                <li>Art</li>
-                <li>Illustrations</li>
-                <li>Intérieur</li>
-                <li>Shop</li>
+                <nuxt-link to="/painter/">
+                  <li>Painter</li>
+                </nuxt-link>
+                <nuxt-link to="/illustrations-et-animations/">
+                  <li>Illustrations</li>
+                </nuxt-link>
+                <nuxt-link to="/interior/">
+                  <li>Intérieur</li>
+                </nuxt-link>
+                <nuxt-link to="/shop/">
+                  <li>Shop</li>
+                </nuxt-link>
               </ul>
               <div>
                 <img
@@ -78,7 +88,7 @@
       .burger-list {
         list-style: none;
         padding: 0;
-        padding-bottom: 94px;
+        margin-bottom: 94px;
         li {
           padding: 5.333vw 0 2.667vw;
           border-bottom: 1px solid #EF0311;
