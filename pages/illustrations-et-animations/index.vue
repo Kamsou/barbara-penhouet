@@ -4,18 +4,13 @@
       <span>ILLUSTRATIONS & ANIMATIONS</span>
     </div>
     <div class="blocs">
-      <div class="subject-1">
-        <img src="/images/illustrations-animations/index-1.jpg" alt="L'humain" />
-        <span>L’HUMAIN</span>
-      </div>
-      <div class="subject-2">
-        <img src="/images/illustrations-animations/index-2.jpg" alt="Architecture" />
-        <span>ARCHITECTURE</span>
-      </div>
-      <div class="subject-3">
-        <img src="/images/illustrations-animations/index-3.jpg" alt="Jardins" />
-        <span>JARDINS</span>
-      </div>
+      
+        <div :class="`subject-${subject.id}`" v-for="subject in subjects" :key="subject.slug">
+          <nuxt-link :to="`/illustrations-et-animations/${subject.slug}`">
+            <img :src="subject.img" alt="">
+            <span>{{ subject.name }}</span>
+          </nuxt-link>
+        </div>
     </div>
     <Footer :up="up" />
   </section>
@@ -27,6 +22,30 @@
     layout: 'default',
     components: {
       Footer,
+    },
+    data() {
+      return {
+        subjects: [
+          {
+            id: 1,
+            slug: 'l-humain',
+            img: '/images/illustrations-animations/index-1.jpg',
+            name: 'L’HUMAIN',
+          },
+          {
+            id: 2,
+            slug: 'architecture',
+            img: '/images/illustrations-animations/index-2.jpg',
+            name: 'ARCHITECTURE',
+          },
+          {
+            id: 3,
+            slug: 'jardins',
+            img: '/images/illustrations-animations/index-3.jpg',
+            name: 'JARDINS',
+          },
+        ],
+      }
     },
     methods: {
       up() {
