@@ -44,12 +44,12 @@
 <style lang="scss" scoped>
 .page-illustrations-animations {
   padding-top: 15vh;
-  width: 100%;
+  width: 100vw;
   .title {
     padding: 8.403vw 0;
     text-align: center;
     span {
-      font-size: 7.639vw;
+      font-size: clamp(6.250vw, 7.639vw, 9.722vw);
       font-weight: bold;
     }
   }

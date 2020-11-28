@@ -53,7 +53,7 @@ html {
   color: #EF0311;
   height: 100%;
   @media (min-width: $breakpoint-tablet) {
-    width: 1440px;
+    width: 100%;
     margin: 0 auto;
   }
 }
