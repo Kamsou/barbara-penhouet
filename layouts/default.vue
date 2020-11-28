@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <Navbar />
-    <Nuxt />
+    <Nuxt class="content" />
     <div id="snipcart" data-api-key="MjMyMzQ5Y2EtNTA0Yi00YWQ0LTlkNGEtMTY5MGFhN2ExOTVhNjM3MzMxODY5ODY3OTIyMDk0" hidden></div>
     <script src="https://cdn.snipcart.com/themes/v3.0.19/default/snipcart.js"></script>
   </div>
@@ -43,6 +43,10 @@ html {
 *::after {
   box-sizing: border-box;
   margin: 0;
+}
+
+.content {
+  padding-top: 15vh;
 }
 
 .page {

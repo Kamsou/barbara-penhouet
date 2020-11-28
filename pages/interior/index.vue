@@ -5,11 +5,11 @@
     </div>
     <div class="blocs">
       <div class="subject-1">
-        <img src="/images/illustrations-animations/index-4.jpg" alt="L'humain" />
+        <img src="/images/illustrations-animations/index-4.jpg" alt="Architecture et ambiances" />
         <span>ARCHITECTURE & AMBIANCES</span>
       </div>
       <div class="subject-2">
-        <img src="/images/illustrations-animations/index-5.jpg" alt="L'humain" />
+        <img src="/images/illustrations-animations/index-5.jpg" alt="Design et objets" />
         <span>DESIGN & OBJETS</span>
       </div>
     </div>
@@ -23,6 +23,16 @@
     layout: 'default',
     components: {
       Footer,
+    },
+    methods: {
+      up() {
+        const myEl = this.$refs.smoothscroll
+        this.$smoothScroll({
+          scrollTo: myEl,
+          duration: 2000,
+          updateHistory: false,
+        })
+      },
     },
   }
 </script>

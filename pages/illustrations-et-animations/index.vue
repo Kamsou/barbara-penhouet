@@ -28,17 +28,28 @@
     components: {
       Footer,
     },
+    methods: {
+      up() {
+        const myEl = this.$refs.smoothscroll
+        this.$smoothScroll({
+          scrollTo: myEl,
+          duration: 2000,
+          updateHistory: false,
+        })
+      },
+    }
   }
 </script>
 
 <style lang="scss" scoped>
 .page-illustrations-animations {
   padding-top: 15vh;
+  width: 100%;
   .title {
-    padding: 121px 0;
+    padding: 8.403vw 0;
     text-align: center;
     span {
-      font-size: 110px;
+      font-size: 7.639vw;
       font-weight: bold;
     }
   }
@@ -65,6 +76,7 @@
     .subject-2,
     .subject-3 {
       position: relative;
+      width: 100%;
       img {
         width: 100%;
         height: 100%;

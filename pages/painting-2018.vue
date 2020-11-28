@@ -35,7 +35,17 @@
     layout: 'bg-white',
     components: {
       Footer,
-    }
+    },
+    methods: {
+      up() {
+        const myEl = this.$refs.smoothscroll
+        this.$smoothScroll({
+          scrollTo: myEl,
+          duration: 2000,
+          updateHistory: false,
+        })
+      },
+    },
   }
 </script>
 

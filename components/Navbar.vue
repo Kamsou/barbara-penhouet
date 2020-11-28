@@ -23,9 +23,11 @@
             <span data-text="Intérieur">Intérieur</span>
           </div>
         </nuxt-link>
-        <div>
-          <span data-text="Shop">Shop</span>
-        </div>
+        <nuxt-link to="/shop/">
+          <div>
+            <span data-text="Shop">Shop</span>
+          </div>
+        </nuxt-link>
         <a href="https://www.instagram.com/barbarabara_p/" target="_blank">
           <img
           class="navbar_instagram"
