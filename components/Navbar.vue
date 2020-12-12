@@ -56,7 +56,7 @@ $breakpoint-tablet: 1025px;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  z-index: 99;
+  z-index: 10;
   .page_navbar {
     display: flex;
     align-items: center;

@@ -10,6 +10,9 @@ export default {
   ** See https://nuxtjs.org/api/configuration-head
   */
   head: {
+    htmlAttrs: {
+      lang: 'fr',
+    },
     title: 'Barbara Pentahouet',
     meta: [
       { charset: 'utf-8' },
