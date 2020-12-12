@@ -22,13 +22,7 @@ export default {
     link: [
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap' },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel:"preconnect", href:"https://app.snipcart.com" },
-      { rel:"preconnect", href:"https://cdn.snipcart.com" },
-      { rel:"stylesheet", href:"https://cdn.snipcart.com/themes/v3.0.27/default/snipcart.css" },
     ],
-    script: [
-      { src: 'https://cdn.snipcart.com/themes/v3.0.27/default/snipcart.js' }
-    ]
   },
 
   /*
@@ -52,7 +46,11 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
+    '@nuxtjs/snipcart',
   ],
+  snipcart: {
+    key: process.env.SNIPCART_API_KEY,
+  },
   /*
   ** Nuxt.js modules
   */
