@@ -18,7 +18,8 @@
         class="buy-button snipcart-add-item"
         :data-item-id="products[id].sku"
         :data-item-name="products[id].name"
-        :data-item-price="products[id].price" 
+        :data-item-price="products[id].price"
+        :data-item-url="products[id].url" 
         :data-item-image="products[id].img"
         data-item-description="T-shirt blanc Barbara Penhouet"
         data-item-custom1-name="Taille"
@@ -55,6 +56,7 @@
             img: '/images/shop/products/shop-0.jpg',
             name: 'T-SHIRT IMPRIME- xx NAME',
             price: 40,
+            url: '/shop/0'
           },
           {
             sku: 1,
