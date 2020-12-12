@@ -19,7 +19,6 @@
         :data-item-id="products[id].sku"
         :data-item-name="products[id].name"
         :data-item-price="products[id].price" 
-        :data-item-url="`http://localhost:3000/`"
         :data-item-image="products[id].img"
         data-item-description="T-shirt blanc Barbara Penhouet"
         data-item-custom1-name="Taille"
