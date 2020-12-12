@@ -21,7 +21,10 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel:"preconnect", href:"https://app.snipcart.com" },
       { rel:"preconnect", href:"https://cdn.snipcart.com" },
-      { rel:"stylesheet", href:"https://cdn.snipcart.com/themes/v3.0.19/default/snipcart.css" },
+      { rel:"stylesheet", href:"https://cdn.snipcart.com/themes/v3.0.27/default/snipcart.css" },
+    ],
+    script: [
+      { src: 'https://cdn.snipcart.com/themes/v3.0.27/default/snipcart.js' }
     ]
   },
 

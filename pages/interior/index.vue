@@ -4,14 +4,18 @@
       <span>INTERIEUR</span>
     </div>
     <div class="blocs">
-      <div class="subject-1">
-        <img src="/images/illustrations-animations/index-4.jpg" alt="Architecture et ambiances" />
-        <span>ARCHITECTURE & AMBIANCES</span>
-      </div>
-      <div class="subject-2">
-        <img src="/images/illustrations-animations/index-5.jpg" alt="Design et objets" />
-        <span>DESIGN & OBJETS</span>
-      </div>
+      <nuxt-link to="/interior/architecture-ambiances/">
+        <div class="subject-1">
+          <img src="/images/illustrations-animations/index-4.jpg" alt="Architecture et ambiances" />
+          <span>ARCHITECTURE & AMBIANCES</span>
+        </div>
+      </nuxt-link>
+      <nuxt-link to="/interior/design-objets/">
+        <div class="subject-2">
+          <img src="/images/illustrations-animations/index-5.jpg" alt="Design et objets" />
+          <span>DESIGN & OBJETS</span>
+        </div>
+      </nuxt-link>
     </div>
     <Footer :up="up" />
   </section>
@@ -38,14 +42,22 @@
 </script>
 
 <style lang="scss" scoped>
+$breakpoint-tablet: 1025px;
+
 .page-illustrations-animations {
   padding-top: 15vh;
   .title {
     padding: 121px 0;
     text-align: center;
+    @media (max-width: $breakpoint-tablet) {
+      padding: 60px 0;
+    }
     span {
       font-size: 110px;
       font-weight: bold;
+      @media (max-width: $breakpoint-tablet) {
+        font-size: 12.800vw;
+      }
     }
   }
   .blocs {
@@ -54,6 +66,10 @@
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    @media (max-width: $breakpoint-tablet) {
+      display: block;
+      margin-bottom: 50px;
+    }
   }
 
     .subject-1 {
@@ -80,6 +96,9 @@
         font-weight: bold;
         color: #ffffff;
         text-align: center;
+        @media (max-width: $breakpoint-tablet) {
+          font-size: 28px;
+        }
       }
     }
 }

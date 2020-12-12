@@ -61,6 +61,7 @@
 </script>
 
 <style lang="scss" scoped>
+
 .page-illustrations-animations {
   padding-top: 15vh;
   width: 100vw;

@@ -46,28 +46,38 @@
 </script>
 
 <style lang="scss" scoped>
+$breakpoint-tablet: 1025px;
+
 .page-shop {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   column-gap: 71px;
   row-gap: 74px;
   width: 100%;
-  padding-left: 124px;
-  padding-right: 124px;
   padding: 220px 124px;
+  @media (max-width: $breakpoint-tablet) {
+    column-gap: 5.333vw;
+    justify-content: space-between;
+    row-gap: 5.333vw;
+    padding: 21.333vw 8.800vw;
+  }
   .item {
     width: 350px;
     text-align: center;
+    font-size: 14px;
+    @media (max-width: $breakpoint-tablet) {
+      width: 38.400vw;
+      font-size: 2.133vw;
+    }
     a img {
       width: 100%;
     }
     h3 {
-      font-size: 14px;
       font-weight: 400;
       padding-top: 10px;
     }
     h4 {
-      font-size: 14px;
       font-weight: bold;
     }
   }

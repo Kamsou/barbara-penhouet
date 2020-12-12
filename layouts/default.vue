@@ -2,8 +2,7 @@
   <div class="page">
     <Navbar />
     <Nuxt class="content" />
-    <div id="snipcart" data-api-key="MjMyMzQ5Y2EtNTA0Yi00YWQ0LTlkNGEtMTY5MGFhN2ExOTVhNjM3MzMxODY5ODY3OTIyMDk0" hidden></div>
-    <script src="https://cdn.snipcart.com/themes/v3.0.19/default/snipcart.js"></script>
+    <div id="snipcart" :data-api-key="apiKey"></div>
   </div>
 </template>
 <script>
@@ -12,6 +11,11 @@
     components: {
       Navbar
     },
+    data() {
+      return {
+        apiKey: process.env.SNIPCART_API_KEY || 'MjMyMzQ5Y2EtNTA0Yi00YWQ0LTlkNGEtMTY5MGFhN2ExOTVhNjM3MzMxODY5ODY3OTIyMDk0'
+      }
+    }
   }
 </script>
 <style lang="scss">
