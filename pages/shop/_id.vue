@@ -92,6 +92,7 @@ $breakpoint-tablet: 1025px;
     @media (max-width: $breakpoint-tablet) {
       width: 49.600vw;
       margin: 0 auto;
+      padding-top: 10.667vw;
     }
     span {
       @media (max-width: $breakpoint-tablet) {
