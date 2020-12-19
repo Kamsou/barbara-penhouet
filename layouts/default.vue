@@ -20,6 +20,7 @@
 </script>
 <style lang="scss">
 $breakpoint-tablet: 1025px;
+
 html {
   font-family:
     'Rubik',
@@ -62,7 +63,7 @@ html {
   height: 100%;
   width: 100%;
   @media (min-width: $breakpoint-tablet) {
-    width: 100%;
+    max-width: 1440px;
     margin: 0 auto;
   }
 }

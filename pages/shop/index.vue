@@ -1,8 +1,8 @@
 <template>
   <div class="page-shop">
-    <div class="item" v-for="product in products" :key="product.id">
+    <div class="item" v-for="product in shop.products" :key="product.id">
       <nuxt-link :to="`/shop/${product.id}`">
-        <img :src="product.img" />
+        <img :src="product.image.url" />
       </nuxt-link>
       <h3>{{ product.name }}</h3>
       <h4>{{ product.price }} EUR</h4>
@@ -13,36 +13,16 @@
 <script>
   export default {
     layout: 'default',
-    data() {
-      return {
-        products: [
-          {
-            id: 0,
-            img: '/images/shop/products/shop-0.jpg',
-            name: 'T-SHIRT IMPRIME- xx NAME',
-            price: 40,
-          },
-          {
-            id: 1,
-            img: '/images/shop/products/shop-1.jpg',
-            name: 'T-SHIRT IMPRIME- xx NAME',
-            price: 15,
-          },
-          {
-            id: 2,
-            img: '/images/shop/products/shop-2.jpg',
-            name: 'FOULARD- xx NAME',
-            price: 60,
-          },
-          {
-            id: 3,
-            img: '/images/shop/products/shop-3.jpg',
-            name: 'FOULARD- xx NAME',
-            price: 60,
-          },
-        ]
+    async asyncData({ $prismic, error }) {
+      const shop = (
+        await $prismic.api.getSingle('shop')
+      ).data
+      if (shop) {
+        return { shop }
+      } else {
+        error({ statusCode: 404, message: 'Page not found' })
       }
-    }
+    },
   }
 </script>
 
@@ -51,7 +31,6 @@ $breakpoint-tablet: 1025px;
 
 .page-shop {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   column-gap: 71px;
   row-gap: 74px;

@@ -12,6 +12,7 @@
   "dependencies": {
     "@nuxtjs/apollo": "^4.0.1-rc.1",
     "@nuxtjs/axios": "^5.11.0",
+    "@nuxtjs/prismic": "^1.2.4",
     "@nuxtjs/snipcart": "^1.1.0",
     "node-sass": "^4.14.1",
     "nuxt": "^2.14.5",

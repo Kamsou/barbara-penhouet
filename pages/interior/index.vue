@@ -1,5 +1,5 @@
 <template>
-  <section class="page-illustrations-animations">
+  <section class="page-interior">
     <div class="title">
       <span>INTERIEUR</span>
     </div>
@@ -44,7 +44,7 @@
 <style lang="scss" scoped>
 $breakpoint-tablet: 1025px;
 
-.page-illustrations-animations {
+.page-interior {
   padding-top: 15vh;
   .title {
     padding: 121px 0;

@@ -61,16 +61,19 @@
 </script>
 
 <style lang="scss" scoped>
+$breakpoint-tablet: 1025px;
 
 .page-illustrations-animations {
   padding-top: 15vh;
-  width: 100vw;
   .title {
     padding: 8.403vw 0;
     text-align: center;
     span {
       font-size: clamp(6.250vw, 7.639vw, 9.722vw);
       font-weight: bold;
+      @media (min-width: $breakpoint-tablet) {
+        font-size: 110px;
+      }
     }
   }
   .blocs {
@@ -106,7 +109,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-size: 49px;
+        font-size: clamp(3.3vw, 3.3vw, 5vw);
         font-weight: bold;
         color: #ffffff;
       }

@@ -57,12 +57,10 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/apollo'
+    '@nuxtjs/prismic',
   ],
-  apollo: {
-    clientConfigs: {
-      default: '~/apollo/config.js'
-    }
+  prismic: {
+    endpoint: "https://barbarap.cdn.prismic.io/api/v2",
   },
   /*
   ** Axios module configuration
@@ -77,8 +75,5 @@ export default {
   },
 
   publicRuntimeConfig: {},
-  privateRuntimeConfig: {
-    httpEndpoint: process.env.HTTP_ENDPOINT,
-    getAuth: process.env.TOKEN_AUTH_DATO
-  }
+  privateRuntimeConfig: {}
 }

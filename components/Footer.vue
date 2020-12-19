@@ -99,5 +99,9 @@ $breakpoint-tablet: 1025px;
   justify-content: space-between;
   padding: 0 8vw 5.333vw;
   font-size: 2.667vw;
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 18px;
+    padding: 0 250px 60px;
+  }
 }
 </style>
