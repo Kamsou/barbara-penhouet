@@ -2,30 +2,31 @@
   <section>
     <div class="page-product">
       <div class="image-product">
-        <img :src="shop.products[id].image.url" alt="" />
+        <img :src="product.image.url" alt="" />
       </div>
       <div class="details-product">
-        <span class="product-title">{{ shop.products[id].name }}</span>
-        <span class="product-price">{{ shop.products[id].price }} € TTC</span>
+        <span class="product-title">{{ product.name }}</span>
+        <span class="product-price">{{ product.price }} € TTC</span>
         <span class="product-description">T-shirt blanc Barbara Penhouet</span>
         <span class="product-description">Print brodé de la série “nom de la série”</span>
         <span class="product-description">Fabriqué en France. 100% coton.</span>
         <div class="product-sizes">
-          <button class="btn">XS</button>
-          <button class="btn">S</button>
-          <button class="btn">M</button>
-          <button class="btn">L</button>
+          <button class="btn" @click="activeButton = 'XS'" :class="{active: activeButton === 'XS' }">XS</button>
+          <button class="btn" @click="activeButton = 'S'" :class="{active: activeButton === 'S' }">S</button>
+          <button class="btn" @click="activeButton = 'M'" :class="{active: activeButton === 'M' }">M</button>
+          <button class="btn" @click="activeButton = 'L'" :class="{active: activeButton === 'L' }">L</button>
         </div>
         <button
-        class="buy-button snipcart-add-item"
-        :data-item-id="shop.products[id].id"
-        :data-item-name="shop.products[id].name"
-        :data-item-price="shop.products[id].price"
-        :data-item-url="shop.products[id].url" 
-        :data-item-image="shop.products[id].image.url"
-        data-item-description="T-shirt blanc Barbara Penhouet"
-        data-item-custom1-name="Taille"
-        data-item-custom1-options="XS|S|M|L"
+          class="buy-button snipcart-add-item"
+          :data-item-id="product.id"
+          :data-item-name="product.name"
+          :data-item-price="product.price"
+          :data-item-url="product.url" 
+          :data-item-image="product.image.url"
+          data-item-description="T-shirt blanc Barbara Penhouet"
+          data-item-custom1-name="Taille"
+          :data-item-custom1-value="activeButton"
+          data-item-custom1-options="XS|S|M|L"
         >
           AJOUTER AU PANIER
         </button>
@@ -49,12 +50,13 @@
       Footer
     },
     layout: 'default',
-    async asyncData({ $prismic, error }) {
-      const shop = (
+    async asyncData({ $prismic, error, route }) {
+      const data = (
         await $prismic.api.getSingle('shop')
-      ).data
-      if (shop) {
-        return { shop }
+      ).data.products.filter((product) => product.id === route.params.id)
+      const product = data[0]
+      if (product) {
+        return { product }
       } else {
         error({ statusCode: 404, message: 'Page not found' })
       }
@@ -62,6 +64,7 @@
     data() {
       return {
         id: this.$route.params.id,
+        activeButton: '',
       }
     },
   }

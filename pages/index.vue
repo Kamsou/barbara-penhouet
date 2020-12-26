@@ -173,7 +173,8 @@ export default {
 $breakpoint-tablet: 1025px;
 
 .page-index {
-  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
   background-color: #FCF3F4;
   @media (max-width: $breakpoint-tablet) {
     width: 100%;
