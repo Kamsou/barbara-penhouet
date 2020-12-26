@@ -98,7 +98,7 @@ $breakpoint-tablet: 1025px;
   }
   .details-product {
     width: 369px;
-    margin: 0 0 0 auto;
+    margin: 0 0 0 30px;
     @media (max-width: $breakpoint-tablet) {
       width: 49.600vw;
       margin: 0 auto;
