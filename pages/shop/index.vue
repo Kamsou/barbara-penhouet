@@ -51,7 +51,7 @@ $breakpoint-tablet: 1025px;
     font-size: 14px;
     @media (max-width: $breakpoint-tablet) {
       width: 38.400vw;
-      font-size: 3.200vw;
+      font-size: 2.133vw;
     }
     a img {
       width: 100%;

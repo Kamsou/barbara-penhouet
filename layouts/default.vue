@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div class="page-white">
     <Navbar />
     <Nuxt class="content" />
     <div id="snipcart" :data-api-key="apiKey"></div>
@@ -57,7 +57,7 @@ html {
   }
 }
 
-.page {
+.page-white {
   background-color: #FCF3F4;
   color: #EF0311;
   height: 100%;
