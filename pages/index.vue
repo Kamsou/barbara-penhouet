@@ -64,59 +64,60 @@
         <img class="img-02" src="/images/index/corps-nus.png" alt="corps nus">
       </div>
       <div class="titles-three-bloc">
-        <div class="titles-placement">
-          <nuxt-link to="/painting-2018/">
+        <div class="title-placement">
+          <nuxt-link to="/painting-2017-2018/">
             <div class="index-lign-flex case-01">
               <span class="couple-numbers">
                 <span>2</span>
                 <span>0</span>
+                <span>1</span>
+                <span>7</span>
+                <span>-</span>
                 <span>1</span>
                 <span>8</span>
               </span>
               <span class="title">PEINTURES</span>
             </div>
           </nuxt-link>
-          <nuxt-link to="/painting-2020/">
+          <nuxt-link to="/painting-2019-2020/">
             <div class="index-lign-flex case-02">
               <span class="couple-numbers">
                 <span>2</span>
                 <span>0</span>
+                <span>1</span>
+                <span>9</span>
+                <span>-</span>
                 <span>2</span>
                 <span>0</span>
               </span>
               <span class="title">PEINTURES</span>
             </div>
           </nuxt-link>
-          <div class="index-lign-flex case-03">
-            <span class="couple-numbers">
-              <span>2</span>
-              <span>0</span>
-              <span>1</span>
-              <span>8</span>
-            </span>
-            <span class="title">FUSAINS</span>
-          </div>
         </div>
       </div>
     </section>
     <section class="four-bloc-index">
-      <div class="superposition">
-        <img class="img-01" src="/images/index/homme-plongeon.png" alt="homme qui plonge">
-        <img class="img-02" src="/images/index/illustrations-animations.png" alt="illustrations et animations">
-      </div>
+      <nuxt-link to="/illustrations-et-animations/">
+        <div class="superposition">
+          <img class="img-01" src="/images/index/homme-plongeon.png" alt="homme qui plonge">
+          <img class="img-02" src="/images/index/illustrations-animations.png" alt="illustrations et animations">
+        </div>
+      </nuxt-link>
     </section>
-    <section class="five-bloc-index">
+    <!-- <section class="five-bloc-index">
       <div class="superposition">
         <img class="img-01" src="/images/index/interieur.png" alt="interieur">
         <img class="img-02" src="/images/index/salon.png" alt="un salon dessiné">
         <img class="img-03" src="/images/index/objet-design.png" alt="un objet design">
       </div>
-    </section>
+    </section> -->
     <section class="six-bloc-index">
-      <div class="superposition">
-        <img class="img-01" src="/images/index/tee-shirt.png" alt="tee-shirt">
-        <img class="img-02" src="/images/index/shop.png" alt="shop">
-      </div>
+      <nuxt-link to="/shop/">
+        <div class="superposition">
+            <img class="img-01" src="/images/index/tee-shirt.png" alt="tee-shirt">
+            <img class="img-02" src="/images/index/shop.png" alt="shop">
+        </div>
+      </nuxt-link>
     </section>
     <section class="seven-bloc-index">
       <div class="superposition">
@@ -139,12 +140,6 @@
         </div>
       </div>
     </section>
-    <!-- <div style="margin-top: 150px; text-align: center">
-      <p>Produit 1</p>
-      <nuxt-link :to="`/teeshirt/produit1`" style="border: 1px solid #000; width: 20%; margin: 0 auto">
-        Acheter
-      </nuxt-link>
-    </div> -->
   </div>
 </template>
 
@@ -319,7 +314,7 @@ $breakpoint-tablet: 1025px;
       text-align: justify;
       margin-right: 0 39px 0 auto;
       @media (max-width: $breakpoint-tablet) {
-        font-size: 2.667vw;
+        font-size: 3.200vw;
         width: 68.267vw;
         margin: 0 auto;
       }
@@ -390,8 +385,8 @@ $breakpoint-tablet: 1025px;
         top: 0;
         padding: 6.400vw 5.333vw 0 11.200vw;
       }
-      .titles-placement {
-        width: 404px;
+      .title-placement {
+        width: 465px;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -615,7 +610,7 @@ $breakpoint-tablet: 1025px;
         left: 0;
         z-index: 2;
         @media (max-width: $breakpoint-tablet) {
-          padding: 0 0 5.667vw 2.667vw;
+          padding: 0 0 5.667vw 3.200vw;
         }
         .links {
           a {

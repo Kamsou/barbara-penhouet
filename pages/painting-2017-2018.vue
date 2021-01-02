@@ -17,14 +17,24 @@
         <img src="/images/painter/painter-2.jpg" alt="painter-2" />
       </div>
     </article>
-    <article class="second-row">
-      <div class="column-1">
-        <img src="/images/painter/painter-3.jpg" alt="painter-2" />
+    <!-- <article class="second-row">
+      <div
+        class="column-1"
+        @mouseover="hover = true"
+        @mouseleave="hover = false"
+        :class="{ active: hover }"
+      >
+        <div class="image">
+          <img src="/images/painter/painter-3.jpg" alt="painter-2" />
+        </div>
+        <div v-if="hover" class="content">
+          <span>Dimensions de la toile : 20x30x15</span>
+        </div>
       </div>
       <div class="column-2">
         <img src="/images/painter/painter-4.jpg" alt="painter-2" />
       </div>
-    </article>
+    </article> -->
     <Footer :up="up" />
   </section>
 </template>
@@ -35,6 +45,11 @@
     layout: 'bg-white',
     components: {
       Footer,
+    },
+    data() {
+      return {
+        hover: false,
+      }
     },
     methods: {
       up() {
@@ -51,7 +66,12 @@
 
 <style lang="scss" scoped>
 $breakpoint-tablet: 1025px;
-
+#scroll_container::-webkit-scrollbar {
+  display: none;
+}
+.flex-row {
+  display: flex;
+}
 .page-painter-2017 {
   .banner {
     background: url("/images/painter/painter-1.jpg");
@@ -134,19 +154,52 @@ $breakpoint-tablet: 1025px;
       display: block;
       padding: 0 8.533vw;
     }
+    .column-1 {
+      @media (max-width: $breakpoint-tablet) {
+        width: inherit;
+      }
+    }
     .column-1,
     .column-2 {
       width: 50%;
+      position: relative;
       @media (max-width: $breakpoint-tablet) {
         width: 100%;
       }
-      img {
-        width: auto;
-        height: 44.097vw;
+      .image {
+        width: 554px;
+        height: 636px;
         @media (max-width: $breakpoint-tablet) {
+          width: 100%;
+          height: auto;
+        }
+        &::after {
+          content: '\A';
+          position: absolute;
+          width: 554px;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background :rgba(0,0,0,0.8);
+          opacity: 0;
+          transition: all 0.5s;
+          -webkit-transition: all 0.5s;
+        }
+        img {
           width: 100%;
           height: 100%;
         }
+      }
+    }
+    .active {
+      .image:after {
+        opacity: 1;
+      }
+      .content {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        color: #ffffff;
       }
     }
   }

@@ -18,14 +18,8 @@
                 />
               </nuxt-link>
               <ul class="burger-list">
-                <nuxt-link to="/painter/">
-                  <li>Painter</li>
-                </nuxt-link>
                 <nuxt-link to="/illustrations-et-animations/">
                   <li>Illustrations</li>
-                </nuxt-link>
-                <nuxt-link to="/interior/">
-                  <li>Intérieur</li>
                 </nuxt-link>
                 <nuxt-link to="/shop/">
                   <li>Shop</li>

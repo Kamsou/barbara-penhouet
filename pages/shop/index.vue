@@ -1,13 +1,16 @@
 <template>
-  <div class="page-shop">
-    <div class="item" v-for="product in shop.products" :key="product.id">
-      <nuxt-link :to="`/shop/${product.id}`">
-        <img :src="product.image.url" />
-      </nuxt-link>
-      <h3>{{ product.name }}</h3>
-      <h4>{{ product.price }} EUR</h4>
+  <section>
+    <div class="page-shop">
+      <div class="item" v-for="product in shop.products" :key="product.id">
+        <nuxt-link :to="`/shop/${product.id}`">
+          <img :src="product.image.url" />
+        </nuxt-link>
+        <h3>{{ product.name }}</h3>
+        <h4>{{ product.price }} EUR</h4>
+      </div>
     </div>
-  </div>
+    <Footer />
+  </section>
 </template>
 
 <script>
@@ -48,7 +51,7 @@ $breakpoint-tablet: 1025px;
     font-size: 14px;
     @media (max-width: $breakpoint-tablet) {
       width: 38.400vw;
-      font-size: 2.133vw;
+      font-size: 3.200vw;
     }
     a img {
       width: 100%;

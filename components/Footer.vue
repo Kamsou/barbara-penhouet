@@ -98,7 +98,7 @@ $breakpoint-tablet: 1025px;
   display: flex;
   justify-content: space-between;
   padding: 0 8vw 5.333vw;
-  font-size: 2.667vw;
+  font-size: 3.200vw;
   @media (min-width: $breakpoint-tablet) {
     font-size: 18px;
     padding: 0 250px 60px;

@@ -35,7 +35,7 @@
           Nous livrons partout dans le monde!
           Compter en moyenne 5 jours ouvrés pour recevoir son colis en France métropolitaine, et en moyenne 10 jours ouvrés pour recevoir son colis dans les autres pays.
           <br/><br/>
-          Nous acceptons les retours, échanges et remboursements. Voir les conditions
+          Nous acceptons les retours, échanges et remboursements.
         </div>
       </div>
     </div>
@@ -127,7 +127,7 @@ $breakpoint-tablet: 1025px;
     .product-description {
       font-size: 14px;
       @media (max-width: $breakpoint-tablet) {
-        font-size: 2.667vw;
+        font-size: 3.200vw;
       }
     }
     .product-sizes {
@@ -162,10 +162,11 @@ $breakpoint-tablet: 1025px;
     .buy-button {
       background-color: #EF0311;
       color: #ffffff;
+      cursor: pointer;
       border: none;
       width: 100%;
       height: 7.733vw;
-      font-size: 2.667vw;
+      font-size: 3.200vw;
       margin-bottom: 6.400vw;
       @media (min-width: $breakpoint-tablet) {
         width: 325px;
@@ -176,7 +177,7 @@ $breakpoint-tablet: 1025px;
     }
     .product-delivery {
       color: #000000;
-      font-size: 2.667vw;
+      font-size: 3.200vw;
       @media (min-width: $breakpoint-tablet) {
         font-size: 12px;
       }

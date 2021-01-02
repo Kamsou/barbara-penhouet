@@ -10,17 +10,9 @@
       </nuxt-link>
       <Burger class="menu-mobile"/>
       <div class="navbar_menu">
-        <!-- <div>
-          <span data-text="Art">Art</span>
-        </div> -->
         <nuxt-link to="/illustrations-et-animations/">
           <div>
             <span data-text="Illustrations">Illustrations</span>
-          </div>
-        </nuxt-link>
-        <nuxt-link to="/interior/">
-          <div>
-            <span data-text="Intérieur">Intérieur</span>
           </div>
         </nuxt-link>
         <nuxt-link to="/shop/">

@@ -12,7 +12,7 @@
           </nuxt-link>
         </div>
     </div>
-    <Footer :up="up" />
+    <Footer class="footer-illustrations" :up="up" />
   </section>
 </template>
 
@@ -114,5 +114,12 @@ $breakpoint-tablet: 1025px;
         color: #ffffff;
       }
     }
+  .footer-illustrations {
+    position: absolute;
+    bottom: 0;
+    @media (min-width: $breakpoint-tablet) {
+      position: initial;
+    }
+  }
 }
 </style>
