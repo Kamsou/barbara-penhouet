@@ -17,41 +17,11 @@
         <img src="/images/painter/painter-2.jpg" alt="painter-2" />
       </div>
     </article>
-    <!-- <article class="second-row">
-      <div
-        class="column-1"
-        @mouseover="hover = true"
-        @mouseleave="hover = false"
-        :class="{ active: hover }"
-      >
-        <div class="image">
-          <img src="/images/painter/painter-3.jpg" alt="painter-2" />
-        </div>
-        <div v-if="hover" class="content">
-          <span>Dimensions de la toile : 20x30x15</span>
-        </div>
-      </div>
-      <div class="column-2">
-        <img src="/images/painter/painter-4.jpg" alt="painter-2" />
-      </div>
-    </article> -->
+    <span class="title-loop">LES PEINTURES</span>
     <article class="items">
       <div class="item item1"><img src="/images/painter/painter-4.jpg" alt="painter-2" /></div>
       <div class="item item2"><img src="/images/painter/painter-4.jpg" alt="painter-2" /></div>
       <div class="item item3"><img src="/images/painter/painter-4.jpg" alt="painter-2" /></div>
-      <div class="item item4"><img src="/images/painter/painter-4.jpg" alt="painter-2" /></div>
-      <div class="item item1"><img src="/images/painter/painter-4.jpg" alt="painter-2" /></div>
-      <div class="item item2"><img src="/images/painter/painter-4.jpg" alt="painter-2" /></div>
-      <div class="item item3"><img src="/images/painter/painter-4.jpg" alt="painter-2" /></div>
-      <div class="item item4"><img src="/images/painter/painter-4.jpg" alt="painter-2" /></div>
-      <div class="item item1"><img src="/images/painter/painter-4.jpg" alt="painter-2" /></div>
-      <div class="item item2"><img src="/images/painter/painter-4.jpg" alt="painter-2" /></div>
-      <div class="item item3"><img src="/images/painter/painter-4.jpg" alt="painter-2" /></div>
-      <div class="item item4"><img src="/images/painter/painter-4.jpg" alt="painter-2" /></div>
-      <div class="item item1"><img src="/images/painter/painter-4.jpg" alt="painter-2" /></div>
-      <div class="item item2"><img src="/images/painter/painter-4.jpg" alt="painter-2" /></div>
-      <div class="item item3"><img src="/images/painter/painter-4.jpg" alt="painter-2" /></div>
-      <div class="item item4"><img src="/images/painter/painter-4.jpg" alt="painter-2" /></div>
     </article>
     <Footer :up="up" />
   </section>
@@ -86,24 +56,27 @@
         let isDown = false;
         let startX;
         let scrollLeft;
-        slider.addEventListener('mousedown', (e) => {
+        slider.addEventListener('touchstart', (e) => {
+          let touches = e.changedTouches
           isDown = true;
           slider.classList.add('active');
-          startX = e.pageX - slider.offsetLeft;
+          startX = touches[0].pageX - slider.offsetLeft;
+          console.log(startX, 'walk')
           scrollLeft = slider.scrollLeft;
         });
-        slider.addEventListener('mouseleave', () => {
+        slider.addEventListener('touchleave', () => {
           isDown = false;
           slider.classList.remove('active');
         });
-        slider.addEventListener('mouseup', () => {
+        slider.addEventListener('touchend', () => {
           isDown = false;
           slider.classList.remove('active');
         });
-        slider.addEventListener('mousemove', (e) => {
+        slider.addEventListener('touchmove', (e) => {
+          let touches = e.changedTouches
           if(!isDown) return;
           e.preventDefault();
-          const x = e.pageX - slider.offsetLeft;
+          const x = touches[0].pageX - slider.offsetLeft;
           const walk = (x - startX) * 3;
           slider.scrollLeft = scrollLeft - walk;
         });
@@ -149,6 +122,7 @@ $breakpoint-tablet: 1025px;
         font-size: 12.800vw;
         color: #EF0311;
         text-align: center;
+        width: 100%;
       }
     }
   }
@@ -255,6 +229,15 @@ $breakpoint-tablet: 1025px;
       }
     }
   }
+  .title-loop {
+    font-size: 20px;
+    font-weight: bold;
+    @media (max-width: $breakpoint-tablet) {
+      text-align: justify;
+      font-size: 3.733vw;
+      padding: 8.800vw 8.533vw;
+    }
+  }
   .items {
     overflow-x: hidden;
     overflow-y: hidden;
@@ -268,6 +251,8 @@ $breakpoint-tablet: 1025px;
     font-size: 0;
     perspective: 500px;
     width: 100%;
+    height: 100%;
+    padding: 8.800vw 8.533vw;
   }
   .items.active {
     background: rgba(255, 255, 255, 0.3);
@@ -286,7 +271,6 @@ $breakpoint-tablet: 1025px;
     /* background: #30a57f; */
     margin-right: 23px;
     width: 394px;
-    height: 474px;
     @media (max-width: $breakpoint-tablet) {
       width: 70%;
     }
