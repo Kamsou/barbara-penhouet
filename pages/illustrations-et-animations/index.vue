@@ -1,17 +1,19 @@
 <template>
-  <section class="page-illustrations-animations">
-    <div class="title">
-      <span>ILLUSTRATIONS & ANIMATIONS</span>
-    </div>
-    <div class="blocs">
-      
-        <div :class="`subject-${subject.id}`" v-for="subject in subjects" :key="subject.slug">
-          <nuxt-link :to="`/illustrations-et-animations/${subject.slug}`">
-            <img :src="subject.img" alt="">
-            <span>{{ subject.name }}</span>
-          </nuxt-link>
-        </div>
-    </div>
+  <section>
+    <section class="page-illustrations-animations">
+      <div class="title">
+        <span>ILLUSTRATIONS & ANIMATIONS</span>
+      </div>
+      <div class="blocs">
+        
+          <div :class="`subject-${subject.id}`" v-for="subject in subjects" :key="subject.slug">
+            <nuxt-link :to="`/illustrations-et-animations/${subject.slug}`">
+              <img :src="subject.img" alt="">
+              <span>{{ subject.name }}</span>
+            </nuxt-link>
+          </div>
+      </div>
+    </section>
     <Footer class="footer-illustrations" :up="up" />
   </section>
 </template>
@@ -114,12 +116,13 @@ $breakpoint-tablet: 1025px;
         color: #ffffff;
       }
     }
-  .footer-illustrations {
-    position: absolute;
-    bottom: 0;
-    @media (min-width: $breakpoint-tablet) {
-      position: initial;
-    }
+}
+.footer-illustrations {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  @media (min-width: $breakpoint-tablet) {
+    position: initial;
   }
 }
 </style>

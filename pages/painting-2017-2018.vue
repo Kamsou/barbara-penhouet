@@ -35,6 +35,24 @@
         <img src="/images/painter/painter-4.jpg" alt="painter-2" />
       </div>
     </article> -->
+    <article class="items">
+      <div class="item item1"><img src="/images/painter/painter-4.jpg" alt="painter-2" /></div>
+      <div class="item item2"><img src="/images/painter/painter-4.jpg" alt="painter-2" /></div>
+      <div class="item item3"><img src="/images/painter/painter-4.jpg" alt="painter-2" /></div>
+      <div class="item item4"><img src="/images/painter/painter-4.jpg" alt="painter-2" /></div>
+      <div class="item item1"><img src="/images/painter/painter-4.jpg" alt="painter-2" /></div>
+      <div class="item item2"><img src="/images/painter/painter-4.jpg" alt="painter-2" /></div>
+      <div class="item item3"><img src="/images/painter/painter-4.jpg" alt="painter-2" /></div>
+      <div class="item item4"><img src="/images/painter/painter-4.jpg" alt="painter-2" /></div>
+      <div class="item item1"><img src="/images/painter/painter-4.jpg" alt="painter-2" /></div>
+      <div class="item item2"><img src="/images/painter/painter-4.jpg" alt="painter-2" /></div>
+      <div class="item item3"><img src="/images/painter/painter-4.jpg" alt="painter-2" /></div>
+      <div class="item item4"><img src="/images/painter/painter-4.jpg" alt="painter-2" /></div>
+      <div class="item item1"><img src="/images/painter/painter-4.jpg" alt="painter-2" /></div>
+      <div class="item item2"><img src="/images/painter/painter-4.jpg" alt="painter-2" /></div>
+      <div class="item item3"><img src="/images/painter/painter-4.jpg" alt="painter-2" /></div>
+      <div class="item item4"><img src="/images/painter/painter-4.jpg" alt="painter-2" /></div>
+    </article>
     <Footer :up="up" />
   </section>
 </template>
@@ -51,6 +69,9 @@
         hover: false,
       }
     },
+    mounted() {
+      this.dragToScroll();
+    },
     methods: {
       up() {
         const myEl = this.$refs.smoothscroll
@@ -60,6 +81,33 @@
           updateHistory: false,
         })
       },
+      dragToScroll() {
+        const slider = document.querySelector('.items');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+        slider.addEventListener('mousedown', (e) => {
+          isDown = true;
+          slider.classList.add('active');
+          startX = e.pageX - slider.offsetLeft;
+          scrollLeft = slider.scrollLeft;
+        });
+        slider.addEventListener('mouseleave', () => {
+          isDown = false;
+          slider.classList.remove('active');
+        });
+        slider.addEventListener('mouseup', () => {
+          isDown = false;
+          slider.classList.remove('active');
+        });
+        slider.addEventListener('mousemove', (e) => {
+          if(!isDown) return;
+          e.preventDefault();
+          const x = e.pageX - slider.offsetLeft;
+          const walk = (x - startX) * 3;
+          slider.scrollLeft = scrollLeft - walk;
+        });
+      }
     },
   }
 </script>
@@ -73,11 +121,12 @@ $breakpoint-tablet: 1025px;
   display: flex;
 }
 .page-painter-2017 {
+  overflow: hidden;
   .banner {
     background: url("/images/painter/painter-1.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     height: 554px;
     position: relative;
     @media (max-width: $breakpoint-tablet) {
@@ -91,9 +140,11 @@ $breakpoint-tablet: 1025px;
       position: absolute;
       top: 50%;
       left: 50%;
+      text-align: center;
       transform: translate(-50%, -50%);
       font-size: 110px;
       color: #FFFFFF;
+      width: 900px;
       @media (max-width: $breakpoint-tablet) {
         font-size: 12.800vw;
         color: #EF0311;
@@ -104,7 +155,8 @@ $breakpoint-tablet: 1025px;
   .first-row {
     display: flex;
     padding: 33px 100px;
-    max-width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
     @media (max-width: $breakpoint-tablet) {
       display: block;
       padding: 8.800vw 8.533vw;
@@ -201,6 +253,46 @@ $breakpoint-tablet: 1025px;
         left: 15px;
         color: #ffffff;
       }
+    }
+  }
+  .items {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    white-space: nowrap;
+    user-select: none;
+    cursor: pointer;
+    transition: all 0.8s;
+    transform: scale(0.98);
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    font-size: 0;
+    perspective: 500px;
+    width: 100%;
+  }
+  .items.active {
+    background: rgba(255, 255, 255, 0.3);
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+    transform: scale(1);
+    transition: all 0.8s;
+  }
+  .item {
+    width: 200px;
+    height: calc(100% - 40px);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    /* background: #30a57f; */
+    margin-right: 23px;
+    width: 394px;
+    height: 474px;
+    @media (max-width: $breakpoint-tablet) {
+      width: 70%;
+    }
+    img {
+      width: 100%;
+      height: auto;
     }
   }
 }

@@ -104,13 +104,14 @@
         </div>
       </nuxt-link>
     </section>
-    <!-- <section class="five-bloc-index">
+    <section class="five-bloc-index">
       <div class="superposition">
+        <span>Bientôt disponible !</span>
         <img class="img-01" src="/images/index/interieur.png" alt="interieur">
         <img class="img-02" src="/images/index/salon.png" alt="un salon dessiné">
         <img class="img-03" src="/images/index/objet-design.png" alt="un objet design">
       </div>
-    </section> -->
+    </section>
     <section class="six-bloc-index">
       <nuxt-link to="/shop/">
         <div class="superposition">
@@ -504,6 +505,21 @@ $breakpoint-tablet: 1025px;
       display: flex;
       justify-content: flex-start;
       height: 100%;
+      span {
+        background-color: #EF0311;
+        font-size: 14px;
+        position: absolute;
+        left: 20%;
+        top: 30%;
+        padding: 1%;
+        color: #FCF3F4;
+        z-index: 100;
+        @media (max-width: $breakpoint-tablet) {
+          font-size: 3.733vw;
+          left: 33%;
+          top: 25%;
+        }
+      }
       .img-01 {
         position: absolute;
         width: 441px;

@@ -49,7 +49,7 @@ $breakpoint-tablet: 1025px;
     background: url("/images/painter/painter-5.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     height: 554px;
     position: relative;
     @media (max-width: $breakpoint-tablet) {
@@ -63,9 +63,11 @@ $breakpoint-tablet: 1025px;
       position: absolute;
       top: 50%;
       left: 50%;
+      text-align: center;
       transform: translate(-50%, -50%);
       font-size: 110px;
       color: #FFFFFF;
+      width: 900px;
       @media (max-width: $breakpoint-tablet) {
         font-size: 12.800vw;
         color: #EF0311;
@@ -76,7 +78,8 @@ $breakpoint-tablet: 1025px;
   .first-row {
     display: flex;
     padding: 33px 100px;
-    max-width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
     @media (max-width: $breakpoint-tablet) {
       display: block;
       padding: 8.800vw 8.533vw;
