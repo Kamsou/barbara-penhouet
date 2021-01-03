@@ -52,31 +52,53 @@
         })
       },
       dragToScroll() {
+        const isMobile = window.matchMedia('(max-width: 1025px)')
+        let start = ''
+        let leave = ''
+        let end = ''
+        let move = ''
+        if (isMobile.matches) {
+          start = 'touchstart'
+          leave = 'touchleave'
+          end = 'touchend'
+          move = 'touchmove'
+        } else {
+          start = 'mousedown'
+          leave = 'mouseleave'
+          end = 'mouseup'
+          move = 'mousemove'
+        }
         const slider = document.querySelector('.items');
         let isDown = false;
         let startX;
         let scrollLeft;
-        slider.addEventListener('touchstart', (e) => {
-          let touches = e.changedTouches
+        slider.addEventListener(start, (e) => {
           isDown = true;
           slider.classList.add('active');
-          startX = touches[0].pageX - slider.offsetLeft;
-          console.log(startX, 'walk')
+          if (start === 'touchstart') {
+            startX = e.changedTouches[0].pageX - slider.offsetLeft;
+          } else {
+            startX = e.pageX - slider.offsetLeft;
+          }
           scrollLeft = slider.scrollLeft;
         });
-        slider.addEventListener('touchleave', () => {
+        slider.addEventListener(leave, () => {
           isDown = false;
           slider.classList.remove('active');
         });
-        slider.addEventListener('touchend', () => {
+        slider.addEventListener(end, () => {
           isDown = false;
           slider.classList.remove('active');
         });
-        slider.addEventListener('touchmove', (e) => {
-          let touches = e.changedTouches
+        slider.addEventListener(move, (e) => {
+          let x = ''
           if(!isDown) return;
           e.preventDefault();
-          const x = touches[0].pageX - slider.offsetLeft;
+          if (move === 'touchmove') {
+            x = e.changedTouches[0].pageX - slider.offsetLeft;
+          } else {
+            x = e.pageX - slider.offsetLeft;
+          }
           const walk = (x - startX) * 3;
           slider.scrollLeft = scrollLeft - walk;
         });
