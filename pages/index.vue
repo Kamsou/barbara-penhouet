@@ -1,7 +1,7 @@
 <template>
   <div class="page-index" ref="smoothscroll">
     <!-- PRELOADER -->
-    <!-- <div class="loading-page"></div> -->
+    <div v-if="preloader" class="loading-page"></div>
     <!-- -->
     <section class="first-bloc-index">
       <div class="arrow-up-mobile" @click="up">
@@ -145,6 +145,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   layout: 'default',
   data() {
@@ -152,6 +153,9 @@ export default {
       videoUrl: '/images/index/femme-qui-danse.mp4',
     }
   },
+  computed: mapState([
+    'preloader'
+  ]),
   methods: {
     up() {
       const myEl = this.$refs.smoothscroll
@@ -161,7 +165,12 @@ export default {
         updateHistory: false,
       })
     }
-  }
+  },
+  mounted() {
+    setTimeout(() => {
+      this.$store.commit('isOkayPreload', false)
+    }, 6000)
+  },
 }
 </script>
 
