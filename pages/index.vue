@@ -210,12 +210,12 @@ $breakpoint-tablet: 1025px;
   }
   .first-bloc-index {
     width: 100%;
-    height: 105vh;
+    height: 86vh;
     display: flex;
     position: relative;
     @media (max-width: $breakpoint-tablet) {
       padding: 0;
-      height: 100vh;
+      height: 95vh;
     }
     .arrow-up-mobile {
       display: none;
