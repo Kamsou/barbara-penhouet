@@ -49,6 +49,7 @@
     }
 </script>
 <style lang="scss" scoped>
+$breakpoint-tablet: 1025px;
     .hidden {
         visibility: hidden;
     }
@@ -75,6 +76,11 @@
       .burger-logo {
         width: 147px;
         margin-bottom: 115px;
+        @media (max-width: $breakpoint-tablet) {
+          padding: 0;
+          width: 35.733vw;
+          position: relative;
+        }
       }
       .burger-instagram {
         width: 7.467vw;

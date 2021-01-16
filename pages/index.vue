@@ -215,7 +215,7 @@ $breakpoint-tablet: 1025px;
     position: relative;
     @media (max-width: $breakpoint-tablet) {
       padding: 0;
-      height: 95vh;
+      height: 82vh;
     }
     .arrow-up-mobile {
       display: none;
