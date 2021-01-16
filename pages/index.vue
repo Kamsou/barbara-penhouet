@@ -219,7 +219,7 @@ $breakpoint-tablet: 1025px;
   }
   .first-bloc-index {
     width: 100%;
-    height: 86vh;
+    height: 91vh;
     display: flex;
     position: relative;
     @media (max-width: $breakpoint-tablet) {
