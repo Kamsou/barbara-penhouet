@@ -65,4 +65,39 @@ a {
   text-decoration: none;
   color: #EF0311;
 }
+#snipcart {
+  .snipcart-modal__container {
+    .snipcart-layout, .snipcart-layout--large {
+      .snipcart-cart-header {
+        .snipcart-modal__close svg path {
+          fill: #EF0311;
+        }
+        .snipcart-cart-header__options {
+          button svg path {
+            fill: #EF0311;
+          }
+        }
+      }
+      .snipcart-layout__content {
+        section {
+          .snipcart-cart__footer {
+            .snipcart-cart__footer-col {
+              footer button {
+                background-color: #EF0311;
+                background-image: none;
+              }
+              .snipcart-cart__featured-payment-methods-container {
+                .snipcart-featured-payment-methods {
+                  h3 {
+                    display: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 </style>
