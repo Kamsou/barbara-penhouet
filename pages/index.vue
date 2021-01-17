@@ -210,7 +210,6 @@ $breakpoint-tablet: 1025px;
       background: url("/images/preloader-mobile.png");
       background-color: #fff;
       z-index: 1000;
-      animation: disappear 3s ease-out 0s forwards;
     }
   }
   @keyframes disappear{
