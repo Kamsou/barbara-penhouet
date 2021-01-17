@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section ref="smoothscroll">
     <div class="page-product">
       <div class="image-product">
         <img :src="product.image.url" alt="" />
@@ -39,7 +39,7 @@
         </div>
       </div>
     </div>
-    <Footer />
+    <Footer :up="up" />
   </section>
 </template>
 
@@ -66,6 +66,16 @@
         id: this.$route.params.id,
         activeButton: '',
       }
+    },
+    methods: {
+      up() {
+        const myEl = this.$refs.smoothscroll
+        this.$smoothScroll({
+          scrollTo: myEl,
+          duration: 2000,
+          updateHistory: false,
+        })
+      },
     },
   }
 </script>

@@ -46,7 +46,7 @@ export default {
 <style lang="scss" scoped>
 $breakpoint-tablet: 1025px;
 .swiper-container {
-  margin-top: 30px;
+  margin: 30px 0;
 }
 .swiper-slide {
   width: auto;
@@ -76,13 +76,16 @@ $breakpoint-tablet: 1025px;
 }
 .swiper-button-prev,
 .swiper-button-next {
-  background-color: white;
+  background-color: #EF0311;
   border-radius: 50%;
-  height: 45px;
+  height: 35px;
   top: 45%;
-  width: 45px;
+  width: 35px;
   &::after {
     display: none;
+  }
+  &:focus {
+    outline: none;
   }
 }
 .swiper-button-prev,
