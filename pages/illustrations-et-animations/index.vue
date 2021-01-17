@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section ref="smoothscroll">
     <article class="page-illustrations-animations">
       <div class="title">
         <span>ILLUSTRATIONS & ANIMATIONS</span>
@@ -140,7 +140,6 @@ $breakpoint-tablet: 1025px;
         z-index: 2;
         width: 100%;
         line-height: 34.6vw;
-            height: 100%;
         @media (min-width: $breakpoint-tablet) {
           font-size: 110px;
           line-height: 130px;

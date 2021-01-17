@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section ref="smoothscroll">
     <div class="page-shop">
       <div class="item" v-for="product in shop.products" :key="product.id">
         <nuxt-link :to="`/shop/${product.id}`">
@@ -9,7 +9,7 @@
         <h4>{{ product.price }} EUR</h4>
       </div>
     </div>
-    <Footer />
+    <Footer :up="up"/>
   </section>
 </template>
 
@@ -25,6 +25,16 @@
       } else {
         error({ statusCode: 404, message: 'Page not found' })
       }
+    },
+    methods: {
+      up() {
+        const myEl = this.$refs.smoothscroll
+        this.$smoothScroll({
+          scrollTo: myEl,
+          duration: 2000,
+          updateHistory: false,
+        })
+      },
     },
   }
 </script>

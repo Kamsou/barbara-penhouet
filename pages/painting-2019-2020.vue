@@ -72,6 +72,7 @@ $breakpoint-tablet: 1025px;
         font-size: 12.800vw;
         color: #EF0311;
         text-align: center;
+        width: 100%;
       }
     }
   }
