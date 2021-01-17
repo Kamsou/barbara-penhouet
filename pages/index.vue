@@ -1,7 +1,8 @@
 <template>
   <div class="page-index" ref="smoothscroll">
     <!-- PRELOADER -->
-    <div ref="preload" v-if="preloader" class="loading-page"></div>
+    <div ref="preload" v-if="preloader" class="loading-white" />
+    <div ref="preload" v-if="preloader" class="loading-page" />
     <!--++++++++++++ -->
     <section class="first-bloc-index">
       <div class="arrow-up-mobile" @click="up">
@@ -171,7 +172,7 @@ export default {
           this.$refs.preload.style.zIndex = -200
         }
         this.$store.commit('isOkayPreload', false)
-      }, 4000)
+      }, 8000)
     }
   },
   mounted() {
@@ -191,6 +192,27 @@ $breakpoint-tablet: 1025px;
     width: 100%;
     height: 100%;
   }
+  .loading-white {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    transition: all 2s;
+    background-color: #FCF3F4;
+    z-index: 100000000;
+    opacity: 1;
+    animation: here 3s ease-out 3s forwards;
+  }
+  @keyframes here{
+    0%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 0;
+    }
+  }
   .loading-page {
     position: fixed;
     top: 0;
@@ -204,9 +226,9 @@ $breakpoint-tablet: 1025px;
     background-attachment: fixed;
     background-size: cover;
     transition: all 2s;
-    background-color: #fff;
     z-index: 100000000;
-    animation: disappear 2s ease-out 1.5s forwards;
+    opacity: 0;
+    animation: disappear 4s ease-out 1s forwards;
     @media (max-width: $breakpoint-tablet) {
       background: url("/images/preloader-mobile.png");
       background-color: #fff;
@@ -215,8 +237,10 @@ $breakpoint-tablet: 1025px;
   }
   @keyframes disappear{
     0%{
+      opacity: 0;
+    }
+    40%{
       opacity: 1;
-      z-index: 1000;
     }
     100%{
       opacity: 0;
