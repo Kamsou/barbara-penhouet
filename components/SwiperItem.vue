@@ -90,7 +90,7 @@ $breakpoint-tablet: 1025px;
 }
 .swiper-button-prev,
 .swiper-container-rtl {
-  background-image: url('/images/illustrations-mobile/arrow-right.svg');
+  background-image: url('/images/illustrations-mobile/arrow.svg');
   -moz-transform: scaleX(-1);
   -o-transform: scaleX(-1);
   -webkit-transform: scaleX(-1);
@@ -102,7 +102,7 @@ $breakpoint-tablet: 1025px;
 }
 .swiper-button-next,
 .swiper-container-rtl .swiper-button-prev {
-  background-image: url('/images/illustrations-mobile/arrow-right.svg');
+  background-image: url('/images/illustrations-mobile/arrow.svg');
   background-position: center;
   background-repeat: no-repeat;
   left: auto;
