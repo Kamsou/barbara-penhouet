@@ -50,8 +50,9 @@ $breakpoint-tablet: 1025px;
 }
 .swiper-slide {
   width: auto;
-  height: 456px;
+  height: 400px;
   cursor: pointer;
+  margin-right: 30px;
   @media (max-width: $breakpoint-tablet) {
     width: 314px;
     height: initial;
