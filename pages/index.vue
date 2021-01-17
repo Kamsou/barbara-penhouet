@@ -1,7 +1,6 @@
 <template>
   <div class="page-index" ref="smoothscroll">
     <!-- PRELOADER -->
-    <div ref="preload" v-if="preloader" class="loading-white" />
     <div ref="preload" v-if="preloader" class="loading-page" />
     <!--++++++++++++ -->
     <section class="first-bloc-index">
@@ -192,27 +191,6 @@ $breakpoint-tablet: 1025px;
     width: 100%;
     height: 100%;
   }
-  .loading-white {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 100;
-    transition: all 2s;
-    background-color: #FCF3F4;
-    z-index: 100000000;
-    opacity: 1;
-    animation: here 3s ease-out 3s forwards;
-  }
-  @keyframes here{
-    0%{
-      opacity: 1;
-    }
-    100%{
-      opacity: 0;
-    }
-  }
   .loading-page {
     position: fixed;
     top: 0;
@@ -227,19 +205,19 @@ $breakpoint-tablet: 1025px;
     background-size: cover;
     transition: all 2s;
     z-index: 100000000;
-    opacity: 0;
     animation: disappear 4s ease-out 1s forwards;
     @media (max-width: $breakpoint-tablet) {
       background: url("/images/preloader-mobile.png");
       background-color: #fff;
       z-index: 1000;
+      animation: disappear 3s ease-out 0s forwards;
     }
   }
   @keyframes disappear{
     0%{
-      opacity: 0;
+      opacity: 1;
     }
-    40%{
+    50%{
       opacity: 1;
     }
     100%{
