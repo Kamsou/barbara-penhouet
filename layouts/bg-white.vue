@@ -77,6 +77,13 @@ a {
             fill: #EF0311;
           }
         }
+        .snipcart-modal__header-summary {
+          .snipcart-modal__header-summary-title {
+            svg path {
+              fill: #EF0311;
+            }
+          }
+        }
       }
       .snipcart-layout__content {
         section {
@@ -90,6 +97,71 @@ a {
                 .snipcart-featured-payment-methods {
                   h3 {
                     display: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      div {
+        .snipcart-checkout__content {
+          .snipcart-layout__cols {
+            .snipcart-layout__col {
+              div .snipcart-cart-summary footer .snipcart-featured-payment-methods {
+                h3 {
+                  display: none;
+                }
+              }
+              div .snipcart-cart-summary section .snipcart-cart-summary__actions button {
+                color: #EF0311;
+              }
+              #snipcart-checkout-step-billing {
+                form .snipcart__box {
+                  .snipcart__box--header .snipcart__box--title {
+                    .snipcart__box--badge-highlight {
+                      background: #EF0311;
+                    }
+                  }
+                  .snipcart-form__footer {
+                    button {
+                      background-color: #EF0311;
+                      background-image: none;
+                    }
+                  }
+                }
+                .snipcart__box {
+                  .snipcart__box--header {
+                    .snipcart__box--title {
+                      .snipcart__box--badge {
+                        svg path {
+                          fill: #EF0311;
+                        }
+                      }
+                    }
+                    a {
+                      color: #EF0311;
+                    }
+                  }
+                  .snipcart-checkout-step__cols {
+                    .snipcart-checkout-step__col {
+                      div svg path {
+                        fill: #EF0311;
+                      }
+                    }
+                  }
+                }
+              }
+              #snipcart-checkout-step-payment {
+                form .snipcart__box--header .snipcart__box--title div {
+                  background: #EF0311;
+                }
+                form .snipcart-loading-overlay .snipcart-loading-overlay__content .snipcart-payment__form-container {
+                  .snipcart-payment-card-form__container .snipcart-loading-overlay .snipcart-loading-overlay__content {
+                    .snipcart-form__footer button {
+                      background-color: #EF0311;
+                      background-image: none;
+                    }
                   }
                 }
               }
