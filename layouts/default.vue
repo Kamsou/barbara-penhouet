@@ -51,7 +51,7 @@ html {
 }
 
 .content {
-  padding-top: 10vh;
+  padding-top: 15vh;
   @media (max-width: $breakpoint-tablet) {
     padding-top: 10vh;
   }

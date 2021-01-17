@@ -292,8 +292,9 @@ $breakpoint-tablet: 1025px;
       font-size: 38px;
       font-weight: bold;
       position: absolute;
-      top: 45%;
+      top: 50%;
       right: 18%;
+      transform: translateY(-50%);
       @media (max-width: $breakpoint-tablet) {
         display: none;
       }
