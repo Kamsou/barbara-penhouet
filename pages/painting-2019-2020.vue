@@ -17,16 +17,20 @@
         <img src="/images/painter/painter-6.jpg" alt="painter-2" />
       </div>
     </article>
+    <span class="title-loop">LES PEINTURES</span>
+    <SwiperItem />
     <Footer :up="up" />
   </section>
 </template>
 
 <script>
   import Footer from '@/components/Footer.vue'
+import SwiperItem from '../components/SwiperItem.vue'
   export default {
     layout: 'bg-white',
     components: {
       Footer,
+      SwiperItem,
     },
     methods: {
       up() {
@@ -119,6 +123,16 @@ $breakpoint-tablet: 1025px;
       img {
         width: 100%;
       }
+    }
+  }
+  .title-loop {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0 100px;
+    @media (max-width: $breakpoint-tablet) {
+      text-align: justify;
+      font-size: 3.733vw;
+      padding: 8.800vw 8.533vw;
     }
   }
   .second-row {

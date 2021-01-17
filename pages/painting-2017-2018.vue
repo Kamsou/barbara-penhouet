@@ -18,29 +18,43 @@
       </div>
     </article>
     <span class="title-loop">LES PEINTURES</span>
-    <article class="items">
-      <div class="item item1"><img src="/images/painter/painter-4.jpg" alt="painter-2" /></div>
-      <div class="item item2"><img src="/images/painter/painter-4.jpg" alt="painter-2" /></div>
-      <div class="item item3"><img src="/images/painter/painter-4.jpg" alt="painter-2" /></div>
-    </article>
+    <SwiperItem :pictures="pictures" />
     <Footer :up="up" />
   </section>
 </template>
 
 <script>
   import Footer from '@/components/Footer.vue'
+import SwiperItem from '@/components/SwiperItem.vue';
   export default {
     layout: 'bg-white',
     components: {
       Footer,
+      SwiperItem,
     },
     data() {
       return {
-        hover: false,
+        pictures: [
+          {
+            src: '/images/painter/slider-2017/slider-1.jpg',
+          },
+          {
+            src: '/images/painter/slider-2017/slider-2.jpg',
+          },
+          {
+            src: '/images/painter/slider-2017/slider-3.jpg',
+          },
+          {
+            src: '/images/painter/slider-2017/slider-4.jpg',
+          },
+          {
+            src: '/images/painter/slider-2017/slider-5.jpg',
+          },
+          {
+            src: '/images/painter/slider-2017/slider-6.jpg',
+          },
+        ]
       }
-    },
-    mounted() {
-      this.dragToScroll();
     },
     methods: {
       up() {
@@ -51,58 +65,6 @@
           updateHistory: false,
         })
       },
-      dragToScroll() {
-        const isMobile = window.matchMedia('(max-width: 1025px)')
-        let start = ''
-        let leave = ''
-        let end = ''
-        let move = ''
-        if (isMobile.matches) {
-          start = 'touchstart'
-          leave = 'touchleave'
-          end = 'touchend'
-          move = 'touchmove'
-        } else {
-          start = 'mousedown'
-          leave = 'mouseleave'
-          end = 'mouseup'
-          move = 'mousemove'
-        }
-        const slider = document.querySelector('.items');
-        let isDown = false;
-        let startX;
-        let scrollLeft;
-        slider.addEventListener(start, (e) => {
-          isDown = true;
-          slider.classList.add('active');
-          if (start === 'touchstart') {
-            startX = e.changedTouches[0].pageX - slider.offsetLeft;
-          } else {
-            startX = e.pageX - slider.offsetLeft;
-          }
-          scrollLeft = slider.scrollLeft;
-        });
-        slider.addEventListener(leave, () => {
-          isDown = false;
-          slider.classList.remove('active');
-        });
-        slider.addEventListener(end, () => {
-          isDown = false;
-          slider.classList.remove('active');
-        });
-        slider.addEventListener(move, (e) => {
-          let x = ''
-          if(!isDown) return;
-          e.preventDefault();
-          if (move === 'touchmove') {
-            x = e.changedTouches[0].pageX - slider.offsetLeft;
-          } else {
-            x = e.pageX - slider.offsetLeft;
-          }
-          const walk = (x - startX) * 3;
-          slider.scrollLeft = scrollLeft - walk;
-        });
-      }
     },
   }
 </script>
@@ -254,6 +216,7 @@ $breakpoint-tablet: 1025px;
   .title-loop {
     font-size: 20px;
     font-weight: bold;
+    padding: 0 100px;
     @media (max-width: $breakpoint-tablet) {
       text-align: justify;
       font-size: 3.733vw;
