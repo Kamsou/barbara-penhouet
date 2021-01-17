@@ -17,8 +17,10 @@
         <img src="/images/painter/painter-2.jpg" alt="painter-2" />
       </div>
     </article>
-    <span class="title-loop">LES PEINTURES</span>
-    <SwiperItem :pictures="pictures" />
+    <article class="second-row">
+      <span class="title-loop">LES PEINTURES</span>
+      <SwiperItem :pictures="pictures" />
+    </article>
     <Footer :up="up" />
   </section>
 </template>
@@ -155,113 +157,21 @@ $breakpoint-tablet: 1025px;
       }
     }
   }
-  .second-row {
-    column-gap: 24px;
-    display: flex;
-    margin: 33px 0;
-    padding: 0 100px;
+  .second-row{
+    max-width: 1440px;
+    margin: 0 auto;
     @media (max-width: $breakpoint-tablet) {
-      display: block;
-      padding: 0 8.533vw;
+      max-width: 100%;
     }
-    .column-1 {
+    .title-loop {
+      font-size: 20px;
+      font-weight: bold;
+      padding: 0 100px;
       @media (max-width: $breakpoint-tablet) {
-        width: inherit;
+        text-align: justify;
+        font-size: 3.733vw;
+        padding: 8.800vw 8.533vw;
       }
-    }
-    .column-1,
-    .column-2 {
-      width: 50%;
-      position: relative;
-      @media (max-width: $breakpoint-tablet) {
-        width: 100%;
-      }
-      .image {
-        width: 554px;
-        height: 636px;
-        @media (max-width: $breakpoint-tablet) {
-          width: 100%;
-          height: auto;
-        }
-        &::after {
-          content: '\A';
-          position: absolute;
-          width: 554px;
-          height: 100%;
-          top: 0;
-          left: 0;
-          background :rgba(0,0,0,0.8);
-          opacity: 0;
-          transition: all 0.5s;
-          -webkit-transition: all 0.5s;
-        }
-        img {
-          width: 100%;
-          height: 100%;
-        }
-      }
-    }
-    .active {
-      .image:after {
-        opacity: 1;
-      }
-      .content {
-        position: absolute;
-        bottom: 15px;
-        left: 15px;
-        color: #ffffff;
-      }
-    }
-  }
-  .title-loop {
-    font-size: 20px;
-    font-weight: bold;
-    padding: 0 100px;
-    @media (max-width: $breakpoint-tablet) {
-      text-align: justify;
-      font-size: 3.733vw;
-      padding: 8.800vw 8.533vw;
-    }
-  }
-  .items {
-    overflow-x: hidden;
-    overflow-y: hidden;
-    white-space: nowrap;
-    user-select: none;
-    cursor: pointer;
-    transition: all 0.8s;
-    transform: scale(0.98);
-    position: relative;
-    background: rgba(255, 255, 255, 0.1);
-    font-size: 0;
-    perspective: 500px;
-    width: 100%;
-    height: 100%;
-    padding: 8.800vw 8.533vw;
-  }
-  .items.active {
-    background: rgba(255, 255, 255, 0.3);
-    cursor: grabbing;
-    cursor: -webkit-grabbing;
-    transform: scale(1);
-    transition: all 0.8s;
-  }
-  .item {
-    width: 200px;
-    height: calc(100% - 40px);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    /* background: #30a57f; */
-    margin-right: 23px;
-    width: 394px;
-    @media (max-width: $breakpoint-tablet) {
-      width: 70%;
-    }
-    img {
-      width: 100%;
-      height: auto;
     }
   }
 }

@@ -49,15 +49,22 @@ $breakpoint-tablet: 1025px;
   margin-top: 30px;
 }
 .swiper-slide {
-  width: 394px;
+  width: auto;
+  height: 456px;
   cursor: pointer;
   @media (max-width: $breakpoint-tablet) {
     width: 314px;
+    height: initial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   img {
-    width: 100%;
+    width: auto;
+    height: 100%;
     @media (max-width: $breakpoint-tablet) {
       width: 100%;
+      height: auto;
     }
   }
 }
@@ -66,6 +73,37 @@ $breakpoint-tablet: 1025px;
   @media (max-width: $breakpoint-tablet) {
     display: initial;
   }
+}
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: white;
+  border-radius: 50%;
+  height: 45px;
+  top: 45%;
+  width: 45px;
+  &::after {
+    display: none;
+  }
+}
+.swiper-button-prev,
+.swiper-container-rtl {
+  background-image: url('/images/illustrations-mobile/arrow-right.svg');
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  background-position: center;
+  background-repeat: no-repeat;
+  left: 5px;
+  right: auto;
+}
+.swiper-button-next,
+.swiper-container-rtl .swiper-button-prev {
+  background-image: url('/images/illustrations-mobile/arrow-right.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  left: auto;
+  right: 5px;
 }
 
 </style>

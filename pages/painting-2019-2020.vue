@@ -18,7 +18,7 @@
       </div>
     </article>
     <span class="title-loop">LES PEINTURES</span>
-    <SwiperItem />
+    <SwiperItem :pictures="pictures" />
     <Footer :up="up" />
   </section>
 </template>
@@ -31,6 +31,30 @@ import SwiperItem from '../components/SwiperItem.vue'
     components: {
       Footer,
       SwiperItem,
+    },
+    data() {
+      return {
+        pictures: [
+          {
+            src: '/images/painter/slider-2017/slider-1.jpg',
+          },
+          {
+            src: '/images/painter/slider-2017/slider-2.jpg',
+          },
+          {
+            src: '/images/painter/slider-2017/slider-3.jpg',
+          },
+          {
+            src: '/images/painter/slider-2017/slider-4.jpg',
+          },
+          {
+            src: '/images/painter/slider-2017/slider-5.jpg',
+          },
+          {
+            src: '/images/painter/slider-2017/slider-6.jpg',
+          },
+        ]
+      }
     },
     methods: {
       up() {
