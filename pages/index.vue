@@ -1,8 +1,8 @@
 <template>
   <div class="page-index" ref="smoothscroll">
     <!-- PRELOADER -->
-    <div v-if="preloader" class="loading-page"></div>
-    <!-- -->
+    <div ref="preload" v-if="preloader" class="loading-page"></div>
+    <!--++++++++++++ -->
     <section class="first-bloc-index">
       <div class="arrow-up-mobile" @click="up">
         <img src="/images/index/arrow.svg" alt="">
@@ -164,12 +164,18 @@ export default {
         duration: 2000,
         updateHistory: false,
       })
+    },
+    preloaderCanOut() {
+      setTimeout(() => {
+        if(this.preloader) {
+          this.$refs.preload.style.zIndex = -200
+        }
+        this.$store.commit('isOkayPreload', false)
+      }, 4000)
     }
   },
   mounted() {
-    setTimeout(() => {
-      this.$store.commit('isOkayPreload', false)
-    }, 6000)
+    this.preloaderCanOut()
   },
 }
 </script>
@@ -200,7 +206,7 @@ $breakpoint-tablet: 1025px;
     transition: all 2s;
     background-color: #fff;
     z-index: 100000000;
-    animation: disappear 2s cubic-bezier(0.895,0.03,0.685,0.22) 1.5s forwards;
+    animation: disappear 2s ease-out 1.5s forwards;
     @media (max-width: $breakpoint-tablet) {
       background: url("/images/preloader-mobile.png");
       background-color: #fff;
@@ -214,7 +220,6 @@ $breakpoint-tablet: 1025px;
     }
     100%{
       opacity: 0;
-      z-index: -1000
     }
   }
   .first-bloc-index {
