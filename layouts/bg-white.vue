@@ -46,6 +46,9 @@ html {
 
 .content {
   padding-top: 10vh;
+  @media (min-width: $breakpoint-tablet) {
+    padding-top: 15vh;
+  }
 }
 
 .page {
