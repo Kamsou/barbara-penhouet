@@ -26,7 +26,7 @@
           data-item-description="T-shirt blanc Barbara Penhouet"
           data-item-custom1-name="Taille"
           :data-item-custom1-value="activeButton"
-          data-item-custom1-options="XS|S|M|L"
+          :data-item-custom1-options="sizes"
         >
           {{ allData.button_article }}
         </button>
@@ -64,6 +64,12 @@
       return {
         id: this.$route.params.id,
         activeButton: '',
+      }
+    },
+    computed: {
+      sizes() {
+        const vetements = product.sizes === 'Vêtements'
+        return vetements ? 'XS|S|M|L' : ''
       }
     },
     methods: {
