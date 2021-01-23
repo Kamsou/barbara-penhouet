@@ -7,9 +7,9 @@
       <div class="details-product">
         <span class="product-title">{{ product.name }}</span>
         <span class="product-price">{{ product.price }} € TTC</span>
-        <span class="product-description">T-shirt blanc Barbara Penhouet</span>
-        <span class="product-description">Print brodé de la série “nom de la série”</span>
-        <span class="product-description">Fabriqué en France. 100% coton.</span>
+        <span class="product-description">{{ product.description_1 }}</span>
+        <span class="product-description">{{ product.description_2 }}</span>
+        <span class="product-description">{{ product.description_3 }}</span>
         <div class="product-sizes">
           <button class="btn" @click="activeButton = 'XS'" :class="{active: activeButton === 'XS' }">XS</button>
           <button class="btn" @click="activeButton = 'S'" :class="{active: activeButton === 'S' }">S</button>
@@ -28,15 +28,11 @@
           :data-item-custom1-value="activeButton"
           data-item-custom1-options="XS|S|M|L"
         >
-          AJOUTER AU PANIER
+          {{ allData.button_article }}
         </button>
-        <div class="product-delivery">LIVRAISON ET RETOUR
-          <br/><br/>
-          Nous livrons partout dans le monde!
-          Compter en moyenne 5 jours ouvrés pour recevoir son colis en France métropolitaine, et en moyenne 10 jours ouvrés pour recevoir son colis dans les autres pays.
-          <br/><br/>
-          Nous acceptons les retours, échanges et remboursements.
-        </div>
+        <span class="product-delivery">{{ allData.title_delivery }}</span>
+        <br>
+        <div class="product-delivery">{{ allData.description_delivery }}</div>
       </div>
     </div>
     <Footer :up="up" />
@@ -54,9 +50,12 @@
       const data = (
         await $prismic.api.getSingle('shop')
       ).data.products.filter((product) => product.id === route.params.id)
+      const allData = (
+        await $prismic.api.getSingle('shop')
+      ).data
       const product = data[0]
-      if (product) {
-        return { product }
+      if (product || allData) {
+        return { product, allData }
       } else {
         error({ statusCode: 404, message: 'Page not found' })
       }
