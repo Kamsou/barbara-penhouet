@@ -24,7 +24,7 @@
           :data-item-url="`/shop/${product.id}`" 
           :data-item-image="product.image.url"
           data-item-description="T-shirt blanc Barbara Penhouet"
-          data-item-custom1-name="Taille"
+          :data-item-custom1-name="taille"
           :data-item-custom1-value="activeButton"
           :data-item-custom1-options="sizes"
         >
@@ -68,9 +68,13 @@
     },
     computed: {
       sizes() {
-        const vetements = product.sizes === 'Vêtements'
-        return vetements ? 'XS|S|M|L' : ''
-      }
+        const vetements = this.product.sizes === 'Vêtements'
+        return vetements ? 'XS|S|M|L' : 'Blanc'
+      },
+      taille() {
+        const vetements = this.product.sizes === 'Vêtements'
+        return vetements ? 'Taille' : 'Couleur'
+      },
     },
     methods: {
       up() {
