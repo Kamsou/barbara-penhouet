@@ -10,7 +10,7 @@
         <span class="product-description">{{ product.description_1 }}</span>
         <span class="product-description">{{ product.description_2 }}</span>
         <span class="product-description">{{ product.description_3 }}</span>
-        <div class="product-sizes">
+        <div v-if="product.sizes === 'Vêtements'" class="product-sizes">
           <button class="btn" @click="activeButton = 'XS'" :class="{active: activeButton === 'XS' }">XS</button>
           <button class="btn" @click="activeButton = 'S'" :class="{active: activeButton === 'S' }">S</button>
           <button class="btn" @click="activeButton = 'M'" :class="{active: activeButton === 'M' }">M</button>
@@ -21,7 +21,7 @@
           :data-item-id="product.id"
           :data-item-name="product.name"
           :data-item-price="product.price"
-          :data-item-url="product.url" 
+          :data-item-url="`/shop/${product.id}`" 
           :data-item-image="product.image.url"
           data-item-description="T-shirt blanc Barbara Penhouet"
           data-item-custom1-name="Taille"
@@ -142,9 +142,9 @@ $breakpoint-tablet: 1025px;
     .product-sizes {
       display: flex;
       justify-content: space-between;
-      padding: 4vw 0;
+      padding: 4vw 0 0;
       @media (min-width: $breakpoint-tablet) {
-        padding: 60px 0 95px;
+        padding: 60px 0 0;
       }
       .btn {
         border: 1px solid #EF0311;
@@ -176,12 +176,12 @@ $breakpoint-tablet: 1025px;
       width: 100%;
       height: 7.733vw;
       font-size: 3.200vw;
-      margin-bottom: 6.400vw;
+      margin: 4vw 0 6.400vw 0;
       @media (min-width: $breakpoint-tablet) {
         width: 325px;
         height: 41px;
         font-size: 20px;
-        margin-bottom: 110px;
+        margin: 60px 0 110px 0;
       }
     }
     .product-delivery {
