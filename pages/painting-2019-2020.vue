@@ -17,8 +17,10 @@
         <img src="/images/painter/painter-6.jpg" alt="painter-2" />
       </div>
     </article>
-    <span class="title-loop">LES PEINTURES</span>
-    <SwiperItem :pictures="pictures" />
+    <article class="second-row">
+      <span class="title-loop">LES PEINTURES</span>
+      <SwiperItem :pictures="pictures" />
+    </article>
     <Footer :up="up" />
   </section>
 </template>
@@ -73,6 +75,10 @@ import SwiperItem from '../components/SwiperItem.vue'
 $breakpoint-tablet: 1025px;
 
 .page-painter-2020 {
+  padding-top: 15vh;
+  @media (max-width: $breakpoint-tablet) {
+    padding-top: 10vh;
+  }
   .banner {
     background: url("/images/painter/painter-5.jpg");
     background-position: center;
@@ -149,27 +155,20 @@ $breakpoint-tablet: 1025px;
       }
     }
   }
-  .title-loop {
-    font-size: 20px;
-    font-weight: bold;
-    padding: 0 100px;
+  .second-row{
+    max-width: 1440px;
+    margin: 0 auto;
     @media (max-width: $breakpoint-tablet) {
-      text-align: justify;
-      font-size: 3.733vw;
-      padding: 8.800vw 8.533vw;
+      max-width: 100%;
     }
-  }
-  .second-row {
-    column-gap: 24px;
-    display: flex;
-    margin: 33px 0;
-    padding: 0 100px;
-    .column-1,
-    .column-2 {
-      width: 50%;
-      img {
-        width: auto;
-        height: 44.097vw;
+    .title-loop {
+      font-size: 20px;
+      font-weight: bold;
+      padding: 0 100px;
+      @media (max-width: $breakpoint-tablet) {
+        text-align: justify;
+        font-size: 3.733vw;
+        padding: 8.800vw 8.533vw;
       }
     }
   }

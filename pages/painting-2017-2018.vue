@@ -81,6 +81,10 @@ $breakpoint-tablet: 1025px;
 }
 .page-painter-2017 {
   overflow: hidden;
+  padding-top: 15vh;
+  @media (max-width: $breakpoint-tablet) {
+    padding-top: 10vh;
+  }
   .banner {
     background: url("/images/painter/painter-1.jpg");
     background-position: center;
@@ -157,7 +161,7 @@ $breakpoint-tablet: 1025px;
       }
     }
   }
-  .second-row{
+  .second-row {
     max-width: 1440px;
     margin: 0 auto;
     @media (max-width: $breakpoint-tablet) {

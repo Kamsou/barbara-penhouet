@@ -20,7 +20,7 @@
             <span data-text="Shop">Shop</span>
           </div>
         </nuxt-link>
-        <a href="https://www.instagram.com/barbarabara_p/" target="_blank">
+        <a href="https://www.instagram.com/barbarabara_p/" rel="noopener noreferrer" target="_blank">
           <img
           class="navbar_instagram"
           src="/images/instagram.svg"

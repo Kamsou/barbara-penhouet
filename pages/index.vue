@@ -1,7 +1,7 @@
 <template>
   <div class="page-index" ref="smoothscroll">
     <!-- PRELOADER -->
-    <!-- <div ref="preload" v-if="preloader" class="loading-page" /> -->
+    <div ref="preload" v-if="preloader" class="loading-page" />
     <!--++++++++++++ -->
     <section class="first-bloc-index">
       <div class="arrow-up-mobile" @click="up">
@@ -171,11 +171,69 @@ export default {
           this.$refs.preload.style.zIndex = -200
         }
         this.$store.commit('isOkayPreload', false)
-      }, 8000)
+      }, 6000)
     }
   },
   mounted() {
     this.preloaderCanOut()
+  },
+  head() {
+    return {
+      title: 'Barbara Penhouet',
+      description: 'Illustratrice / Architecte',
+      link: [
+        {
+          rel: 'prefetch',
+          href: '/images/painter/painter-2.jpg',
+          as: 'image',
+        },
+        {
+          rel: 'preload',
+          href: '/images/painter/painter-2.jpg',
+          as: 'image',
+        },
+        {
+          rel: 'prefetch',
+          href: '/images/painter/slider-2017/slider-1.jpg',
+          as: 'image',
+        },
+        {
+          rel: 'preload',
+          href: '/images/painter/slider-2017/slider-1.jpg',
+          as: 'image',
+        },
+        {
+          rel: 'prefetch',
+          href: '/images/painter/slider-2017/slider-2.jpg',
+          as: 'image',
+        },
+        {
+          rel: 'preload',
+          href: '/images/painter/slider-2017/slider-2.jpg',
+          as: 'image',
+        },
+        {
+          rel: 'prefetch',
+          href: '/images/painter/slider-2017/slider-3.jpg',
+          as: 'image',
+        },
+        {
+          rel: 'preload',
+          href: '/images/painter/slider-2017/slider-3.jpg',
+          as: 'image',
+        },
+        {
+          rel: 'prefetch',
+          href: '/images/illustrations-desktop/illu-1.jpg',
+          as: 'image',
+        },
+        {
+          rel: 'preload',
+          href: '/images/illustrations-desktop/illu-1.jpg',
+          as: 'image',
+        },
+      ],
+    }
   },
 }
 </script>
