@@ -1,7 +1,7 @@
 <template>
   <div class="page-index" ref="smoothscroll">
     <!-- PRELOADER -->
-    <!-- <div ref="preload" v-if="preloader" class="loading-page" /> -->
+    <div ref="preload" v-if="preloader" class="loading-page" />
     <!--++++++++++++ -->
     <section class="first-bloc-index">
       <div class="arrow-up-mobile" @click="up">
