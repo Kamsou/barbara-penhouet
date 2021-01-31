@@ -52,7 +52,6 @@ $breakpoint-tablet: 1025px;
   width: auto;
   height: 400px;
   cursor: pointer;
-  margin-right: 30px;
   @media (max-width: $breakpoint-tablet) {
     width: 314px;
     height: initial;
