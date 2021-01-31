@@ -1,4 +1,4 @@
-[build.environment]
+[context.production.environment]
   HTTP_ENDPOINT=https://graphql.datocms.com
   TOKEN_AUTH_DATO=095c38f9f0cea84f784f3f573e5606
   SNIPCART_API_KEY=MjMyMzQ5Y2EtNTA0Yi00YWQ0LTlkNGEtMTY5MGFhN2ExOTVhNjM3MzMxODY5ODY3OTIyMDk0
