@@ -43,22 +43,29 @@
 $breakpoint-tablet: 1025px;
 
 .page-shop {
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
   column-gap: 71px;
-  row-gap: 74px;
+  row-gap: 74px; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 50px;
   width: 100%;
-  padding: 220px 124px;
+  padding: 220px 30px;
   @media (max-width: $breakpoint-tablet) {
+    display: flex;
+    flex-wrap: wrap;
     column-gap: 5.333vw;
     justify-content: space-between;
     row-gap: 5.333vw;
     padding: 21.333vw 8.800vw;
   }
   .item {
-    width: 350px;
+    max-width: 350px;
     text-align: center;
     font-size: 14px;
+    margin: 0 auto;
     @media (max-width: $breakpoint-tablet) {
       width: 38.400vw;
       font-size: 2.133vw;
