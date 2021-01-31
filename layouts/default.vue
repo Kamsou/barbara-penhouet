@@ -2,7 +2,7 @@
   <div class="page-white">
     <Navbar />
     <Nuxt class="content" />
-    <div id="snipcart" :data-api-key="apiKey"></div>
+    <div hidden id="snipcart" :data-api-keys="apiKey"></div>
   </div>
 </template>
 <script>
@@ -13,9 +13,9 @@
     },
     data() {
       return {
-        apiKey: process.env.SNIPCART_API_KEY || 'MjMyMzQ5Y2EtNTA0Yi00YWQ0LTlkNGEtMTY5MGFhN2ExOTVhNjM3MzMxODY5ODY3OTIyMDk0'
+        apiKey: process.env.SNIPCART_API_KEY
       }
-    }
+    },
   }
 </script>
 <style lang="scss">
