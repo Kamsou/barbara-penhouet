@@ -165,18 +165,18 @@ export default {
         updateHistory: false,
       })
     },
-    // preloaderCanOut() {
-    //   setTimeout(() => {
-    //     if(this.preloader) {
-    //       this.$refs.preload.style.zIndex = -200
-    //     }
-    //     this.$store.commit('isOkayPreload', false)
-    //   }, 6000)
-    // }
+    preloaderCanOut() {
+      setTimeout(() => {
+        if(this.preloader) {
+          this.$refs.preload.style.zIndex = -200
+        }
+        this.$store.commit('isOkayPreload', false)
+      }, 6000)
+    }
   },
-  // mounted() {
-  //   this.preloaderCanOut()
-  // },
+  mounted() {
+    this.preloaderCanOut()
+  },
   head() {
     return {
       title: 'Barbara Penhouet',
