@@ -16,7 +16,7 @@
 </script>
 <style lang="scss">
 $breakpoint-tablet: 1025px;
-html {
+html, body {
   font-family:
     'Rubik',
     -apple-system,
@@ -35,6 +35,7 @@ html {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
   display: block;
+  overflow: hidden;
 }
 
 *,
