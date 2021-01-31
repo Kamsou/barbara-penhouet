@@ -46,6 +46,7 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
+    '@nuxtjs/dotenv',
     '@nuxtjs/snipcart',
   ],
   snipcart: {
@@ -74,6 +75,8 @@ export default {
   build: {
   },
 
-  publicRuntimeConfig: {},
+  publicRuntimeConfig: {
+    apiKey: process.env.SNIPCART_API_KEY
+  },
   privateRuntimeConfig: {}
 }

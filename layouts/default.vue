@@ -2,7 +2,6 @@
   <div class="page-white">
     <Navbar />
     <Nuxt class="content" />
-    <div hidden id="snipcart" :data-api-keys="apiKey"></div>
   </div>
 </template>
 <script>
@@ -10,11 +9,6 @@
   export default {
     components: {
       Navbar
-    },
-    data() {
-      return {
-        apiKey: 'MjMyMzQ5Y2EtNTA0Yi00YWQ0LTlkNGEtMTY5MGFhN2ExOTVhNjM3MzMxODY5ODY3OTIyMDk0'
-      }
     },
   }
 </script>

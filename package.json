@@ -20,5 +20,7 @@
     "vue-awesome-swiper": "^4.1.1",
     "vue2-smooth-scroll": "^1.5.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@nuxtjs/dotenv": "^1.4.1"
+  }
 }
