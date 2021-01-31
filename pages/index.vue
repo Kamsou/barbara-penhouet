@@ -194,36 +194,6 @@ export default {
         },
         {
           rel: 'prefetch',
-          href: '/images/painter/slider-2017/slider-1.jpg',
-          as: 'image',
-        },
-        {
-          rel: 'preload',
-          href: '/images/painter/slider-2017/slider-1.jpg',
-          as: 'image',
-        },
-        {
-          rel: 'prefetch',
-          href: '/images/painter/slider-2017/slider-2.jpg',
-          as: 'image',
-        },
-        {
-          rel: 'preload',
-          href: '/images/painter/slider-2017/slider-2.jpg',
-          as: 'image',
-        },
-        {
-          rel: 'prefetch',
-          href: '/images/painter/slider-2017/slider-3.jpg',
-          as: 'image',
-        },
-        {
-          rel: 'preload',
-          href: '/images/painter/slider-2017/slider-3.jpg',
-          as: 'image',
-        },
-        {
-          rel: 'prefetch',
           href: '/images/illustrations-desktop/illu-1.jpg',
           as: 'image',
         },
