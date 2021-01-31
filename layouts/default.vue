@@ -13,7 +13,7 @@
     },
     data() {
       return {
-        apiKey: process.env.SNIPCART_API_KEY
+        apiKey: 'MjMyMzQ5Y2EtNTA0Yi00YWQ0LTlkNGEtMTY5MGFhN2ExOTVhNjM3MzMxODY5ODY3OTIyMDk0'
       }
     },
   }
