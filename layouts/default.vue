@@ -21,7 +21,7 @@
 <style lang="scss">
 $breakpoint-tablet: 1025px;
 
-html, body {
+html {
   font-family:
     'Rubik',
     -apple-system,
@@ -41,7 +41,6 @@ html, body {
   box-sizing: border-box;
   display: block;
   background-color: #FCF3F4;
-  overflow: hidden;
 }
 
 *,
