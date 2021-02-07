@@ -5,13 +5,7 @@
     </article>
     <article class="first-row">
       <div class="column-1">
-        <span>PEAU DE SILENCE</span>
-        <p>Un corps, le corps, nos corps. Barbara P. se plait à arpenter les territoires complexes du corps, ses intérieurs, ses extérieurs,      ses mouvances, ses formes, ses textures. Le vide se faufilant, des discussions homme-homme, homme-espace, homme-nature, homme-temps, figuration-abstraction apparaissent.  En tant que peintre et architecte les « espaces d'entre deux » et leur exploration sont déterminants dans son travail.
-          <br/><br/>
-          Les lutteurs et les danceurs dansent pradoxalement entre l'attirance et répulsion de l'autre. Ce point d'équilibre entre l'individualité de l'homme et son besoin d'être ensemble est l'essence du travail de Barbara qu'elle tente de chorégraphier.
-          <br/><br/>
-          On ne peut construire le vide, à l’instar du bonheur, de l’harmonie,de l’intimité ou du silence. Il tient sa raison d’être en suspension de la présences de d’autres éléments. 
-          À l’image de la rue symbole de démocratie et de liberté, mes représentations sont une ode au vivre ensemble par le silence de l’interstice, incluant ses amours et désamours.</p>
+        <span>Peintures 2019 - 2020: Texte en construction.. </span>
       </div>
       <div class="column-2">
         <img src="/images/painter/painter-6.jpg" alt="painter-2" />
@@ -38,22 +32,52 @@ import SwiperItem from '../components/SwiperItem.vue'
       return {
         pictures: [
           {
-            src: '/images/painter/slider-2017/slider-1.jpg',
+            src: '/images/painter/slider-2019/1.jpg',
           },
           {
-            src: '/images/painter/slider-2017/slider-2.jpg',
+            src: '/images/painter/slider-2019/2.jpg',
           },
           {
-            src: '/images/painter/slider-2017/slider-3.jpg',
+            src: '/images/painter/slider-2019/3.jpg',
           },
           {
-            src: '/images/painter/slider-2017/slider-4.jpg',
+            src: '/images/painter/slider-2019/4.jpg',
           },
           {
-            src: '/images/painter/slider-2017/slider-5.jpg',
+            src: '/images/painter/slider-2019/5.jpg',
           },
           {
-            src: '/images/painter/slider-2017/slider-6.jpg',
+            src: '/images/painter/slider-2019/6.jpg',
+          },
+          {
+            src: '/images/painter/slider-2019/7.jpg',
+          },
+          {
+            src: '/images/painter/slider-2019/8.jpg',
+          },
+          {
+            src: '/images/painter/slider-2019/10.jpg',
+          },
+          {
+            src: '/images/painter/slider-2019/11.jpg',
+          },
+          {
+            src: '/images/painter/slider-2019/12.jpg',
+          },
+          {
+            src: '/images/painter/slider-2019/13.jpg',
+          },
+          {
+            src: '/images/painter/slider-2019/14.jpeg',
+          },
+          {
+            src: '/images/painter/slider-2019/15.jpeg',
+          },
+          {
+            src: '/images/painter/slider-2019/16.jpeg',
+          },
+          {
+            src: '/images/painter/slider-2019/17.jpg',
           },
         ]
       }
