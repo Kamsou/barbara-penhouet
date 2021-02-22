@@ -1,7 +1,7 @@
 <template>
   <div class="page-index" ref="smoothscroll">
     <!-- PRELOADER -->
-    <div ref="preload" v-if="preloader" class="loading-page" />
+    <!-- <div ref="preload" v-if="preloader" class="loading-page" /> -->
     <!--++++++++++++ -->
     <section class="first-bloc-index">
       <div class="arrow-up-mobile" @click="up">
@@ -20,7 +20,7 @@
         </div>
       </div>
       <div class="image-first-bloc">
-        <video
+        <!-- <video
         ref="videoPlayer"
         muted
         autoplay
@@ -32,7 +32,8 @@
         <source
           :src="videoUrl"
           type="video/mp4">
-      </video>
+      </video> -->
+      <img src="/images/index/gif-femme-qui-danse.gif" />
       </div>
       <div class="title-first-bloc">
         <div class="title-placement">
@@ -148,11 +149,11 @@
 import { mapState } from 'vuex'
 export default {
   layout: 'default',
-  data() {
-    return {
-      videoUrl: '/images/index/femme-qui-danse.mp4',
-    }
-  },
+  // data() {
+  //   return {
+  //     videoUrl: '/images/index/femme-qui-danse.mp4',
+  //   }
+  // },
   computed: mapState([
     'preloader'
   ]),
@@ -279,7 +280,7 @@ $breakpoint-tablet: 1025px;
       width: 648px;
       position: absolute;
       bottom: 0;
-      video {
+      img {
         width: 100%;
         position: relative;
         @media (max-width: $breakpoint-tablet) {
