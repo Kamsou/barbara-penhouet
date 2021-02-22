@@ -79,6 +79,9 @@ import SwiperItem from '../components/SwiperItem.vue'
           {
             src: '/images/painter/slider-2019/17.jpg',
           },
+          {
+            src: '/images/painter/slider-2019/18.jpg',
+          },
         ]
       }
     },
