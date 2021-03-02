@@ -1,7 +1,9 @@
 <template>
   <section class="page-painter-2020" ref="smoothscroll">
     <article class="banner">
-      <h2>PEINTURES 2019-2020</h2>
+      <h2 :class="{ fadeSlowly: titleDissapear }">
+        PEINTURES 2019-2020
+      </h2>
     </article>
     <article class="first-row">
       <div class="column-1">
@@ -23,6 +25,7 @@
   import Footer from '@/components/Footer.vue'
 import SwiperItem from '../components/SwiperItem.vue'
   export default {
+    scrollToTop: true,
     layout: 'bg-white',
     components: {
       Footer,
@@ -30,6 +33,7 @@ import SwiperItem from '../components/SwiperItem.vue'
     },
     data() {
       return {
+        titleDissapear: false,
         pictures: [
           {
             src: '/images/painter/slider-2019/1.jpg',
@@ -85,6 +89,16 @@ import SwiperItem from '../components/SwiperItem.vue'
         ]
       }
     },
+    created () {
+      if (process.client) { 
+          window.addEventListener('scroll', this.handleScroll);
+      }
+    },
+    destroyed () {
+      if (process.client) { 
+          window.removeEventListener('scroll', this.handleScroll);
+      }
+    },
     methods: {
       up() {
         const myEl = this.$refs.smoothscroll
@@ -93,6 +107,11 @@ import SwiperItem from '../components/SwiperItem.vue'
           duration: 2000,
           updateHistory: false,
         })
+      },
+      handleScroll () {
+        if (window.scrollY > 50) {
+          this.titleDissapear = true
+        }
       }
     }
   }
@@ -198,6 +217,19 @@ $breakpoint-tablet: 1025px;
         padding: 8.800vw 8.533vw;
       }
     }
+  }
+}
+
+.fadeSlowly {
+  animation: fadein 1s ease-in-out forwards;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
 </style>

@@ -10,6 +10,16 @@
       </nuxt-link>
       <Burger class="menu-mobile"/>
       <div class="navbar_menu">
+        <nuxt-link to="/painting-2017-2018/">
+          <div>
+            <span data-text="Peintures 2017-18">Peintures 2017-18</span>
+          </div>
+        </nuxt-link>
+        <nuxt-link to="/painting-2019-2020/">
+          <div>
+            <span data-text="Peintures 2019-20">Peintures 2019-20</span>
+          </div>
+        </nuxt-link>
         <nuxt-link to="/illustrations-et-animations/">
           <div>
             <span data-text="Illustrations">Illustrations</span>

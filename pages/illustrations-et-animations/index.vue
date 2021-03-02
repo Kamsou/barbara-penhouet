@@ -2,7 +2,9 @@
   <section ref="smoothscroll">
     <article class="page-illustrations-animations">
       <div class="title">
-        <span>ILLUSTRATIONS & ANIMATIONS</span>
+        <span :class="{ fadeSlowly: titleDissapear }">
+          ILLUSTRATIONS & ANIMATIONS
+        </span>
         <div class="image-1">
           <img src="/images/illustrations-desktop/illu-1.jpg" alt=""/>
         </div>
@@ -68,12 +70,14 @@
 <script>
   import Footer from '@/components/Footer.vue'
   export default {
+    scrollToTop: true,
     layout: 'bg-white',
     components: {
       Footer,
     },
     data() {
       return {
+        titleDissapear: false,
         subjects: [
           {
             id: 1,
@@ -96,6 +100,16 @@
         ],
       }
     },
+    created () {
+      if (process.client) { 
+          window.addEventListener('scroll', this.handleScroll);
+      }
+    },
+    destroyed () {
+      if (process.client) { 
+          window.removeEventListener('scroll', this.handleScroll);
+      }
+    },
     methods: {
       up() {
         const myEl = this.$refs.smoothscroll
@@ -105,6 +119,11 @@
           updateHistory: false,
         })
       },
+      handleScroll () {
+        if (window.scrollY > 50) {
+          this.titleDissapear = true
+        }
+      }
     }
   }
 </script>
@@ -379,5 +398,18 @@ $breakpoint-tablet: 1025px;
 }
 .footer-illustrations {
   position: initial;
+}
+
+.fadeSlowly {
+  animation: fadein 1s ease-in-out forwards;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 </style>
