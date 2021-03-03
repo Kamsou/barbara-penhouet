@@ -18,6 +18,12 @@
                 />
               </nuxt-link>
               <ul class="burger-list">
+                <nuxt-link to="/painting-2017-2018/">
+                  <li>Peintures 2017-18</li>
+                </nuxt-link>
+                <nuxt-link to="/painting-2019-2020/">
+                  <li>Peintures 2019-20</li>
+                </nuxt-link>
                 <nuxt-link to="/illustrations-et-animations/">
                   <li>Illustrations</li>
                 </nuxt-link>
@@ -71,7 +77,7 @@ $breakpoint-tablet: 1025px;
       height: 100vh;
       background-color: #E5E5E5;
       z-index: 100;
-      padding: 12vw 22.667vw 20.267vw 16vw;
+      padding: 12vw 9vw 20.267vw;
       transition: all 1s;
       .burger-logo {
         width: 147px;
