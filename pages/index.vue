@@ -1,8 +1,5 @@
 <template>
   <div class="page-index" ref="smoothscroll">
-    <!-- PRELOADER -->
-    <!-- <div ref="preload" v-if="preloader" class="loading-page" /> -->
-    <!--++++++++++++ -->
     <section class="first-bloc-index">
       <div class="arrow-up-mobile" @click="up">
         <img src="/images/index/arrow.svg" alt="">
@@ -20,19 +17,6 @@
         </div>
       </div>
       <div class="image-first-bloc">
-        <!-- <video
-        ref="videoPlayer"
-        muted
-        autoplay
-        loop
-        playsinline
-        preload="auto"
-        rel="preload"
-      >
-        <source
-          :src="videoUrl"
-          type="video/mp4">
-      </video> -->
       <img src="/images/index/gif-femme-qui-danse.gif" />
       </div>
       <div class="title-first-bloc">
@@ -49,11 +33,29 @@
       </div>
     </section>
     <section class="second-bloc-index">
-      <div class="text">Barbara P. est une architecte, artiste-peintre et illustratrice vivant à Paris. Elle est diplômée de l’école supérieure d'architecture de Bretagne et a vécu 6 ans à Berlin avant de revenir en France en 2019. Sa sensibilité multi-supports lui permet d'être porteuse de projets singuliers et ambitieux.
+      <div
+        class="biography"
+        :class="{ fadeBiography: bioVisible }"
+        v-observe-visibility="{
+          callback: visibilityChanged,
+          once: true,
+          intersection: {
+            rootMargin: '0px',
+          },
+        }"
+      >
+        Barbara P. est artiste et une architecte vivant à Paris. 
         <br><br>
-        Barbara accompagne ses clients dans la construction de leurs identités avec un positionnement esthétique fort, car elle se sert de l'art comme outil de communication.
+        Elle affectionne les projets transdisciplinaires pour exprimer des identités
+        fortes et uniques en accompagnant ses clients dans la construction d’expériences.
+        Sa pratique artistique imprègne différents médiums pour raconter ses histoires :
+        peinture, objets, lieux de vie, tapisseries, installations, illustrations. 
         <br><br>
-        Elle a présenté son travail de peintre lors de son exposition «  Peau de silence » (Berlin, Novembre 2018) qui a lieu à la suite d'une résidence de deux mois à la SIM residency, à Reykjavik, Islande (été 2018).
+        Barbara est diplômée de l’école supérieure d'architecture de Bretagne en 2014.
+        Elle part vivre 6 ans à Berlin, avant de s’installer à Paris. Sa dernière exposition
+        « Peau de silence » fut présentée à coGalleries Berlin après une immersion en résidence
+        à la SIM, Reykjavik. Elle a travaillé avec India Madhavi, Nowadays, Dietrich Untertrifaller et
+        Sander& Hofrichter P-SH. Elle est actuellement résidente aux ateliers de la fabrique à Ivry. 
       </div>
       <div class="img">
         <img src="/images/index/barbara-sur-chaise.png" alt="barbara-sur-chaise" />
@@ -157,6 +159,11 @@ export default {
   computed: mapState([
     'preloader'
   ]),
+  data() {
+    return {
+      bioVisible: false,
+    }
+  },
   methods: {
     up() {
       const myEl = this.$refs.smoothscroll
@@ -166,17 +173,10 @@ export default {
         updateHistory: false,
       })
     },
-    preloaderCanOut() {
-      setTimeout(() => {
-        if(this.preloader) {
-          this.$refs.preload.style.zIndex = -200
-        }
-        this.$store.commit('isOkayPreload', false)
-      }, 6000)
+    visibilityChanged (isVisible) {
+      this.bioVisible = isVisible
+      console.log(isVisible)
     }
-  },
-  mounted() {
-    this.preloaderCanOut()
   },
   head() {
     return {
@@ -340,30 +340,38 @@ $breakpoint-tablet: 1025px;
   .second-bloc-index {
     display: grid;
     grid-template-areas:
-      'text img';
+      'biography img';
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     padding: 147px 72px 39px 30%;
+    height: 100%;
     @media (max-width: $breakpoint-tablet) {
       grid-template-areas:
       'img'
-      'text';
+      'biography';
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 1fr;
       padding: 0 74px 0 53px;
-      height: 167.200vw;
     }
-    .text {
-      grid-area: text;
+    .biography {
+      grid-area: biography;
       width: 317px;
       font-size: 14px;
       text-align: justify;
       margin-right: 0 39px 0 auto;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 700ms ease-in-out;
       @media (max-width: $breakpoint-tablet) {
         font-size: 3.200vw;
         width: 68.267vw;
         margin: 0 auto;
       }
+    }
+
+    .fadeBiography {
+      opacity: 1;
+      transform: translateY(0px);
     }
     .img {
       grid-area: img;

@@ -36,6 +36,7 @@ export default {
   */
   plugins: [
     { src: '~/plugins/smooth-scroll', ssr: false },
+    { src: '~/plugins/vue-observe-visibility', ssr: false },
   ],
   /*
   ** Auto import components
