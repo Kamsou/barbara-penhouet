@@ -10,14 +10,23 @@
       </nuxt-link>
       <Burger class="menu-mobile"/>
       <div class="navbar_menu">
-        <nuxt-link to="/painting-2017-2018/">
-          <div>
-            <span data-text="Peintures 2017-18">Peintures 2017-18</span>
+        <nuxt-link class="relative" to="/painting-2017-2018/">
+          <div class="menu-painter">
+            <span data-text="Peinture">Peinture</span>
           </div>
-        </nuxt-link>
-        <nuxt-link to="/painting-2019-2020/">
-          <div>
-            <span data-text="Peintures 2019-20">Peintures 2019-20</span>
+          <div class="sub-menu">
+            <ul class="sub-menu-titles">
+              <li>
+                <nuxt-link to="/painting-2019-2020/">
+                  Peintures 2019-20
+                </nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/painting-2017-2018/">
+                  Peintures 2017-18
+                </nuxt-link>
+              </li>
+            </ul>
           </div>
         </nuxt-link>
         <nuxt-link to="/illustrations-et-animations/">
@@ -123,5 +132,34 @@ $breakpoint-tablet: 1025px;
       }
     }
   }
+}
+
+.relative {
+  position: relative;
+}
+
+.sub-menu {
+  position: absolute;
+  top: 100%;
+  padding: 0 20px 20px 10px;
+  left: -10px;
+  opacity: 0;
+  min-width: 200px;
+  transition: all 0.3s ease-in-out;
+  background-color: #ffffff;
+}
+
+.sub-menu-titles {
+  list-style: none;
+  padding: 0;
+}
+
+.sub-menu-titles li {
+  padding-top: 20px;
+}
+
+.relative:hover .sub-menu {
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
 }
 </style>
