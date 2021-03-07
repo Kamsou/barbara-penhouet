@@ -20,7 +20,6 @@
       </div>
     </article>
     <article class="second-row">
-      <span class="title-loop">LES PEINTURES</span>
       <SwiperItem :pictures="pictures" />
     </article>
     <Footer :up="up" />
@@ -109,7 +108,7 @@ $breakpoint-tablet: 1025px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 554px;
+    height: 842px;
     position: relative;
     @media (max-width: $breakpoint-tablet) {
       background: url("/images/painter/painter-1-mobile.jpg");

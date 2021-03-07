@@ -6,15 +6,11 @@
       </h2>
     </article>
     <article class="first-row">
-      <div class="column-1">
+      <!-- <div class="column-1">
         <span>Peintures 2019 - 2020: Texte en construction.. </span>
-      </div>
-      <div class="column-2">
-        <img src="/images/painter/painter-6.jpg" alt="painter-2" />
-      </div>
+      </div> -->
     </article>
     <article class="second-row">
-      <span class="title-loop">LES PEINTURES</span>
       <SwiperItem :pictures="pictures" />
     </article>
     <Footer :up="up" />
@@ -86,6 +82,42 @@ import SwiperItem from '../components/SwiperItem.vue'
           {
             src: '/images/painter/slider-2019/18.jpg',
           },
+          {
+            src: '/images/painter/slider-2019/19.jpg',
+          },
+          {
+            src: '/images/painter/slider-2019/20.jpg',
+          },
+          {
+            src: '/images/painter/slider-2019/21.jpg',
+          },
+          {
+            src: '/images/painter/slider-2019/22.jpg',
+          },
+          {
+            src: '/images/painter/slider-2019/23.jpg',
+          },
+          {
+            src: '/images/painter/slider-2019/24.jpg',
+          },
+          {
+            src: '/images/painter/slider-2019/25.jpg',
+          },
+          {
+            src: '/images/painter/slider-2019/26.jpg',
+          },
+          {
+            src: '/images/painter/slider-2019/27.jpg',
+          },
+          {
+            src: '/images/painter/slider-2019/28.jpg',
+          },
+          {
+            src: '/images/painter/slider-2019/29.jpg',
+          },
+          {
+            src: '/images/painter/slider-2019/30.jpg',
+          },
         ]
       }
     },
@@ -130,10 +162,10 @@ $breakpoint-tablet: 1025px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 554px;
+    height: 842px;
     position: relative;
     @media (max-width: $breakpoint-tablet) {
-      background: url("/images/painter/painter-5-mobile.jpg");
+      background: url("/images/painter/painter-5.jpg");
       background-position: right;
       background-size: cover;
       background-repeat: no-repeat;
