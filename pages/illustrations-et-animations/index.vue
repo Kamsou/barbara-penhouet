@@ -21,7 +21,7 @@
       </div>
       <div class="flex row-3">
         <div>
-          <img src="/images/illustrations-desktop/illu-4.jpg" alt=""/>
+          <img src="/images/illustrations-desktop/illu-3.gif" alt=""/>
         </div>
         <div>
           <img src="/images/illustrations-desktop/illu-5.jpg" alt=""/>
@@ -32,7 +32,7 @@
       </div>
       <div class="flex row-5">
         <div>
-          <img src="/images/illustrations-desktop/illu-7.jpg" alt=""/>
+          <img src="/images/illustrations-desktop/illu-7.gif" alt=""/>
         </div>
         <div>
           <img src="/images/illustrations-desktop/illu-8.jpg" alt=""/>
@@ -40,6 +40,14 @@
       </div>
       <div class="global-row-5-6">
         <img class="row-5-6" src="/images/illustrations-mobile/mosaique2.jpg" alt=""/>
+      </div>
+      <div class="flex row-6-5">
+        <div class="gif-chandeleur">
+          <img src="/images/illustrations-desktop/illu-8.gif" alt=""/>
+        </div>
+        <div class="img-liberty">
+          <img src="/images/illustrations-desktop/img-8.png" alt=""/>
+        </div>
       </div>
       <div class="flex row-6">
         <div>
@@ -342,7 +350,33 @@ $breakpoint-tablet: 1025px;
         }
       }
       :nth-child(2) {
-        max-width: 598px;
+        max-width: 588px;
+        @media (max-width: $breakpoint-tablet) {
+          width: 42.4vw;
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .row-6-5 {
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      padding: 36px 100px;
+      @media (max-width: $breakpoint-tablet) {
+        padding: 9.6vw 7.19vw;
+      }
+      :nth-child(1) {
+        margin-right: 52px;
+        @media (max-width: $breakpoint-tablet) {
+          width: 42.4vw;
+          margin-right: 2.6vw;
+        }
+        img {
+          width: 100%;
+        }
+      }
+      :nth-child(2) {
         @media (max-width: $breakpoint-tablet) {
           width: 42.4vw;
         }
@@ -396,6 +430,16 @@ $breakpoint-tablet: 1025px;
     }
   }
 }
+
+.gif-chandeleur {
+  width: 395px;
+}
+
+.img-liberty {
+  max-width: 100%;
+  height: 100%;
+}
+
 .footer-illustrations {
   position: initial;
 }
