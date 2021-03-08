@@ -15,6 +15,15 @@
 <style lang="scss">
 $breakpoint-tablet: 1025px;
 
+.layout-enter-active,
+.layout-leave-active {
+  transition: opacity 0.5s;
+}
+.layout-enter,
+.layout-leave-to {
+  opacity: 0;
+}
+
 html {
   font-family:
     'Rubik',

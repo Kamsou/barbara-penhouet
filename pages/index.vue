@@ -151,14 +151,6 @@
 import { mapState } from 'vuex'
 export default {
   layout: 'default',
-  // data() {
-  //   return {
-  //     videoUrl: '/images/index/femme-qui-danse.mp4',
-  //   }
-  // },
-  computed: mapState([
-    'preloader'
-  ]),
   data() {
     return {
       bioVisible: false,
