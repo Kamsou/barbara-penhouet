@@ -101,12 +101,6 @@ import SwiperItem from '../components/SwiperItem.vue'
             src: '/images/painter/slider-2019/24.jpg',
           },
           {
-            src: '/images/painter/slider-2019/25.jpg',
-          },
-          {
-            src: '/images/painter/slider-2019/26.jpg',
-          },
-          {
             src: '/images/painter/slider-2019/27.jpg',
           },
           {

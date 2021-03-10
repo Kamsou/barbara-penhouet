@@ -30,13 +30,17 @@ export default {
   data() {
     return {
       swiperOption: {
-        slidesPerView: 'auto',
         centeredSlides: true,
         spaceBetween: 30,
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev'
-        }
+        },
+        direction: 'horizontal',
+        slidesPerView: 'auto',
+        observer: true,
+        observeParents: true,
+        loop: false,
       },
     }
   }
@@ -60,7 +64,7 @@ $breakpoint-tablet: 1025px;
     align-items: center;
   }
   img {
-    width: auto;
+    min-width: 200px;
     height: 100%;
     @media (max-width: $breakpoint-tablet) {
       width: 100%;
