@@ -23,6 +23,16 @@
       <span>Politique de confidentalité</span>
       <span>Mentions Légales</span>
       <span>CGV</span>
+      <span class="link-developer">
+        Site développé par
+        <a
+          href="https://camillecoutens.com"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          Camille Coutens
+        </a>
+      </span>
     </div>
   </section>
 </template>
@@ -103,5 +113,10 @@ $breakpoint-tablet: 1025px;
     font-size: 18px;
     padding: 0 250px 60px;
   }
+}
+
+.link-developer {
+  font-size: 11px;
+  padding-left: 50px;
 }
 </style>
