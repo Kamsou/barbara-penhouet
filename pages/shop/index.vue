@@ -2,9 +2,11 @@
   <section ref="smoothscroll">
     <div class="page-shop">
       <div class="item" v-for="product in shop.products" :key="product.id">
-        <nuxt-link :to="`/shop/${product.id}`">
-          <img :src="product.image.url" />
-        </nuxt-link>
+        <div class="limit-image">
+          <nuxt-link :to="`/shop/${product.id}`">
+            <img class="image-shop" :src="product.image.url" />
+          </nuxt-link>
+        </div>
         <h3>{{ product.name }}</h3>
         <h4>{{ product.price }} EUR</h4>
       </div>
@@ -81,5 +83,18 @@ $breakpoint-tablet: 1025px;
       font-weight: bold;
     }
   }
+}
+
+.limit-image {
+  overflow: hidden;
+}
+
+.image-shop {
+  transform: scale(1);
+  transition: .3s ease-in-out;
+}
+
+.limit-image:hover .image-shop  {
+  transform: scale(1.1);
 }
 </style>
