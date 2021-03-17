@@ -6,9 +6,6 @@
       </h2>
     </article>
     <article class="first-row">
-      <!-- <div class="column-1">
-        <span>Peintures 2019 - 2020: Texte en construction.. </span>
-      </div> -->
     </article>
     <article class="second-row">
       <SwiperItem :pictures="pictures" />
@@ -33,84 +30,106 @@ import SwiperItem from '../components/SwiperItem.vue'
         pictures: [
           {
             src: '/images/painter/slider-2019/1.jpg',
+            alt: '15h50 2020 Oil on canvas, 90 x 70 cm',
           },
           {
             src: '/images/painter/slider-2019/2.jpg',
+            alt: '17h45 2020 Oil on canvas, 145 x 125 cm',
           },
           {
             src: '/images/painter/slider-2019/3.jpg',
+            alt: '17h02 2020 Oil on canvas, 155 x 135 cm',
           },
           {
             src: '/images/painter/slider-2019/4.jpg',
+            alt: 'Atelier',
           },
           {
             src: '/images/painter/slider-2019/5.jpg',
+            alt: '8h17 2020 Oil on canvas, 120 x 90 cm',
           },
           {
             src: '/images/painter/slider-2019/6.jpg',
+            alt: '7h25 2020 Oil on canvas, 90 x 70 cm',
           },
           {
             src: '/images/painter/slider-2019/7.jpg',
+            alt: '12h30 2020 Oil on canvas, 25 x 19 cm',
           },
           {
             src: '/images/painter/slider-2019/8.jpg',
+            alt: '11h30 2020 Oil on canvas, 150 x 125 cm',
           },
           {
             src: '/images/painter/slider-2019/10.jpg',
+            alt: '21h23 2020 Oil on canvas, 90 x 70 cm',
           },
           {
             src: '/images/painter/slider-2019/11.jpg',
-          },
-          {
-            src: '/images/painter/slider-2019/12.jpg',
+            alt: '16h07 2020 Oil on canvas, 30 x 24 cm',
           },
           {
             src: '/images/painter/slider-2019/13.jpg',
+            alt: '14h30 2020 Oil on canvas, 90 x 70 cm',
           },
           {
             src: '/images/painter/slider-2019/14.jpeg',
+            alt: '14h34 2020 Oil on canvas, 25 x 19 cm',
           },
           {
             src: '/images/painter/slider-2019/15.jpeg',
+            alt: '13h30 2020 Oil on canvas, 25 x 19 cm',
           },
           {
             src: '/images/painter/slider-2019/16.jpeg',
-          },
-          {
-            src: '/images/painter/slider-2019/17.jpg',
+            alt: 'En suspens 2020 Oil on canvas, 150 x 120cm',
           },
           {
             src: '/images/painter/slider-2019/18.jpg',
+            alt: '17h01 2020 Oil on canvas, 155 x 125 cm',
           },
           {
             src: '/images/painter/slider-2019/19.jpg',
           },
           {
             src: '/images/painter/slider-2019/20.jpg',
+            alt: '',
           },
           {
             src: '/images/painter/slider-2019/21.jpg',
+            alt: '',
+          },
+          {
+            src: '/images/painter/slider-2019/17.jpg',
+            alt: '14h40 2020 Oil on canvas, 30 x 24 cm',
           },
           {
             src: '/images/painter/slider-2019/22.jpg',
+            alt: '',
           },
           {
             src: '/images/painter/slider-2019/23.jpg',
+            alt: '',
           },
           {
             src: '/images/painter/slider-2019/24.jpg',
+            alt: '',
           },
           {
             src: '/images/painter/slider-2019/27.jpg',
+            alt: '',
           },
           {
             src: '/images/painter/slider-2019/28.jpg',
+            alt: '',
           },
           {
             src: '/images/painter/slider-2019/29.jpg',
+            alt: '',
           },
           {
             src: '/images/painter/slider-2019/30.jpg',
+            alt: '',
           },
         ]
       }

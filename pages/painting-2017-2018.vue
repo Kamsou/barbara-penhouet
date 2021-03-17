@@ -42,21 +42,27 @@ import SwiperItem from '@/components/SwiperItem.vue';
         pictures: [
           {
             src: '/images/painter/slider-2017/slider-1.jpg',
+            alt: '',
           },
           {
             src: '/images/painter/slider-2017/slider-2.jpg',
+            alt: 'Interstice 2017 Acrylic on canvas, 100 x 100 cm',
           },
           {
             src: '/images/painter/slider-2017/slider-3.jpg',
+            alt: 'Petites actualités II 2018 Mixed media on canvas 150x130 cm',
           },
           {
             src: '/images/painter/slider-2017/slider-4.jpg',
+            alt: 'Peau de silence 2018 Mixed media on canvas 150x 150cm',
           },
           {
             src: '/images/painter/slider-2017/slider-5.jpg',
+            alt: '',
           },
           {
             src: '/images/painter/slider-2017/slider-6.jpg',
+            alt: 'Interstice II 2017 Acrylic on canvas, 100 x 100 cm',
           },
         ]
       }

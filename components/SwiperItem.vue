@@ -1,11 +1,10 @@
 <template>
   <Swiper class="swiper" :options="swiperOption">
-    <!-- <SwiperSlide><img src="/images/painter/painter-4.jpg" alt="painter-2" /></SwiperSlide>
-    <SwiperSlide><img src="/images/painter/painter-4.jpg" alt="painter-2" /></SwiperSlide>
-    <SwiperSlide><img src="/images/painter/painter-4.jpg" alt="painter-2" /></SwiperSlide>
-    <SwiperSlide><img src="/images/painter/painter-4.jpg" alt="painter-2" /></SwiperSlide> -->
     <SwiperSlide v-for="picture in pictures" :key="picture.index">
       <img :src="picture.src" alt="" />
+      <div class="item__overlay">
+        <span class="item__alt">{{ picture.alt }}</span>
+      </div>
     </SwiperSlide>
     <div class="swiper-button-prev" slot="button-prev"></div>
     <div class="swiper-button-next" slot="button-next"></div>
@@ -63,12 +62,21 @@ $breakpoint-tablet: 1025px;
     justify-content: center;
     align-items: center;
   }
+  &:hover,
+  &:focus {
+    .item__overlay {
+      z-index: 1;
+      opacity: 1;
+    }
+  }
   img {
     min-width: 200px;
     height: 100%;
     @media (max-width: $breakpoint-tablet) {
       width: 100%;
       height: auto;
+      position: absolute;
+      top: 0;
     }
   }
 }
@@ -111,6 +119,26 @@ $breakpoint-tablet: 1025px;
   background-repeat: no-repeat;
   left: auto;
   right: 5px;
+}
+
+.item__overlay {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  transition: transform 300ms;
+  background-color: rgba(255,255,255,0.65);
+  height: 100%;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+  transition: .3s ease-in-out;
+}
+
+.item__alt {
+  max-width: 110px;
+  text-align: center;
 }
 
 </style>
