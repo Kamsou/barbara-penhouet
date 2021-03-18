@@ -50,6 +50,10 @@ export default {
 $breakpoint-tablet: 1025px;
 .swiper-container {
   margin: 30px 0;
+  height: 100%;
+  @media (max-width: $breakpoint-tablet) {
+    height: 378px;
+  }
 }
 .swiper-slide {
   width: auto;
