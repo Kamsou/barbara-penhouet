@@ -58,7 +58,6 @@ $breakpoint-tablet: 1025px;
 .image-enter {
   background-size: contain;
   background-position: 0% 50%;
-  background-attachment: fixed;
   background-color: white;
   background-repeat: no-repeat;
   background-image: url('/images/enter.jpg');
@@ -77,7 +76,7 @@ $breakpoint-tablet: 1025px;
   width: 34.7222vw;
   @media (max-width: $breakpoint-tablet) {
     width: 60.7222vw;
-    bottom: 37.3333vw;
+    bottom: 48.3333vw;
     right: 18.6666vw;
   }
 }
@@ -100,7 +99,7 @@ $breakpoint-tablet: 1025px;
     color: #ffffff;
   }
   @media (max-width: $breakpoint-tablet) {
-    bottom: 21.3333vw;
+    bottom: 36.3333vw;
     right: 32vw;
     font-size: 5.3888vw;
     width: 35.8888vw;
