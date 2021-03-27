@@ -3,7 +3,12 @@
     <Navbar />
     <Nuxt class="content" />
     <section v-if="seeInputImage" class="enter">
-      <div class="image-enter" />
+      <div
+        class="image-enter"
+        :class="imgIsLoaded ? 'image-enter-show' : ''"
+        loading="lazy"
+        @load="imgLoadedMethod"
+      />
       <img class="enter-logo" src="/images/logo.svg" />
       <button class="enter-button" @click="disappears">ENTRER</button>
     </section>
@@ -17,6 +22,11 @@
     components: {
       Navbar
     },
+    data() {
+      return {
+        imgIsLoaded: false
+      }
+    },
     computed: {
       ...mapState([
         'seeInputImage'
@@ -27,6 +37,9 @@
         this.$store.commit('isOkayPreload', false)
         let pageEnter = document.body
         pageEnter.classList.add("is-deblocked");
+      },
+      imgLoadedMethod () {
+        this.imgIsLoaded = true
       },
     }
   }
@@ -52,21 +65,30 @@ $breakpoint-tablet: 1025px;
   top: 0;
   left: 0;
   width: 100%;
+  height: 100vh;
   z-index: 100;
+  background-color: white;
 }
 
 .image-enter {
   background-size: contain;
   background-position: 0% 50%;
-  background-color: white;
   background-repeat: no-repeat;
   background-image: url('/images/enter.jpg');
-  opacity: 1;
   height: 100vh;
   @media (max-width: $breakpoint-tablet) {
     background-size: cover;
     background-position: right;
   }
+}
+
+img.image-enter {
+  opacity: 0;
+  transition: 3s;
+}
+
+img.image-enter-show {
+  opacity: 1;
 }
 
 .enter-logo {
