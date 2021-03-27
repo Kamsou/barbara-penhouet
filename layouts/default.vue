@@ -2,14 +2,33 @@
   <div class="page-white">
     <Navbar />
     <Nuxt class="content" />
+    <section v-if="seeInputImage" class="enter">
+      <div class="image-enter" />
+      <img class="enter-logo" src="/images/logo.svg" />
+      <button class="enter-button" @click="disappears">ENTRER</button>
+    </section>
   </div>
 </template>
 <script>
+  import { mapState } from 'vuex';
   import Navbar from '@/components/Navbar.vue';
+
   export default {
     components: {
       Navbar
     },
+    computed: {
+      ...mapState([
+        'seeInputImage'
+      ])
+    },
+    methods: {
+      disappears() {
+        this.$store.commit('isOkayPreload', false)
+        let pageEnter = document.body
+        pageEnter.classList.add("is-deblocked");
+      },
+    }
   }
 </script>
 <style lang="scss">
@@ -22,6 +41,71 @@ $breakpoint-tablet: 1025px;
 .layout-enter,
 .layout-leave-to {
   opacity: 0;
+}
+
+.is-deblocked {
+  overflow: initial;
+}
+
+.enter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.image-enter {
+  background-size: contain;
+  background-position: 0% 50%;
+  background-attachment: fixed;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-image: url('/images/enter.jpg');
+  opacity: 1;
+  height: 100vh;
+  @media (max-width: $breakpoint-tablet) {
+    background-size: cover;
+    background-position: right;
+  }
+}
+
+.enter-logo {
+  position: absolute;
+  bottom: 20.8333vw;
+  right: 6.9444vw;
+  width: 34.7222vw;
+  @media (max-width: $breakpoint-tablet) {
+    width: 60.7222vw;
+    bottom: 37.3333vw;
+    right: 18.6666vw;
+  }
+}
+
+.enter-button {
+  position: absolute;
+  bottom: 13.8888vw;
+  right: 17.3611vw;
+  background: transparent;
+  border: 1px solid #EF0311;
+  color: #EF0311;
+  padding: 1.7361vw 2.4305vw;
+  font-weight: bold;
+  width: 13.8888vw;
+  font-size: 1.3888vw;
+  cursor: pointer;
+  transition: all 170ms ease-in-out;
+  &:hover {
+    background: #EF0311;
+    color: #ffffff;
+  }
+  @media (max-width: $breakpoint-tablet) {
+    bottom: 21.3333vw;
+    right: 32vw;
+    font-size: 5.3888vw;
+    width: 35.8888vw;
+    padding: 2.7361vw 5.4305vw;
+  }
 }
 
 html {
@@ -44,6 +128,12 @@ html {
   box-sizing: border-box;
   display: block;
   background-color: #FCF3F4;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
 }
 
 *,

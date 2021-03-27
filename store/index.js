@@ -1,9 +1,9 @@
 export const state = () => ({
-  preloader: true,
+  seeInputImage: true,
 })
 
 export const mutations = {
   isOkayPreload(state, payload) {
-    state.preloader = payload
+    state.seeInputImage = payload
   }
 }

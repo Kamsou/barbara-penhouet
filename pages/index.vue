@@ -167,7 +167,6 @@ export default {
     },
     visibilityChanged (isVisible) {
       this.bioVisible = isVisible
-      console.log(isVisible)
     }
   },
   head() {
@@ -208,6 +207,7 @@ $breakpoint-tablet: 1025px;
   max-width: 1440px;
   margin: 0 auto;
   background-color: #FCF3F4;
+  position: relative;
   @media (max-width: $breakpoint-tablet) {
     width: 100%;
     height: 100%;
