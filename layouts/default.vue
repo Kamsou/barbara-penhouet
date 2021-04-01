@@ -105,14 +105,14 @@ img.image-enter-show {
 
 .enter-button {
   position: absolute;
-  bottom: 13.8888vw;
-  right: 17.3611vw;
+  bottom: 16.8888vw;
+  right: 21.3611vw;
   background: transparent;
   border: 1px solid #EF0311;
   color: #EF0311;
-  padding: 1.7361vw 2.4305vw;
+  padding: 0.9361vw 0.4305vw;
   font-weight: bold;
-  width: 13.8888vw;
+  width: 10.8888vw;
   font-size: 1.3888vw;
   cursor: pointer;
   transition: all 170ms ease-in-out;
