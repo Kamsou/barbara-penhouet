@@ -569,11 +569,11 @@ $breakpoint-tablet: 1025px;
         position: absolute;
         width: 441px;
         z-index: 2;
-        bottom: 70%;
+        bottom: 47%;
         @media (max-width: $breakpoint-tablet) {
           width: 65.067vw;
-          bottom: 75%;
-          right: 40%;
+          bottom: 55%;
+          right: 27%;
           transform: rotate(-41.09deg);
         }
       }
