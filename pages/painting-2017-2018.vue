@@ -42,7 +42,7 @@ import SwiperItem from '@/components/SwiperItem.vue';
         pictures: [
           {
             src: '/images/painter/slider-2017/slider-1.jpg',
-            alt: '',
+            alt: 'Embrasements, 150 x 130cm , acrylic on canvas, 2017',
           },
           {
             src: '/images/painter/slider-2017/slider-2.jpg',
@@ -63,6 +63,22 @@ import SwiperItem from '@/components/SwiperItem.vue';
           {
             src: '/images/painter/slider-2017/slider-6.jpg',
             alt: 'Interstice II 2017 Acrylic on canvas, 100 x 100 cm',
+          },
+          {
+            src: '/images/painter/slider-2017/slider-7.jpg',
+            alt: 'Embrasements III, 50 x 50cm , acrylic on canvas, 2017',
+          },
+          {
+            src: '/images/painter/slider-2017/slider-8.jpg',
+            alt: 'Embrasements IV, 150 x 130cm , acrylic on canvas, 2017',
+          },
+          {
+            src: '/images/painter/slider-2017/slider-9.jpg',
+            alt: 'Embrasements V, 120 x 90cm , acrylic on canvas, 2017',
+          },
+          {
+            src: '/images/painter/slider-2017/slider-10.jpg',
+            alt: 'Entrelacs, 150 x 130cm , acrylic on canvas, 2018',
           },
         ]
       }
