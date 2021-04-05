@@ -182,7 +182,7 @@ $breakpoint-tablet: 1025px;
       background-position: right;
       background-size: cover;
       background-repeat: no-repeat;
-      height: 80vw;
+      height: 160vw;
     }
     h2 {
       position: absolute;

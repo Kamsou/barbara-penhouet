@@ -35,12 +35,16 @@
     methods: {
       disappears() {
         this.$store.commit('isOkayPreload', false)
-        let pageEnter = document.body
-        pageEnter.classList.add("is-deblocked");
+        document.body.classList.remove("is-blocked");
       },
       imgLoadedMethod () {
         this.imgIsLoaded = true
       },
+    },
+    mounted() {
+      if (this.$route.name === 'index' && this.seeInputImage) {
+        document.body.classList.add("is-blocked");
+      }
     }
   }
 </script>
@@ -56,8 +60,8 @@ $breakpoint-tablet: 1025px;
   opacity: 0;
 }
 
-.is-deblocked {
-  overflow: initial;
+.is-blocked {
+  overflow: hidden;
 }
 
 .enter {
@@ -154,7 +158,6 @@ html {
 body {
   margin: 0;
   height: 100%;
-  overflow: hidden;
 }
 
 *,
