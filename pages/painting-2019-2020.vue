@@ -146,7 +146,12 @@ import SwiperItem from '../components/SwiperItem.vue'
           this.titleDissapear = true
         }
       }
-    }
+    },
+    head() {
+      return {
+        title: 'Barbara Penhouet - Peintures 2019-2020',
+      }
+    },
   }
 </script>
 

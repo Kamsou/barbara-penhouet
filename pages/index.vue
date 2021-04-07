@@ -44,18 +44,25 @@
           },
         }"
       >
-        Barbara P. est artiste et une architecte vivant à Paris. 
+        Barbara P. est artiste et architecte basée à Paris.
         <br><br>
-        Elle affectionne les projets transdisciplinaires pour exprimer des identités
-        fortes et uniques en accompagnant ses clients dans la construction d’expériences.
-        Sa pratique artistique imprègne différents médiums pour raconter ses histoires :
-        peinture, objets, lieux de vie, tapisseries, installations, illustrations. 
+        Elle affectionne les projets transdisciplinaires, ou elle exprime des identités
+        fortes et uniques pour ses clients. Sa pratique artistique imprègne différents
+        médiums pour raconter ses histoires : peinture, objets, lieux de vie, tapisseries,
+        installations, illustrations.
         <br><br>
+        Elle est représentée par
+        <a href="https://www.karinegarnier.com/fr/barbara- p-illustration/" target="_blank" rel="noreferrer noopener">
+        KG Agency Paris
+        </a> et est notemment apparue dans <a href="https://www.stylist.fr/exposition-art-contemporain-curation-gilets-jaunes-precarite-intermittents,311386.asp" target="_blank" rel="noreferrer noopener">
+        Stylist</a>.
         Barbara est diplômée de l’école supérieure d'architecture de Bretagne en 2014.
         Elle part vivre 6 ans à Berlin, avant de s’installer à Paris. Sa dernière exposition
-        « Peau de silence » fut présentée à coGalleries Berlin après une immersion en résidence
-        à la SIM, Reykjavik. Elle a travaillé avec India Madhavi, Nowadays, Dietrich Untertrifaller et
-        Sander& Hofrichter P-SH. Elle est actuellement résidente aux ateliers de la fabrique à Ivry. 
+        « <a href="https://www.artrabbit.com/events/peau-de-silence" target="_blank" rel="noreferrer noopener">Peau de silence</a> » fut présentée à CoGalleries Berlin après une immersion en résidence
+        à la SIM, Reykjavik.
+        <br><br>
+        Elle a travaillé avec India Madhavi, Nowadays, Dietrich Untertrifaller et Sander& Hofrichter
+        P-SH, et est actuellement résidente aux ateliers de la fabrique à Ivry.
       </div>
       <div class="img">
         <img src="/images/index/barbara-sur-chaise.png" alt="barbara-sur-chaise" />
@@ -172,7 +179,6 @@ export default {
   head() {
     return {
       title: 'Barbara Penhouet',
-      description: 'Illustratrice / Architecte',
       link: [
         {
           rel: 'prefetch',
@@ -359,6 +365,10 @@ $breakpoint-tablet: 1025px;
         width: 68.267vw;
         margin: 0 auto;
       }
+    }
+
+    .biography a {
+      text-decoration: underline;
     }
 
     .fadeBiography {

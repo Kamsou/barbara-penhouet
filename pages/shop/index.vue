@@ -38,6 +38,11 @@
         })
       },
     },
+    head() {
+      return {
+        title: 'Barbara Penhouet - Shop',
+      }
+    },
   }
 </script>
 

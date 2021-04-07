@@ -11,6 +11,16 @@
       </div>
     </article>
     <article>
+      <div class="description-illustrations">
+        Disponible pour commissions et sur-mesure, représentée par
+        <a href="https://www.karinegarnier.com/fr/barbara-p-illustration/" target="_blank" rel="noreferrer noopener">
+        KG Agency
+        </a>
+        Dernière publication : pour
+        <a href="https://www.stylist.fr/exposition-art-contemporain-curation-gilets-jaunes-precarite-intermittents,311386.asp" target="_blank" rel="noreferrer noopener">
+        Stylist France
+        </a>
+      </div>
       <div class="flex row-2">
         <div>
           <img src="/images/illustrations-desktop/illu-2.jpg" alt=""/>
@@ -132,7 +142,12 @@
           this.titleDissapear = true
         }
       }
-    }
+    },
+    head() {
+      return {
+        title: 'Barbara Penhouet - Illustrations et Animations',
+      }
+    },
   }
 </script>
 
@@ -429,6 +444,19 @@ $breakpoint-tablet: 1025px;
       }
     }
   }
+}
+
+.description-illustrations {
+  margin: 0 auto 36px;
+  max-width: 615px;
+  text-align: center;
+  @media (max-width: $breakpoint-tablet) {
+    max-width: 64%;
+  }
+}
+
+.description-illustrations a {
+  text-decoration: underline;
 }
 
 .gif-chandeleur {

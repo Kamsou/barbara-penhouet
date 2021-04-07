@@ -23,9 +23,10 @@
       <span>Politique de confidentalité</span>
       <span>Mentions Légales</span>
       <span>CGV</span>
-      <span class="link-developer">
-        Site développé par
+      <span>
+        Développement:
         <a
+          class="footer-underline"
           href="https://camillecoutens.com"
           target="_blank"
           rel="noreferrer noopener"
@@ -105,18 +106,24 @@ $breakpoint-tablet: 1025px;
   }
 }
 .footer-admin {
-  display: flex;
-  justify-content: space-between;
+  display: block;
   padding: 0 8vw 5.333vw;
-  font-size: 3.200vw;
+  font-size: 4.200vw;
   @media (min-width: $breakpoint-tablet) {
-    font-size: 18px;
-    padding: 0 250px 60px;
+    display: flex;
+  justify-content: space-between;
+    font-size: 1.25vw;
+    padding: 0 17.3611vw 4.1666vw;
+  }
+  span {
+    display: block;
+    margin-bottom: 4vw;
   }
 }
 
-.link-developer {
-  font-size: 11px;
-  padding-left: 50px;
+.footer-underline {
+  &:hover {
+    text-decoration: underline;
+  }
 }
 </style>

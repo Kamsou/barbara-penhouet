@@ -13,7 +13,10 @@
           Les lutteurs et les danceurs dansent pradoxalement entre l'attirance et répulsion de l'autre. Ce point d'équilibre entre l'individualité de l'homme et son besoin d'être ensemble est l'essence du travail de Barbara qu'elle tente de chorégraphier.
           <br/><br/>
           On ne peut construire le vide, à l’instar du bonheur, de l’harmonie,de l’intimité ou du silence. Il tient sa raison d’être en suspension de la présences de d’autres éléments. 
-          À l’image de la rue symbole de démocratie et de liberté, mes représentations sont une ode au vivre ensemble par le silence de l’interstice, incluant ses amours et désamours.</p>
+          À l’image de la rue symbole de démocratie et de liberté, mes représentations sont une ode au vivre ensemble par le silence de l’interstice, incluant ses amours et désamours.
+          <br><br><br><br>
+          N'hésitez pas à m'écrire pour recevoir mon portfolio et la liste de prix de mes œuvres.
+        </p>
       </div>
       <div class="column-2">
         <img src="/images/painter/painter-2.jpg" alt="painter-2" />
@@ -42,7 +45,7 @@ import SwiperItem from '@/components/SwiperItem.vue';
         pictures: [
           {
             src: '/images/painter/slider-2017/slider-1.jpg',
-            alt: 'Embrasements, 150 x 130cm , acrylic on canvas, 2017',
+            alt: 'Embrasements, 150 x130cm, Acrylic and mixed media on canvas, 2018',
           },
           {
             src: '/images/painter/slider-2017/slider-2.jpg',
@@ -58,7 +61,7 @@ import SwiperItem from '@/components/SwiperItem.vue';
           },
           {
             src: '/images/painter/slider-2017/slider-5.jpg',
-            alt: '',
+            alt: 'Embrasements II, 200 x 100cm , acrylic on canvas, 2017',
           },
           {
             src: '/images/painter/slider-2017/slider-6.jpg',
@@ -106,6 +109,11 @@ import SwiperItem from '@/components/SwiperItem.vue';
         if (window.scrollY > 50) {
           this.titleDissapear = true
         }
+      }
+    },
+    head() {
+      return {
+        title: 'Barbara Penhouet - Peintures 2017-2018',
       }
     },
   }
