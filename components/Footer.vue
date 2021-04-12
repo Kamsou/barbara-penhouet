@@ -8,7 +8,7 @@
         <a href="https://www.facebook.com/Barbara-P-354201155083653/" target="_blank">
           <span>Facebook</span>
         </a>
-        <a href="https://www.instagram.com/barbarap._painter/" target="_blank">
+        <a href="https://www.instagram.com/barbarap._illustration/" target="_blank">
           <span>Instagram</span>
         </a>
       </div>
