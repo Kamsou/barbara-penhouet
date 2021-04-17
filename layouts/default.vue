@@ -9,8 +9,10 @@
         loading="lazy"
         @load="imgLoadedMethod"
       />
-      <img class="enter-logo" src="/images/logo.svg" />
-      <button class="enter-button" @click="disappears">ENTRER</button>
+      <div class="bloc-text">
+        <img class="enter-logo" src="/images/logo.svg" />
+        <button class="enter-button" @click="disappears">ENTRER</button>
+      </div>
     </section>
   </div>
 </template>
@@ -95,41 +97,44 @@ img.image-enter-show {
   opacity: 1;
 }
 
-.enter-logo {
+.bloc-text {
   position: absolute;
-  bottom: 20.8333vw;
-  right: 6.9444vw;
-  width: 34.7222vw;
+  bottom: 30%;
+  right: 10%;
+  transform: translateY(-70%);
+  width: 517px;
+  text-align: center;
   @media (max-width: $breakpoint-tablet) {
-    width: 60.7222vw;
-    bottom: 48.3333vw;
-    right: 18.6666vw;
+      width: 60.7222vw;
+      bottom: 0vw;
+      right: 18.6666vw;
+    }
+  .enter-logo {
+    width: 517px;
+    @media (max-width: $breakpoint-tablet) {
+      width: 60.7222vw;
+    }
   }
-}
 
-.enter-button {
-  position: absolute;
-  bottom: 16.8888vw;
-  right: 21.3611vw;
-  background: transparent;
-  border: 1px solid #EF0311;
-  color: #EF0311;
-  padding: 0.9361vw 0.4305vw;
-  font-weight: bold;
-  width: 10.8888vw;
-  font-size: 1.3888vw;
-  cursor: pointer;
-  transition: all 170ms ease-in-out;
-  &:hover {
-    background: #EF0311;
-    color: #ffffff;
-  }
-  @media (max-width: $breakpoint-tablet) {
-    bottom: 36.3333vw;
-    right: 32vw;
-    font-size: 5.3888vw;
-    width: 35.8888vw;
-    padding: 2.7361vw 5.4305vw;
+  .enter-button {
+    background: transparent;
+    border: 1px solid #EF0311;
+    color: #EF0311;
+    padding: 20px 20px;
+    font-weight: bold;
+    width: 205px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 170ms ease-in-out;
+    &:hover {
+      background: #EF0311;
+      color: #ffffff;
+    }
+    @media (max-width: $breakpoint-tablet) {
+      font-size: 5.3888vw;
+      width: 35.8888vw;
+      padding: 2.7361vw 5.4305vw;
+    }
   }
 }
 

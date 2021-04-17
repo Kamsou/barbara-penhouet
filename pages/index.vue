@@ -63,6 +63,10 @@
         <br><br>
         Elle a travaillé avec India Madhavi, Nowadays, Dietrich Untertrifaller et Sander& Hofrichter
         P-SH, et est actuellement résidente aux ateliers de la fabrique à Ivry.
+        <br><br>
+        Presse : <a href="https://www.artistikrezo.com/art/rencontre-avec-barbara-penhouet-artiste-peintre-de-la-couleur.html" target="_blank" rel="noreferrer noopener">
+        Article artistik rezo
+        </a>
       </div>
       <div class="img">
         <img src="/images/index/barbara-sur-chaise.png" alt="barbara-sur-chaise" />
@@ -353,10 +357,10 @@ $breakpoint-tablet: 1025px;
     }
     .biography {
       grid-area: biography;
-      width: 317px;
+      width: 370px;
       font-size: 14px;
       text-align: justify;
-      margin-right: 0 39px 0 auto;
+      margin: 0 0 0 auto;
       opacity: 0;
       transform: translateY(50px);
       transition: all 700ms ease-in-out;
@@ -377,6 +381,7 @@ $breakpoint-tablet: 1025px;
     }
     .img {
       grid-area: img;
+      margin: 0 0 0 39px;
       @media (max-width: $breakpoint-tablet) {
         margin: 0 auto;
       }

@@ -15,7 +15,7 @@
           On ne peut construire le vide, à l’instar du bonheur, de l’harmonie,de l’intimité ou du silence. Il tient sa raison d’être en suspension de la présences de d’autres éléments. 
           À l’image de la rue symbole de démocratie et de liberté, mes représentations sont une ode au vivre ensemble par le silence de l’interstice, incluant ses amours et désamours.
           <br><br><br><br>
-          N'hésitez pas à m'écrire pour recevoir mon portfolio et la liste de prix de mes œuvres.
+          <span class="italic">N'hésitez pas à m'écrire pour recevoir mon portfolio et la liste de prix de mes œuvres.</span>
         </p>
       </div>
       <div class="column-2">
@@ -177,9 +177,14 @@ $breakpoint-tablet: 1025px;
       width: 50%;
       color: #EF0311;
       padding-right: 55px;
+      text-align: justify;
       @media (max-width: $breakpoint-tablet) {
         width: 100%;
         padding-right: 0;
+      }
+      .italic {
+        font-style: italic;
+        font-size: 14px;
       }
       span {
         font-size: 20px;
