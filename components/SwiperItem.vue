@@ -29,7 +29,7 @@ export default {
   data() {
     return {
       swiperOption: {
-        centeredSlides: true,
+        // centeredSlides: true,
         spaceBetween: 30,
         navigation: {
           nextEl: '.swiper-button-next',
@@ -49,10 +49,11 @@ export default {
 <style lang="scss" scoped>
 $breakpoint-tablet: 1025px;
 .swiper-container {
-  margin: 30px 0;
+  margin: 30px 0 0 93px;
   height: 100%;
   @media (max-width: $breakpoint-tablet) {
     height: 378px;
+    margin: 30px 0 30px 0;
   }
 }
 .swiper-slide {
@@ -65,6 +66,7 @@ $breakpoint-tablet: 1025px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 8vw;
   }
   &:hover,
   &:focus {
@@ -80,7 +82,8 @@ $breakpoint-tablet: 1025px;
       width: 100%;
       height: auto;
       position: absolute;
-      top: 0;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 }
@@ -141,8 +144,13 @@ $breakpoint-tablet: 1025px;
 }
 
 .item__alt {
-  max-width: 110px;
+  max-width: 167px;
+  font-weight: bold;
   text-align: center;
+  font-size: 1.5vw;
+  @media (max-width: $breakpoint-tablet) {
+    font-size: 5vw;
+  }
 }
 
 </style>

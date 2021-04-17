@@ -111,9 +111,8 @@ $breakpoint-tablet: 1025px;
   font-size: 4.200vw;
   @media (min-width: $breakpoint-tablet) {
     display: flex;
-  justify-content: space-between;
-    font-size: 1.25vw;
-    padding: 0 17.3611vw 4.1666vw;
+    justify-content: space-between;
+    font-size: 14px;
   }
   span {
     display: block;

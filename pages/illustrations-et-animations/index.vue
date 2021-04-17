@@ -16,7 +16,7 @@
         <a href="https://www.karinegarnier.com/fr/barbara-p-illustration/" target="_blank" rel="noreferrer noopener">
         KG Agency
         </a>
-        Dernière publication : pour
+        Presse :
         <a href="https://www.stylist.fr/exposition-art-contemporain-curation-gilets-jaunes-precarite-intermittents,311386.asp" target="_blank" rel="noreferrer noopener">
         Stylist France
         </a>
@@ -450,6 +450,7 @@ $breakpoint-tablet: 1025px;
   margin: 0 auto 36px;
   max-width: 615px;
   text-align: center;
+  font-style: italic;
   @media (max-width: $breakpoint-tablet) {
     max-width: 64%;
   }

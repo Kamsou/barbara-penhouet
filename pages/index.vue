@@ -54,7 +54,7 @@
         Elle est représentée par
         <a href="https://www.karinegarnier.com/fr/barbara- p-illustration/" target="_blank" rel="noreferrer noopener">
         KG Agency Paris
-        </a> et est notemment apparue dans <a href="https://www.stylist.fr/exposition-art-contemporain-curation-gilets-jaunes-precarite-intermittents,311386.asp" target="_blank" rel="noreferrer noopener">
+        </a> et est notamment apparue dans <a href="https://www.stylist.fr/exposition-art-contemporain-curation-gilets-jaunes-precarite-intermittents,311386.asp" target="_blank" rel="noreferrer noopener">
         Stylist</a>.
         Barbara est diplômée de l’école supérieure d'architecture de Bretagne en 2014.
         Elle part vivre 6 ans à Berlin, avant de s’installer à Paris. Sa dernière exposition

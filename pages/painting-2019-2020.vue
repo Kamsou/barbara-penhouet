@@ -6,9 +6,44 @@
       </h2>
     </article>
     <article class="first-row">
+      <div class="text-bloc-1">
+        <span class="bold">Le travail de Barbara P.</span> est un savant mélange entre un regard inédit sur les corps en peinture et une explosion de couleur. Dans sa série XXX elle pose son regard sur nos intérieurs, nous invitant à prendre un peu de recul pour observer nos contradictions. 
+        <br><br>
+        De la préparation de la toile aux temps de séchages, qui varient selon les couleurs mais aussi les saisons, la peinture est une pratique particulièrement longue. Chez Barbara P., elle s’installe sur la toile par de grands aplats d’abord. C’est d’ailleurs de la réserve, cette première sous-couche fine et laissée nue par endroits, que vient la lumière si caractéristique de son travail. Plus les couches se succèdent et s’épaississent, plus sa touche se resserre pour s’approcher des détails et creuser, doucement la profondeur du tableau. 
+        <br><br>
+        Cette temporalité de la peinture donne à Barbara P. le temps de composer son regard autant que sa toile, de faire des pas de côtés, de prendre un peu de recul et de modeler sa vision tout en se posant à contre courant d’une société consumériste de plus en plus rapide. 
+        <br><br>
+        Pour Barbara P., peindre c’est prendre le temps d’observer.<br>
+        Avec cette série, elle pose justement son regard sur une de nos plus grandes contradictions du moment : celle d’abandonner, consciemment ou non, nos intimités. L’intimité de nos foyers, que l’on montre, que l’on affiche, que l’on présente, que l’on compare et celle de nos corps. Consciemment ou non, la société de la transparence nous atteint toutes et tous. Le regard de l’autre vient juger nos meubles, nos décorations, nos maisons autant que nos corps qui deviennent des objets comme les autres. Au point que nous devenons les témoins de nos propres reflets transformés par les retouches ou les pauses, et les acteurs de nos déformations.
+        <br><br>
+        <br><br>
+        Suite du texte ci dessous
+      </div>
+      <div class="image-bloc-1">
+        <img src="/images/painter/painter-2019-bloc-1.jpg" alt=""/>
+      </div>
     </article>
     <article class="second-row">
       <SwiperItem :pictures="pictures" />
+    </article>
+    <article class="third-row">
+      <div class="text-bloc-3">
+        C’est là que le regard de Barbara P. change la donne dans l’histoire de la peinture.   
+        Les corps qu’elle présente, passent de ce statut d’objet à sujet. Dans des cadres qui sont presque cinématographiques et à mesure qu’elle les peint, Barbara P. redonne à ces corps une place dans l’espace et dans le temps. Les personnages sont captés dans un mouvement léger, presque infime et profondément vivant. D’une manière si subtile que lorsqu’on surprend une poitrine qui se soulève pour respirer, le sursaut d’un sanglot ou le passage d’une brise légère dans l’herbe, on se demande si on ne l’a pas rêvé. 
+        <br><br>
+        Il se créer une telle proximité, une telle intimité entre le regardeur et la figure au centre de la toile, qu’on se laisse à croire qu’on fait parti de la scène. 
+        <br><br>
+        XXX de Barbara P. nous invite à regarder nos contradictions avec bienveillance, à les observer, les interroger et les comprendre. Plus que tout, avec cette série, elle nous rend nos corps, nos intérieurs, nos intimités. Avec respect et pudeur, elle nous rappelle, que nous, et nous seuls pouvons décider que faire et que penser de nos reflets. 
+        <br><br>
+        <br><br>
+        Margo Coïc
+        <br><br>
+        <br><br>
+        N'hésitez pas à m'écrire pour recevoir mon portfolio et la liste de prix.
+      </div>
+      <div class="image-bloc-3">
+        <img src="/images/painter/painter-2019-bloc-3.jpg" alt=""/>
+      </div>
     </article>
     <Footer :up="up" />
   </section>
@@ -194,52 +229,43 @@ $breakpoint-tablet: 1025px;
       }
     }
   }
+  .bold {
+    font-family: 'Work Sans';
+    font-weight: 700;
+  }
   .first-row {
+    font-family: 'Work Sans';
     display: flex;
-    padding: 33px 100px;
+    justify-content: space-between;
+    padding: 186px 95px 63px;
     max-width: 1440px;
     margin: 0 auto;
     @media (max-width: $breakpoint-tablet) {
       display: block;
       padding: 8.800vw 8.533vw;
     }
-    .column-1 {
-      width: 50%;
-      color: #EF0311;
-      padding-right: 55px;
+    .text-bloc-1 {
+      text-align: justify;
+      max-width: 50%;
+      font-size: 14px;
+      margin-right: 100px;
       @media (max-width: $breakpoint-tablet) {
-        width: 100%;
-        padding-right: 0;
-      }
-      span {
-        font-size: 20px;
-        font-weight: bold;
-        @media (max-width: $breakpoint-tablet) {
-          text-align: justify;
-          font-size: 3.733vw;
-        }
-      }
-      p {
-        font-size: 14px;
-        padding-top: 25px;
-        @media (max-width: $breakpoint-tablet) {
-          text-align: justify;
-          font-size: 2.667vw;
-        }
+        max-width: 100%;
+        margin-right: 0;
       }
     }
-    .column-2 {
-      width: 50%;
+    .image-bloc-1  {
+      max-width: 50%;
       @media (max-width: $breakpoint-tablet) {
-        width: 100%;
-        margin-top: 6.667vw;
+        max-width: 100%;
+        margin-top: 10px;
       }
       img {
         width: 100%;
       }
     }
   }
-  .second-row{
+  .second-row {
     max-width: 1440px;
     margin: 0 auto;
     @media (max-width: $breakpoint-tablet) {
@@ -253,6 +279,38 @@ $breakpoint-tablet: 1025px;
         text-align: justify;
         font-size: 3.733vw;
         padding: 8.800vw 8.533vw;
+      }
+    }
+  }
+  .third-row {
+    font-family: 'Work Sans';
+    display: flex;
+    justify-content: space-between;
+    padding: 73px 95px;
+    max-width: 1440px;
+    margin: 0 auto;
+    @media (max-width: $breakpoint-tablet) {
+      display: block;
+      padding: 8.800vw 8.533vw;
+    }
+    .text-bloc-3 {
+      text-align: justify;
+      max-width: 50%;
+      font-size: 14px;
+      margin-right: 100px;
+      @media (max-width: $breakpoint-tablet) {
+        max-width: 100%;
+        margin-right: 0;
+      }
+    }
+    .image-bloc-3  {
+      max-width: 50%;
+      @media (max-width: $breakpoint-tablet) {
+        max-width: 100%;
+        margin-top: 10px;
+      }
+      img {
+        width: 100%;
       }
     }
   }
